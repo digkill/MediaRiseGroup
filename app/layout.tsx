@@ -7,9 +7,10 @@ import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { Providers } from "@/components/providers";
 import { organizationJsonLd } from "@/lib/content";
+import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mediarisegroup.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "MediaRiseGroup | Premium Software, AI, Robotics & Mobile Apps",
     template: "%s | MediaRiseGroup",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   creator: "MediaRiseGroup",
   openGraph: {
     type: "website",
-    url: "https://mediarisegroup.com",
+    url: siteUrl,
     siteName: "MediaRiseGroup",
     title: "MediaRiseGroup | Premium Software, AI, Robotics & Mobile Apps",
     description:

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const siteUrl = "https://mediarisegroup.com";
+import { siteUrl } from "@/lib/site";
 
 export function createMetadata({
   title,

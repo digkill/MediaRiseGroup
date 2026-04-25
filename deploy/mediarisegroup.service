@@ -1,0 +1,26 @@
+[Unit]
+Description=MediaRiseGroup Next.js site
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/mediarisegroup
+
+# PORT, LISTEN_HOST, SITE_URL и др. — в файле .env в WorkingDirectory
+EnvironmentFile=-/var/www/mediarisegroup/.env
+Environment=NODE_ENV=production
+
+# Не запускайте здесь `yarn build`: перед деплоем собирайте вручную или в CI.
+# Путь к node: `which node`.
+ExecStart=/usr/bin/node ./scripts/start.mjs
+
+Restart=on-failure
+RestartSec=10
+
+# Лимиты (по желанию)
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

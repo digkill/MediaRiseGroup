@@ -11,6 +11,8 @@ import {
   Sparkles,
 } from "lucide-react";
 
+import { siteUrl } from "./site";
+
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
@@ -246,9 +248,9 @@ export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "MediaRiseGroup",
-  url: "https://mediarisegroup.com",
-  logo: "https://mediarisegroup.com/images/mediarisegroup-logo.png",
-  sameAs: ["https://mediarisegroup.com"],
+  url: siteUrl,
+  logo: `${siteUrl}/images/mediarisegroup-logo.png`,
+  sameAs: [siteUrl],
   description: "Premium technology company specializing in mobile apps, web platforms, AI, robotics, IoT, and digital transformation.",
   contactPoint: {
     "@type": "ContactPoint",
