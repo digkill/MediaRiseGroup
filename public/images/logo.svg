@@ -1,0 +1,12 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="96" fill="#0A0A0A"/>
+  <rect x="48" y="48" width="416" height="416" rx="76" fill="url(#paint0_radial)"/>
+  <text x="122" y="302" fill="white" font-family="Inter, Arial, sans-serif" font-size="118" font-weight="800">MR</text>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(160 112) rotate(47.3) scale(470)">
+      <stop stop-color="#FF7A92"/>
+      <stop offset="0.34" stop-color="#FF0033"/>
+      <stop offset="1" stop-color="#210006"/>
+    </radialGradient>
+  </defs>
+</svg>

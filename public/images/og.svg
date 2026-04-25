@@ -1,0 +1,10 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <circle cx="850" cy="130" r="360" fill="#FF0033" opacity="0.18"/>
+  <circle cx="260" cy="520" r="300" fill="#E50914" opacity="0.14"/>
+  <rect x="80" y="86" width="1040" height="458" rx="28" fill="white" opacity="0.045"/>
+  <rect x="80.5" y="86.5" width="1039" height="457" rx="27.5" stroke="white" opacity="0.12"/>
+  <text x="130" y="250" fill="white" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="700">MediaRiseGroup</text>
+  <text x="132" y="324" fill="#FFB3C0" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600">Mobile | AI | Robotics | IoT | Web Platforms</text>
+  <text x="132" y="404" fill="white" opacity="0.68" font-family="Inter, Arial, sans-serif" font-size="28">Premium technology for products with real complexity.</text>
+</svg>
