@@ -20,7 +20,9 @@ export function ProjectsFilter() {
           </Button>
         ))}
       </div>
-      <motion.div layout className="mt-10 grid gap-5 md:grid-cols-2">
+      {/* items-start: cards with a screenshot are much taller, and stretching the
+          others to match left them with a large empty box at the bottom. */}
+      <motion.div layout className="mt-10 grid items-start gap-5 md:grid-cols-2">
         {filtered.map((project) => (
           <motion.div key={project.title} layout initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}>
             <PortfolioCard project={project} />

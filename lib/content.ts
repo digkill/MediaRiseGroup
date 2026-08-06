@@ -190,7 +190,30 @@ export const process = [
 
 export const projectFilters = ["All", "Mobile", "AI", "Robotics", "Web"];
 
-export const projects = [
+export type PortfolioProject = {
+  title: string;
+  category: string;
+  type: string;
+  description: string;
+  href: string;
+  metrics: string[];
+  /** Real product screenshot. Cards without one fall back to the icon header. */
+  image?: string;
+  imageAlt?: string;
+};
+
+export const projects: PortfolioProject[] = [
+  {
+    title: "Vibe Video",
+    category: "Mobile",
+    type: "iOS + macOS video editor",
+    description:
+      "Short-form editor with a multitrack timeline, green-screen overlays, stickers and one-tap export to TikTok, Reels, Shorts and YouTube.",
+    href: "https://vibevideo.fun",
+    metrics: ["Shipping on the App Store for iPhone, iPad and Mac", "Localized into 6 languages"],
+    image: "/images/projects/vibevideo-editor.webp",
+    imageAlt: "Vibe Video editor on macOS: multitrack timeline with a chroma-key overlay and the layer inspector",
+  },
   {
     title: "PlantPal",
     category: "Mobile",
