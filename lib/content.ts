@@ -69,8 +69,8 @@ export const stats = [
 export const featuredProjects = [
   {
     title: "Vibe Video",
-    href: "https://vibevideo.fun",
-    category: "iOS + macOS",
+    href: "/vibe-video",
+    category: "iOS · iPadOS · macOS",
     description:
       "Short-form video editor for iPhone, iPad and Mac: multitrack timeline, green-screen overlays, stickers and one-tap export to social formats.",
     tags: ["Swift", "AVFoundation", "App Store"],
@@ -196,12 +196,12 @@ export const projects: PortfolioProject[] = [
   {
     title: "Vibe Video",
     category: "Mobile",
-    type: "iOS + macOS video editor",
+    type: "iOS, iPadOS & macOS video editor",
     description:
-      "Short-form editor with a multitrack timeline, green-screen overlays, stickers and one-tap export to TikTok, Reels, Shorts and YouTube.",
-    href: "https://vibevideo.fun",
-    metrics: ["Shipping on the App Store for iPhone, iPad and Mac", "Localized into 6 languages"],
-    image: "/images/projects/vibevideo-editor.webp",
+      "One SwiftUI codebase shipping as a touch editor on iPhone and iPad and a windowed editor on Mac: multitrack timeline, green screen, stickers and one-tap social export.",
+    href: "/vibe-video",
+    metrics: ["Native iPhone, iPad and Mac builds from one codebase", "On the App Store, localized into 6 languages"],
+    image: "/images/projects/vibevideo/mac-editor.webp",
     imageAlt: "Vibe Video editor on macOS: multitrack timeline with a chroma-key overlay and the layer inspector",
   },
   {
@@ -216,6 +216,66 @@ export const projects: PortfolioProject[] = [
 
 /** Derived from the data so a filter can never point at an empty result set. */
 export const projectFilters = ["All", ...Array.from(new Set(projects.map((project) => project.category)))];
+
+export const vibeVideo = {
+  appStoreUrl: "https://apps.apple.com/us/app/vibe-video-video-editor/id6794705650",
+  siteUrl: "https://vibevideo.fun",
+  platforms: ["iOS 17+", "iPadOS 17+", "macOS 14+"],
+  mac: [
+    {
+      src: "/images/projects/vibevideo/mac-editor.webp",
+      alt: "Vibe Video on macOS: multitrack timeline with a chroma-key overlay selected and the layer inspector open",
+      caption: "Multitrack timeline with per-lane layer order, split and trim",
+      wide: true,
+    },
+    {
+      src: "/images/projects/vibevideo/mac-formats.webp",
+      alt: "Canvas format menu listing TikTok, YouTube Shorts, Instagram Reels, Facebook Reels, Instagram portrait and post, YouTube and a custom size",
+      caption: "Canvas presets for TikTok, Shorts, Reels, Instagram and YouTube — plus a custom size",
+    },
+    {
+      src: "/images/projects/vibevideo/mac-memes.webp",
+      alt: "Green-screen meme picker showing a grid of cat clips shot on a green background",
+      caption: "Built-in green-screen meme library",
+    },
+    {
+      src: "/images/projects/vibevideo/mac-text.webp",
+      alt: "Text sticker inspector with style presets, colour, font size, outline and plate controls",
+      caption: "Text styling: presets, colour, outline and plate",
+    },
+    {
+      src: "/images/projects/vibevideo/mac-export.webp",
+      alt: "Export finished dialog showing the TikTok 1080x1920 output with save and share actions",
+      caption: "Export straight to the gallery or the share sheet",
+    },
+  ],
+  mobile: [
+    {
+      src: "/images/projects/vibevideo/iphone-editor.webp",
+      alt: "Vibe Video on iPhone in dark appearance: preview, tool bar and three timeline lanes",
+      caption: "iPhone — dark appearance",
+    },
+    {
+      src: "/images/projects/vibevideo/iphone-light.webp",
+      alt: "The same iPhone project in light appearance",
+      caption: "iPhone — light appearance",
+    },
+    {
+      src: "/images/projects/vibevideo/ipad-editor.webp",
+      alt: "Vibe Video on iPad Pro with the sticker inspector and a four-lane timeline",
+      caption: "iPad — inspector alongside the timeline",
+      wide: true,
+    },
+  ],
+  features: [
+    "Multitrack timeline with drag between lanes, trim and split",
+    "Green-screen chroma key plus person and background removal",
+    "Video, image and text stickers sharing one z-order stack",
+    "Export presets for TikTok, Shorts, Reels, Instagram and YouTube",
+    "Voice-over and camera capture recorded into the project",
+    "Projects saved as .pjvv documents with autosave between launches",
+  ],
+};
 
 export const plantPalFeatures = [
   "AI plant identification from a single photo",
