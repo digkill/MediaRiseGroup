@@ -12,13 +12,13 @@ import { siteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "MediaRiseGroup | Premium Software, AI, Robotics & Mobile Apps",
-    template: "%s | MediaRiseGroup",
+    default: "MediaRise | Premium Software, AI, Robotics & Mobile Apps",
+    template: "%s | MediaRise",
   },
   description:
-    "MediaRiseGroup builds premium mobile apps, complex web platforms, AI and machine learning systems, robotics automation, IoT solutions, and digital transformation programs.",
+    "MediaRise builds premium mobile apps, complex web platforms, AI and machine learning systems, robotics automation, IoT solutions, and digital transformation programs.",
   keywords: [
-    "MediaRiseGroup",
+    "MediaRise",
     "mobile app development",
     "Android development",
     "iOS development",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     "IoT solutions",
     "web platform development",
   ],
-  authors: [{ name: "MediaRiseGroup" }],
-  creator: "MediaRiseGroup",
+  authors: [{ name: "MediaRise" }],
+  creator: "MediaRise",
   openGraph: {
     type: "website",
     url: siteUrl,
-    siteName: "MediaRiseGroup",
-    title: "MediaRiseGroup | Premium Software, AI, Robotics & Mobile Apps",
+    siteName: "MediaRise",
+    title: "MediaRise | Premium Software, AI, Robotics & Mobile Apps",
     description:
       "Premium engineering studio for mobile apps, complex platforms, AI systems, robotics automation, IoT, and digital transformation.",
   },

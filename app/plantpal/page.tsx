@@ -13,7 +13,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "PlantPal AI Plant Care App",
-  description: "PlantPal is MediaRiseGroup's flagship AI plant care mobile app with plant identification, care reminders, diagnostics, and community features.",
+  description: "PlantPal is MediaRise's flagship AI plant care mobile app with plant identification, care reminders, diagnostics, and community features.",
   path: "/plantpal",
 });
 
@@ -53,7 +53,7 @@ export default function PlantPalPage() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] py-24">
+      <section className="border-y border-white/10 bg-white/2.5 py-24">
         <div className="container">
           <Reveal>
             <SectionHeading
@@ -67,7 +67,7 @@ export default function PlantPalPage() {
               const Icon = featureIcons[index];
               return (
                 <Reveal key={feature} delay={index * 0.04}>
-                  <Card className="h-full bg-white/[0.045] p-6">
+                  <Card className="h-full bg-white/4.5 p-6">
                     <Icon className="size-6 text-emerald-200" />
                     <h2 className="mt-5 font-display text-xl font-semibold text-white">{feature}</h2>
                   </Card>
@@ -94,7 +94,7 @@ export default function PlantPalPage() {
           </Reveal>
           <div className="grid gap-4">
             {["AI recognition pipeline", "Personalized care engine", "Cross-platform mobile UX", "Subscriptions and retention analytics"].map((item) => (
-              <Card key={item} className="bg-white/[0.045] p-5 text-white/72">
+              <Card key={item} className="bg-white/4.5 p-5 text-white/72">
                 {item}
               </Card>
             ))}
@@ -108,7 +108,7 @@ export default function PlantPalPage() {
         </Reveal>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.name} className="bg-white/[0.045] p-6">
+            <Card key={testimonial.name} className="bg-white/4.5 p-6">
               <p className="text-sm leading-7 text-white/72">&quot;{testimonial.quote}&quot;</p>
               <p className="mt-5 text-sm font-semibold text-white">{testimonial.name}</p>
             </Card>

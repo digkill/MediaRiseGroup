@@ -32,7 +32,7 @@ export default function AndroidPage() {
             Native Android apps built for performance, polish, and Play Store growth.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/62">
-            MediaRiseGroup builds Kotlin and Jetpack Compose products with the production details Android users notice immediately.
+            MediaRise builds Kotlin and Jetpack Compose products with the production details Android users notice immediately.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg">
@@ -53,7 +53,7 @@ export default function AndroidPage() {
             const Icon = pillar.icon;
             return (
               <Reveal key={pillar.title} delay={index * 0.05}>
-                <Card className="h-full bg-white/[0.045] p-6 text-white">
+                <Card className="h-full bg-white/4.5 p-6 text-white">
                   <Icon className="size-6 text-red-300" />
                   <h2 className="mt-5 font-display text-xl font-semibold text-white">{pillar.title}</h2>
                   <p className="mt-3 text-sm leading-6 text-white/58">{pillar.description}</p>
@@ -64,7 +64,7 @@ export default function AndroidPage() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] py-24 text-zinc-950 dark:text-zinc-50">
+      <section className="border-y border-white/10 bg-white/2.5 py-24 text-zinc-950 dark:text-zinc-50">
         <div className="container grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
             <SectionHeading
@@ -75,7 +75,7 @@ export default function AndroidPage() {
           </Reveal>
           <div className="grid gap-3">
             {androidBenefits.map((benefit) => (
-              <Card key={benefit} className="bg-white/[0.045] p-5 text-sm leading-6 text-white/70">
+              <Card key={benefit} className="bg-white/4.5 p-5 text-sm leading-6 text-white/70">
                 {benefit}
               </Card>
             ))}

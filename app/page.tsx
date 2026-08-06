@@ -20,11 +20,11 @@ export default function HomePage() {
           <div className="max-w-4xl">
             <Reveal>
               <Badge>Mobile, AI, Robotics, IoT, Web Platforms</Badge>
-              <h1 className="mt-6 max-w-[23rem] font-display text-4xl font-semibold leading-tight tracking-normal text-white text-balance sm:max-w-4xl sm:text-5xl md:text-7xl lg:text-8xl">
+              <h1 className="mt-6 max-w-92 font-display text-4xl font-semibold leading-tight tracking-normal text-white text-balance sm:max-w-4xl sm:text-5xl md:text-7xl lg:text-8xl">
                 Premium technology for products that need to feel inevitable.
               </h1>
-              <p className="mt-6 max-w-[23rem] text-base leading-7 text-white/64 sm:max-w-2xl md:text-xl md:leading-8">
-                MediaRiseGroup designs and engineers native apps, complex platforms, AI systems, robotics interfaces, and connected digital infrastructure.
+              <p className="mt-6 max-w-92 text-base leading-7 text-white/64 sm:max-w-2xl md:text-xl md:leading-8">
+                MediaRise designs and engineers native apps, complex platforms, AI systems, robotics interfaces, and connected digital infrastructure.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">
@@ -66,13 +66,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] py-24">
+      <section className="border-y border-white/10 bg-white/2.5 py-24">
         <div className="container">
           <Reveal>
             <SectionHeading
               eyebrow="Featured work"
               title="Selected systems with serious product depth."
-              description="Portfolio concepts represent the type of design, engineering, and product architecture MediaRiseGroup delivers."
+              description="Portfolio concepts represent the type of design, engineering, and product architecture MediaRise delivers."
             />
           </Reveal>
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
@@ -99,7 +99,7 @@ export default function HomePage() {
               const Icon = item.icon;
               return (
                 <Reveal key={item.title} delay={index * 0.05}>
-                  <Card className="h-full bg-white/[0.045] p-6">
+                  <Card className="h-full bg-white/4.5 p-6">
                     <Icon className="size-6 text-red-300" />
                     <h3 className="mt-5 font-display text-xl font-semibold text-white">{item.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-white/58">{item.description}</p>
@@ -118,8 +118,8 @@ export default function HomePage() {
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <Reveal key={testimonial.name} delay={index * 0.05}>
-              <Card className="h-full bg-white/[0.045] p-6">
-                <p className="text-base leading-7 text-foreground/[0.76] dark:text-white/[0.76]">&quot;{testimonial.quote}&quot;</p>
+              <Card className="h-full bg-white/4.5 p-6">
+                <p className="text-base leading-7 text-foreground/76 dark:text-white/76">&quot;{testimonial.quote}&quot;</p>
                 <div className="mt-6 border-t border-white/10 pt-5">
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="mt-1 text-sm text-white/46">{testimonial.role}</div>

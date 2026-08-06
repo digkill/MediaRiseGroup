@@ -13,7 +13,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "Contact",
-  description: "Contact MediaRiseGroup for mobile app development, AI systems, web platforms, robotics automation, IoT solutions, and digital transformation.",
+  description: "Contact MediaRise for mobile app development, AI systems, web platforms, robotics automation, IoT solutions, and digital transformation.",
   path: "/contact",
 });
 
@@ -34,7 +34,7 @@ export default function ContactPage() {
 
       <section className="container grid gap-8 pb-24 lg:grid-cols-[1.05fr_0.95fr]">
         <Reveal>
-          <Card className="bg-white/[0.045] p-6 md:p-8">
+          <Card className="bg-white/4.5 p-6 md:p-8">
             <form className="grid gap-5">
               <div className="grid gap-2">
                 <Label htmlFor="name">Name</Label>
@@ -60,14 +60,14 @@ export default function ContactPage() {
         </Reveal>
         <div className="grid gap-5">
           <Reveal delay={0.05}>
-            <Card className="overflow-hidden bg-white/[0.045]">
+            <Card className="overflow-hidden bg-white/4.5">
               <div className="relative min-h-[310px] bg-[radial-gradient(circle_at_45%_45%,rgba(255,0,51,.28),transparent_24%),linear-gradient(135deg,#111,#050505)]">
-                <div className="absolute inset-0 bg-grid-fade bg-[size:32px_32px] opacity-50" />
+                <div className="absolute inset-0 bg-grid-fade bg-size-[32px_32px] opacity-50" />
                 <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center">
                   <div className="flex size-14 items-center justify-center rounded-full bg-red-500 text-white shadow-glow">
                     <MapPin className="size-6" />
                   </div>
-                  <p className="mt-4 rounded-md border border-white/10 bg-black/50 px-3 py-2 text-sm text-white/72 backdrop-blur">
+                  <p className="mt-4 rounded-md border border-white/10 bg-black/50 px-3 py-2 text-sm text-white/72 backdrop-blur-sm">
                     Remote-first global studio
                   </p>
                 </div>
@@ -77,7 +77,7 @@ export default function ContactPage() {
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
             {contactCards.map((card) => (
               <Reveal key={card.title}>
-                <Card className="bg-white/[0.045] p-5">
+                <Card className="bg-white/4.5 p-5">
                   <Mail className="size-5 text-red-300" />
                   <h2 className="mt-4 text-sm font-semibold text-white">{card.title}</h2>
                   <p className="mt-2 text-sm leading-6 text-white/58">{card.value}</p>

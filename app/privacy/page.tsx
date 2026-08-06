@@ -2,14 +2,14 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "Privacy Policy",
-  description: "MediaRiseGroup privacy policy covering personal data, contact inquiries, analytics, cookies, service providers, and user rights.",
+  description: "MediaRise privacy policy covering personal data, contact inquiries, analytics, cookies, service providers, and user rights.",
   path: "/privacy",
 });
 
 const sections = [
   {
     title: "1. Information we collect",
-    body: "We may collect contact details, company information, project descriptions, communications, device and browser metadata, and usage analytics when you interact with this website or contact MediaRiseGroup.",
+    body: "We may collect contact details, company information, project descriptions, communications, device and browser metadata, and usage analytics when you interact with this website or contact MediaRise.",
   },
   {
     title: "2. How we use information",
@@ -33,7 +33,7 @@ const sections = [
   },
   {
     title: "7. International processing",
-    body: "MediaRiseGroup may work with distributed infrastructure and service providers. Information may be processed in countries different from your location, subject to applicable privacy and data protection requirements.",
+    body: "MediaRise may work with distributed infrastructure and service providers. Information may be processed in countries different from your location, subject to applicable privacy and data protection requirements.",
   },
   {
     title: "8. Your rights",
@@ -45,7 +45,7 @@ const sections = [
   },
   {
     title: "10. Contact",
-    body: "For privacy questions or requests, contact hello@mediarisegroup.com. We may need to verify your identity before fulfilling certain requests.",
+    body: "For privacy questions or requests, contact hello@mediarise.org. We may need to verify your identity before fulfilling certain requests.",
   },
 ];
 
@@ -54,14 +54,14 @@ export default function PrivacyPage() {
     <section className="container pt-36 pb-24">
       <div className="mx-auto max-w-4xl">
         <p className="text-sm font-semibold uppercase text-red-200/80">Privacy Policy</p>
-        <h1 className="mt-4 font-display text-5xl font-semibold tracking-normal text-white md:text-6xl">MediaRiseGroup Privacy Policy</h1>
+        <h1 className="mt-4 font-display text-5xl font-semibold tracking-normal text-white md:text-6xl">MediaRise Privacy Policy</h1>
         <p className="mt-5 text-sm text-white/48">Effective date: April 25, 2026</p>
         <p className="mt-8 text-lg leading-8 text-white/64">
-          This Privacy Policy explains how MediaRiseGroup collects, uses, shares, and protects information when you use mediarisegroup.com or communicate with us. This page is provided for general business transparency and should not be treated as legal advice.
+          This Privacy Policy explains how MediaRise collects, uses, shares, and protects information when you use mediarise.org or communicate with us. This page is provided for general business transparency and should not be treated as legal advice.
         </p>
         <div className="mt-12 grid gap-5">
           {sections.map((section) => (
-            <article key={section.title} className="rounded-lg border border-white/10 bg-white/[0.045] p-6">
+            <article key={section.title} className="rounded-lg border border-white/10 bg-white/4.5 p-6">
               <h2 className="font-display text-2xl font-semibold text-white">{section.title}</h2>
               <p className="mt-4 text-base leading-8 text-white/62">{section.body}</p>
             </article>

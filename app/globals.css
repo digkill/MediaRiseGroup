@@ -1,130 +1,253 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
-  color-scheme: light;
-  --background: 0 0% 98%;
-  --foreground: 240 10% 7%;
-  --card: 0 0% 100%;
-  --card-foreground: 240 10% 7%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 7%;
-  --primary: 348 100% 50%;
-  --primary-foreground: 0 0% 100%;
-  --muted: 0 0% 94%;
-  --muted-foreground: 240 5% 42%;
-  --accent: 348 100% 50%;
-  --accent-foreground: 0 0% 100%;
-  --destructive: 0 85% 55%;
-  --destructive-foreground: 0 0% 100%;
-  --border: 240 6% 86%;
-  --input: 240 6% 88%;
-  --ring: 348 100% 50%;
-  --radius: 0.5rem;
-  --font-inter: Inter;
-  --font-space-grotesk: "Space Grotesk";
-}
+@custom-variant dark (&:is(.dark *));
 
-.dark {
-  color-scheme: dark;
-  --background: 0 0% 4%;
-  --foreground: 0 0% 96%;
-  --card: 0 0% 7%;
-  --card-foreground: 0 0% 96%;
-  --popover: 0 0% 7%;
-  --popover-foreground: 0 0% 96%;
-  --muted: 0 0% 12%;
-  --muted-foreground: 0 0% 64%;
-  --border: 0 0% 16%;
-  --input: 0 0% 14%;
-}
-
-* {
-  border-color: hsl(var(--border));
-}
-
-html {
-  scroll-behavior: smooth;
-  background: #fafafa;
-}
-
-html.dark {
-  background: #0a0a0a;
-}
-
-body {
-  min-height: 100vh;
-  overflow-x: hidden;
-  background:
-    radial-gradient(circle at 15% -10%, rgba(255, 0, 51, 0.12), transparent 34rem),
-    radial-gradient(circle at 85% 12%, rgba(229, 9, 20, 0.08), transparent 30rem),
-    linear-gradient(180deg, #ffffff 0%, #f5f5f6 100%);
-  color: hsl(var(--foreground));
-  text-rendering: geometricPrecision;
-}
-
-html.dark body {
-  background:
-    radial-gradient(circle at 20% -10%, rgba(255, 0, 51, 0.18), transparent 34rem),
-    radial-gradient(circle at 80% 15%, rgba(229, 9, 20, 0.12), transparent 30rem),
-    #0a0a0a;
-}
-
-::selection {
-  background: rgba(255, 0, 51, 0.55);
-  color: white;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
   }
-
-  .glass {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.62));
-    border: 1px solid rgba(10, 10, 10, 0.1);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86), 0 20px 80px rgba(24, 24, 27, 0.1);
-    backdrop-filter: blur(20px);
+  @media (width >= 1280px) {
+    max-width: 1280px;
   }
+}
 
-  .dark .glass {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.045));
+@theme {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --font-sans: var(--font-inter), Inter, system-ui, sans-serif;
+  --font-display:
+    var(--font-space-grotesk), Space Grotesk, system-ui, sans-serif;
+
+  --shadow-glow: 0 0 60px rgba(255, 0, 51, 0.2);
+  --shadow-glow-strong: 0 0 100px rgba(255, 0, 51, 0.34);
+
+  --background-image-radial-red: radial-gradient(
+    circle at center,
+    rgba(255, 0, 51, 0.2),
+    transparent 48%
+  );
+  --background-image-grid-fade:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  /* Same grid for the light theme, where white hairlines are invisible. */
+  --background-image-grid-fade-light:
+    linear-gradient(rgba(10, 10, 20, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 10, 20, 0.04) 1px, transparent 1px);
+
+  --animate-shimmer: shimmer 2.6s ease-in-out infinite;
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-120%);
+    }
+    100% {
+      transform: translateX(120%);
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility glass {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.82),
+    rgba(255, 255, 255, 0.62)
+  );
+  border: 1px solid rgba(10, 10, 10, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.86),
+    0 20px 80px rgba(24, 24, 27, 0.1);
+  backdrop-filter: blur(20px);
+
+  .dark & {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.09),
+      rgba(255, 255, 255, 0.045)
+    );
     border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 20px 80px rgba(0, 0, 0, 0.28);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.09),
+      0 20px 80px rgba(0, 0, 0, 0.28);
   }
+}
 
-  .premium-border {
-    position: relative;
-  }
+@utility premium-border {
+  position: relative;
 
-  .premium-border::before {
-    content: "";
+  &::before {
+    content: '';
     position: absolute;
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(10, 10, 10, 0.14), rgba(255, 0, 51, 0.42), rgba(10, 10, 10, 0.05));
-    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    background: linear-gradient(
+      135deg,
+      rgba(10, 10, 10, 0.14),
+      rgba(255, 0, 51, 0.42),
+      rgba(10, 10, 10, 0.05)
+    );
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
     mask-composite: exclude;
     pointer-events: none;
   }
 
-  .dark .premium-border::before {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 0, 51, 0.52), rgba(255, 255, 255, 0.06));
+  .dark &::before {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.22),
+      rgba(255, 0, 51, 0.52),
+      rgba(255, 255, 255, 0.06)
+    );
   }
+}
 
-  .noise {
-    position: relative;
-  }
+@utility noise {
+  position: relative;
 
-  .noise::after {
-    content: "";
+  &::after {
+    content: '';
     pointer-events: none;
     position: absolute;
     inset: 0;
     opacity: 0.045;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.75'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  :root {
+    color-scheme: light;
+    --background: 0 0% 98%;
+    --foreground: 240 10% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 7%;
+    --primary: 348 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 240 5% 42%;
+    --accent: 348 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 6% 86%;
+    --input: 240 6% 88%;
+    --ring: 348 100% 50%;
+    --radius: 0.5rem;
+    --font-inter: Inter;
+    --font-space-grotesk: 'Space Grotesk';
+  }
+
+  .dark {
+    color-scheme: dark;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 96%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 64%;
+    --border: 0 0% 16%;
+    --input: 0 0% 14%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: #fafafa;
+  }
+
+  html.dark {
+    background: #0a0a0a;
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background:
+      radial-gradient(
+        circle at 15% -10%,
+        rgba(255, 0, 51, 0.12),
+        transparent 34rem
+      ),
+      radial-gradient(
+        circle at 85% 12%,
+        rgba(229, 9, 20, 0.08),
+        transparent 30rem
+      ),
+      linear-gradient(180deg, #ffffff 0%, #f5f5f6 100%);
+    color: hsl(var(--foreground));
+    text-rendering: geometricPrecision;
+  }
+
+  html.dark body {
+    background:
+      radial-gradient(
+        circle at 20% -10%,
+        rgba(255, 0, 51, 0.18),
+        transparent 34rem
+      ),
+      radial-gradient(
+        circle at 80% 15%,
+        rgba(229, 9, 20, 0.12),
+        transparent 30rem
+      ),
+      #0a0a0a;
+  }
+
+  ::selection {
+    background: rgba(255, 0, 51, 0.55);
+    color: white;
   }
 }
 
@@ -219,15 +342,16 @@ html:not(.dark) .border-white\/24 {
   border-color: rgb(16 16 20 / 0.1) !important;
 }
 
-html:not(.dark) [class~="bg-white/[0.025]"] {
+html:not(.dark) [class~="bg-white/2.5"] {
   background-color: rgb(244 244 245 / 0.78) !important;
 }
 
-html:not(.dark) [class~="bg-white/[0.045]"],
-html:not(.dark) [class~="bg-white/[0.05]"],
-html:not(.dark) [class~="bg-white/[0.06]"],
+html:not(.dark) [class~="bg-white/4.5"],
+html:not(.dark) [class~="bg-white/5"],
+html:not(.dark) [class~="bg-white/6"],
 html:not(.dark) [class~="bg-white/[0.07]"],
-html:not(.dark) [class~="bg-white/[0.1]"] {
+html:not(.dark) [class~="bg-white/8"],
+html:not(.dark) [class~="bg-white/10"] {
   background-color: rgb(255 255 255 / 0.82) !important;
 }
 
@@ -239,15 +363,14 @@ html:not(.dark) [class~="bg-black/50"] {
   background-color: rgb(255 255 255 / 0.74) !important;
 }
 
-html:not(.dark) [class~="bg-black/[0.76]"],
-html:not(.dark) [class~="bg-[#0a0a0a]/[0.96]"] {
+html:not(.dark) [class~="bg-black/76"],
+html:not(.dark) [class~="bg-[#0a0a0a]/96"] {
   background-color: rgb(255 255 255 / 0.88) !important;
 }
 
 html:not(.dark) .shadow-black,
 html:not(.dark) .shadow-black\/30 {
   --tw-shadow-color: rgb(24 24 27 / 0.12) !important;
-  --tw-shadow: var(--tw-shadow-colored) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

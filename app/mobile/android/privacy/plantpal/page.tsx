@@ -7,7 +7,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "PlantPal Privacy Policy",
   description:
-    "Privacy policy for PlantPal, a free houseplant care reminder app by MediaRiseGroup. PlantPal stores data locally and does not collect, sell, share, or transmit personal data.",
+    "Privacy policy for PlantPal, a free houseplant care reminder app by MediaRise. PlantPal stores data locally and does not collect, sell, share, or transmit personal data.",
   path: "/mobile/android/privacy/plantpal",
 });
 
@@ -15,7 +15,7 @@ const policySections = [
   {
     title: "Data Collection",
     icon: ShieldCheck,
-    body: "PlantPal does not collect, sell, share, or transmit personal data to MediaRiseGroup or third parties.",
+    body: "PlantPal does not collect, sell, share, or transmit personal data to MediaRise or third parties.",
   },
   {
     title: "Local Data",
@@ -62,7 +62,7 @@ export default function PlantPalPrivacyPage() {
             const Icon = section.icon;
 
             return (
-              <Card key={section.title} className="bg-white/[0.045] p-6">
+              <Card key={section.title} className="bg-white/4.5 p-6">
                 <div className="flex gap-4">
                   <div className="flex size-11 shrink-0 items-center justify-center rounded-md border border-red-400/30 bg-red-500/10 text-red-200">
                     <Icon className="size-5" />
@@ -76,9 +76,9 @@ export default function PlantPalPrivacyPage() {
             );
           })}
 
-          <Card className="bg-white/[0.045] p-6">
+          <Card className="bg-white/4.5 p-6">
             <h2 className="font-display text-2xl font-semibold text-white">Contact</h2>
-            <p className="mt-3 text-base leading-8 text-white/62">MediaRiseGroup.com</p>
+            <p className="mt-3 text-base leading-8 text-white/62">MediaRise.org</p>
           </Card>
         </div>
       </div>

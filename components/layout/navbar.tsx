@@ -15,10 +15,10 @@ import { ThemeToggle } from "./theme-toggle";
 
 function Logo() {
   return (
-    <Link href="/" className="group flex items-center gap-3" aria-label="MediaRiseGroup home">
+    <Link href="/" className="group flex items-center gap-3" aria-label="MediaRise home">
       <span className="relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-md border border-red-400/25 bg-white shadow-glow">
         <Image
-          src="/images/mediarisegroup-mark.png"
+          src="/images/mediarise-mark.png"
           alt=""
           width={512}
           height={512}
@@ -27,7 +27,7 @@ function Logo() {
         />
       </span>
       <span className="font-display text-base font-semibold tracking-normal text-foreground">
-        Media<span className="text-red-400">Rise</span>Group
+        Media<span className="text-red-400">Rise</span>
       </span>
     </Link>
   );
@@ -38,9 +38,15 @@ export function Navbar() {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [lastPathname, setLastPathname] = useState(pathname);
 
   useEffect(() => scrollY.on("change", (latest) => setScrolled(latest > 18)), [scrollY]);
-  useEffect(() => setOpen(false), [pathname]);
+
+  // Close the mobile menu whenever navigation happens.
+  if (lastPathname !== pathname) {
+    setLastPathname(pathname);
+    setOpen(false);
+  }
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-6">
@@ -48,7 +54,7 @@ export function Navbar() {
         className={cn(
           "mx-auto flex h-16 max-w-7xl items-center justify-between rounded-lg px-4 transition-all duration-300 md:px-5",
           scrolled
-            ? "border border-black/10 bg-white/[0.86] shadow-2xl shadow-black/10 backdrop-blur-2xl dark:border-white/10 dark:bg-black/[0.76] dark:shadow-black/30"
+            ? "border border-black/10 bg-white/86 shadow-2xl shadow-black/10 backdrop-blur-2xl dark:border-white/10 dark:bg-black/76 dark:shadow-black/30"
             : "glass",
         )}
       >
@@ -61,8 +67,8 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "rounded-md px-3 py-2 text-sm font-medium text-foreground/66 transition hover:bg-black/[0.05] hover:text-foreground dark:text-white/66 dark:hover:bg-white/[0.06] dark:hover:text-white",
-                  active && "bg-black/[0.05] text-foreground dark:bg-white/[0.07] dark:text-white",
+                  "rounded-md px-3 py-2 text-sm font-medium text-foreground/66 transition hover:bg-black/5 hover:text-foreground dark:text-white/66 dark:hover:bg-white/6 dark:hover:text-white",
+                  active && "bg-black/5 text-foreground dark:bg-white/[0.07] dark:text-white",
                 )}
               >
                 {item.label}
@@ -87,7 +93,7 @@ export function Navbar() {
               <Dialog.Portal forceMount>
                 <Dialog.Overlay asChild>
                   <motion.div
-                    className="fixed inset-0 z-50 bg-black/45 backdrop-blur-sm dark:bg-black/70"
+                    className="fixed inset-0 z-50 bg-black/45 backdrop-blur-xs dark:bg-black/70"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -95,7 +101,7 @@ export function Navbar() {
                 </Dialog.Overlay>
                 <Dialog.Content asChild>
                   <motion.div
-                    className="fixed inset-x-3 top-3 z-50 rounded-lg border border-black/10 bg-white/[0.96] p-4 shadow-2xl shadow-red-950/10 dark:border-white/10 dark:bg-[#0a0a0a]/[0.96] dark:shadow-red-950/25"
+                    className="fixed inset-x-3 top-3 z-50 rounded-lg border border-black/10 bg-white/96 p-4 shadow-2xl shadow-red-950/10 dark:border-white/10 dark:bg-[#0a0a0a]/96 dark:shadow-red-950/25"
                     initial={{ opacity: 0, y: -12, scale: 0.98 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -12, scale: 0.98 }}
@@ -113,7 +119,7 @@ export function Navbar() {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="rounded-md px-3 py-3 text-base font-medium text-foreground/80 transition hover:bg-black/[0.05] hover:text-foreground dark:text-white/80 dark:hover:bg-white/[0.07] dark:hover:text-white"
+                          className="rounded-md px-3 py-3 text-base font-medium text-foreground/80 transition hover:bg-black/5 hover:text-foreground dark:text-white/80 dark:hover:bg-white/[0.07] dark:hover:text-white"
                         >
                           {item.label}
                         </Link>

@@ -1,15 +1,15 @@
 [Unit]
-Description=MediaRiseGroup Next.js site
+Description=MediaRise Next.js site
 After=network.target
 
 [Service]
 Type=simple
 User=www-data
 Group=www-data
-WorkingDirectory=/var/www/mediarisegroup
+WorkingDirectory=/var/www/mediarise
 
 # PORT, LISTEN_HOST, SITE_URL и др. — в файле .env в WorkingDirectory
-EnvironmentFile=-/var/www/mediarisegroup/.env
+EnvironmentFile=-/var/www/mediarise/.env
 Environment=NODE_ENV=production
 
 # Не запускайте здесь `yarn build`: перед деплоем собирайте вручную или в CI.

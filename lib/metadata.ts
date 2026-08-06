@@ -23,14 +23,14 @@ export function createMetadata({
       title,
       description,
       url,
-      siteName: "MediaRiseGroup",
+      siteName: "MediaRise",
       type: "website",
       images: [
         {
           url: `${siteUrl}/images/og.svg`,
           width: 1200,
           height: 630,
-          alt: "MediaRiseGroup premium technology studio",
+          alt: "MediaRise premium technology studio",
         },
       ],
     },

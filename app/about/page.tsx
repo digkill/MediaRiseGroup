@@ -8,7 +8,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "About",
-  description: "Learn about MediaRiseGroup, a premium technology company building mobile apps, web platforms, AI systems, robotics automation, and IoT solutions.",
+  description: "Learn about MediaRise, a premium technology company building mobile apps, web platforms, AI systems, robotics automation, and IoT solutions.",
   path: "/about",
 });
 
@@ -24,12 +24,12 @@ export default function AboutPage() {
     <>
       <section className="container pt-36 pb-20">
         <Reveal>
-          <Badge>About MediaRiseGroup</Badge>
+          <Badge>About MediaRise</Badge>
           <h1 className="mt-6 max-w-5xl font-display text-5xl font-semibold tracking-normal text-white text-balance md:text-7xl">
             A senior technology studio for products with real complexity.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/62">
-            MediaRiseGroup partners with founders and operators to design, build, and scale software that crosses mobile, web, AI, robotics, automation, and IoT.
+            MediaRise partners with founders and operators to design, build, and scale software that crosses mobile, web, AI, robotics, automation, and IoT.
           </p>
         </Reveal>
       </section>
@@ -40,7 +40,7 @@ export default function AboutPage() {
             const Icon = value.icon;
             return (
               <Reveal key={value.title} delay={index * 0.05}>
-                <Card className="h-full bg-white/[0.045] p-6">
+                <Card className="h-full bg-white/4.5 p-6">
                   <Icon className="size-6 text-red-300" />
                   <h2 className="mt-5 font-display text-xl font-semibold text-white">{value.title}</h2>
                   <p className="mt-3 text-sm leading-6 text-white/58">{value.text}</p>
@@ -51,7 +51,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] py-24">
+      <section className="border-y border-white/10 bg-white/2.5 py-24">
         <div className="container grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <SectionHeading

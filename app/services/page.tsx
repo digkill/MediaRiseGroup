@@ -11,7 +11,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "Services",
-  description: "Explore MediaRiseGroup services across mobile apps, web platforms, AI, machine learning, robotics, automation, and IoT solutions.",
+  description: "Explore MediaRise services across mobile apps, web platforms, AI, machine learning, robotics, automation, and IoT solutions.",
   path: "/services",
 });
 
@@ -25,7 +25,7 @@ export default function ServicesPage() {
             Digital product engineering for ambitious technical roadmaps.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/62">
-            MediaRiseGroup covers the full lifecycle: product strategy, UX systems, application engineering, AI integration, robotics interfaces, IoT architecture, and launch support.
+            MediaRise covers the full lifecycle: product strategy, UX systems, application engineering, AI integration, robotics interfaces, IoT architecture, and launch support.
           </p>
         </Reveal>
       </section>
@@ -36,7 +36,7 @@ export default function ServicesPage() {
             const Icon = service.icon;
             return (
               <Reveal key={service.id} delay={index * 0.04}>
-                <Card id={service.id} className="scroll-mt-28 overflow-hidden bg-white/[0.045] p-6 md:p-8">
+                <Card id={service.id} className="scroll-mt-28 overflow-hidden bg-white/4.5 p-6 md:p-8">
                   <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
                     <div>
                       <div className="flex size-12 items-center justify-center rounded-md border border-red-400/30 bg-red-500/10 text-red-200">
@@ -62,7 +62,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] py-24">
+      <section className="border-y border-white/10 bg-white/2.5 py-24">
         <div className="container">
           <Reveal>
             <SectionHeading eyebrow="Process" title="A delivery model that keeps strategy and engineering connected." />
@@ -70,7 +70,7 @@ export default function ServicesPage() {
           <div className="mt-12 grid gap-4 md:grid-cols-4">
             {process.map((item, index) => (
               <Reveal key={item.title} delay={index * 0.05}>
-                <Card className="h-full bg-white/[0.045] p-6">
+                <Card className="h-full bg-white/4.5 p-6">
                   <div className="text-sm font-semibold text-red-200">0{index + 1}</div>
                   <h3 className="mt-5 font-display text-xl font-semibold text-white">{item.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-white/58">{item.description}</p>

@@ -12,7 +12,7 @@ export function Footer() {
           <Link href="/" className="inline-flex items-center gap-3 font-display text-xl font-semibold text-white">
             <span className="flex size-11 items-center justify-center overflow-hidden rounded-md border border-red-400/25 bg-white">
               <Image
-                src="/images/mediarisegroup-mark.png"
+                src="/images/mediarise-mark.png"
                 alt=""
                 width={512}
                 height={512}
@@ -20,7 +20,7 @@ export function Footer() {
               />
             </span>
             <span>
-              Media<span className="text-red-400">Rise</span>Group
+              Media<span className="text-red-400">Rise</span>
             </span>
           </Link>
           <p className="mt-4 max-w-md text-sm leading-6 text-white/58">
@@ -55,7 +55,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container border-t border-white/10 py-5 text-xs text-white/42">
-        (c) {new Date().getFullYear()} MediaRiseGroup. All rights reserved.
+        (c) {new Date().getFullYear()} MediaRise. All rights reserved.
       </div>
     </footer>
   );

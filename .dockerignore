@@ -1,0 +1,36 @@
+# Build artefacts and deps — reinstalled/rebuilt inside the image
+node_modules
+.next
+out
+build
+dist
+*.tsbuildinfo
+
+# Not part of the frontend image
+backend
+deploy
+scripts/start.mjs
+
+# VCS and tooling
+.git
+.gitignore
+.github
+.vscode
+.idea
+.claude
+.codex
+.cursor
+
+# Secrets — SITE_URL is passed as a build arg instead
+.env
+.env.*
+!.env.example
+
+# Noise
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+README.md

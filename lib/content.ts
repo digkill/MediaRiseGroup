@@ -73,7 +73,9 @@ export const featuredProjects = [
     category: "Mobile + AI",
     description: "AI plant recognition, personalized care plans, reminders, and a calm mobile community experience.",
     tags: ["iOS", "Android", "Computer Vision"],
-    accent: "from-emerald-400/20 via-red-500/20 to-white/10",
+    // Brand red only; cards differ by the anchor point of the glow, not by hue.
+    accent:
+      "bg-[radial-gradient(110%_80%_at_12%_0%,rgba(255,0,51,.11),transparent_55%)] dark:bg-[radial-gradient(110%_80%_at_12%_0%,rgba(255,0,51,.30),transparent_58%)]",
   },
   {
     title: "NeuroOps Control",
@@ -81,7 +83,8 @@ export const featuredProjects = [
     category: "AI Automation",
     description: "Autonomous workflow orchestration for operations teams with auditability and human approvals.",
     tags: ["Agents", "Analytics", "Workflow"],
-    accent: "from-red-500/30 via-white/10 to-zinc-900",
+    accent:
+      "bg-[radial-gradient(110%_80%_at_88%_0%,rgba(255,0,51,.10),transparent_55%)] dark:bg-[radial-gradient(110%_80%_at_88%_0%,rgba(255,0,51,.26),transparent_58%)]",
   },
   {
     title: "Atlas Robotics",
@@ -89,7 +92,8 @@ export const featuredProjects = [
     category: "Robotics",
     description: "Fleet telemetry, predictive maintenance, and real-time command surfaces for warehouse robotics.",
     tags: ["Robotics", "IoT", "Realtime"],
-    accent: "from-zinc-200/15 via-red-500/25 to-black",
+    accent:
+      "bg-[radial-gradient(120%_85%_at_50%_0%,rgba(255,0,51,.09),transparent_58%)] dark:bg-[radial-gradient(120%_85%_at_50%_0%,rgba(255,0,51,.22),transparent_60%)]",
   },
 ];
 
@@ -118,7 +122,7 @@ export const whyUs = [
 
 export const testimonials = [
   {
-    quote: "MediaRiseGroup brought the clarity of a senior product team and the execution speed of a focused studio.",
+    quote: "MediaRise brought the clarity of a senior product team and the execution speed of a focused studio.",
     name: "Elena V.",
     role: "Founder, HealthTech platform",
   },
@@ -239,22 +243,22 @@ export const androidBenefits = [
 ];
 
 export const contactCards = [
-  { title: "New products", value: "hello@mediarisegroup.com" },
-  { title: "Partnerships", value: "partners@mediarisegroup.com" },
+  { title: "New products", value: "hello@mediarise.org" },
+  { title: "Partnerships", value: "partners@mediarise.org" },
   { title: "Office", value: "Remote-first studio serving global clients" },
 ];
 
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "MediaRiseGroup",
+  name: "MediaRise",
   url: siteUrl,
-  logo: `${siteUrl}/images/mediarisegroup-logo.png`,
+  logo: `${siteUrl}/images/mediarise-logo.png`,
   sameAs: [siteUrl],
   description: "Premium technology company specializing in mobile apps, web platforms, AI, robotics, IoT, and digital transformation.",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "sales",
-    email: "hello@mediarisegroup.com",
+    email: "hello@mediarise.org",
   },
 };

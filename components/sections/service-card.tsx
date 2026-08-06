@@ -14,8 +14,8 @@ export function ServiceCard({ service, index }: { service: Service; index: numbe
   return (
     <Reveal delay={index * 0.05}>
       <Link href={service.href} className="group block h-full">
-        <Card className="premium-border relative h-full overflow-hidden bg-white/[0.045] transition duration-300 hover:-translate-y-1 hover:bg-white/[0.07] hover:shadow-glow">
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-400/70 to-transparent" />
+        <Card className="premium-border relative h-full overflow-hidden bg-white/4.5 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.07] hover:shadow-glow">
+          <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-red-400/70 to-transparent" />
           <CardHeader>
             <div className="mb-5 flex items-center justify-between">
               <div className="flex size-11 items-center justify-center rounded-md border border-red-400/30 bg-red-500/10 text-red-200">

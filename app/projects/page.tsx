@@ -10,7 +10,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "Projects",
-  description: "Explore MediaRiseGroup portfolio concepts across mobile, AI, robotics, and web platforms, including the PlantPal AI plant care app.",
+  description: "Explore MediaRise portfolio concepts across mobile, AI, robotics, and web platforms, including the PlantPal AI plant care app.",
   path: "/projects",
 });
 
@@ -24,7 +24,7 @@ export default function ProjectsPage() {
             Portfolio systems across mobile, AI, robotics, and complex web.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/62">
-            Selected work concepts showing the product quality, technical range, and interface polish MediaRiseGroup brings to every engagement.
+            Selected work concepts showing the product quality, technical range, and interface polish MediaRise brings to every engagement.
           </p>
         </Reveal>
       </section>
@@ -33,7 +33,7 @@ export default function ProjectsPage() {
         <ProjectsFilter />
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] py-24">
+      <section className="border-y border-white/10 bg-white/2.5 py-24">
         <div className="container grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <Reveal>
             <SectionHeading

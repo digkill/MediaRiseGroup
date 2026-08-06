@@ -11,7 +11,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "Native Mobile App Development",
-  description: "Native iOS and Android development by MediaRiseGroup with Swift, Kotlin, React Native, Flutter, product strategy, and launch support.",
+  description: "Native iOS and Android development by MediaRise with Swift, Kotlin, React Native, Flutter, product strategy, and launch support.",
   path: "/mobile",
 });
 
@@ -53,14 +53,14 @@ export default function MobilePage() {
         </Reveal>
         <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {technologies.map((tech) => (
-            <Card key={tech} className="bg-white/[0.045] p-5 text-center font-semibold text-white">
+            <Card key={tech} className="bg-white/4.5 p-5 text-center font-semibold text-white">
               {tech}
             </Card>
           ))}
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] py-24">
+      <section className="border-y border-white/10 bg-white/2.5 py-24">
         <div className="container grid gap-12 lg:grid-cols-2">
           <Reveal>
             <SectionHeading
@@ -71,7 +71,7 @@ export default function MobilePage() {
           </Reveal>
           <div className="grid gap-4">
             {benefits.map((benefit) => (
-              <Card key={benefit} className="flex items-center gap-4 bg-white/[0.045] p-5">
+              <Card key={benefit} className="flex items-center gap-4 bg-white/4.5 p-5">
                 <CheckCircle2 className="size-5 shrink-0 text-red-300" />
                 <span className="text-white/72">{benefit}</span>
               </Card>
