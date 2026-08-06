@@ -72,10 +72,10 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Featured work"
               title="Selected systems with serious product depth."
-              description="Portfolio concepts represent the type of design, engineering, and product architecture MediaRise delivers."
+              description="Products we designed, engineered and shipped end to end."
             />
           </Reveal>
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
             {featuredProjects.map((project) => (
               <Reveal key={project.title}>
                 <FeaturedProjectCard project={project} />

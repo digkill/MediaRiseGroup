@@ -68,32 +68,24 @@ export const stats = [
 
 export const featuredProjects = [
   {
-    title: "PlantPal",
-    href: "/plantpal",
-    category: "Mobile + AI",
-    description: "AI plant recognition, personalized care plans, reminders, and a calm mobile community experience.",
-    tags: ["iOS", "Android", "Computer Vision"],
+    title: "Vibe Video",
+    href: "https://vibevideo.fun",
+    category: "iOS + macOS",
+    description:
+      "Short-form video editor for iPhone, iPad and Mac: multitrack timeline, green-screen overlays, stickers and one-tap export to social formats.",
+    tags: ["Swift", "AVFoundation", "App Store"],
     // Brand red only; cards differ by the anchor point of the glow, not by hue.
     accent:
       "bg-[radial-gradient(110%_80%_at_12%_0%,rgba(255,0,51,.11),transparent_55%)] dark:bg-[radial-gradient(110%_80%_at_12%_0%,rgba(255,0,51,.30),transparent_58%)]",
   },
   {
-    title: "NeuroOps Control",
-    href: "/projects",
-    category: "AI Automation",
-    description: "Autonomous workflow orchestration for operations teams with auditability and human approvals.",
-    tags: ["Agents", "Analytics", "Workflow"],
+    title: "PlantPal",
+    href: "/plantpal",
+    category: "Mobile + AI",
+    description: "AI plant recognition, personalized care plans, reminders, and a calm mobile community experience.",
+    tags: ["Kotlin", "Compose", "Computer Vision"],
     accent:
       "bg-[radial-gradient(110%_80%_at_88%_0%,rgba(255,0,51,.10),transparent_55%)] dark:bg-[radial-gradient(110%_80%_at_88%_0%,rgba(255,0,51,.26),transparent_58%)]",
-  },
-  {
-    title: "Atlas Robotics",
-    href: "/projects",
-    category: "Robotics",
-    description: "Fleet telemetry, predictive maintenance, and real-time command surfaces for warehouse robotics.",
-    tags: ["Robotics", "IoT", "Realtime"],
-    accent:
-      "bg-[radial-gradient(120%_85%_at_50%_0%,rgba(255,0,51,.09),transparent_58%)] dark:bg-[radial-gradient(120%_85%_at_50%_0%,rgba(255,0,51,.22),transparent_60%)]",
   },
 ];
 
@@ -188,8 +180,6 @@ export const process = [
   { title: "Scale", description: "Launch support, monitoring, optimization, roadmap planning, and growth experiments." },
 ];
 
-export const projectFilters = ["All", "Mobile", "AI", "Robotics", "Web"];
-
 export type PortfolioProject = {
   title: string;
   category: string;
@@ -218,35 +208,14 @@ export const projects: PortfolioProject[] = [
     title: "PlantPal",
     category: "Mobile",
     type: "AI plant care app",
-    description: "Flagship consumer app with AI identification, care reminders, disease hints, and community loops.",
+    description: "Consumer app with AI plant identification, personalized care plans, reminders, and community collections.",
     href: "/plantpal",
-    metrics: ["91% week-one task completion", "34% reminder conversion lift"],
-  },
-  {
-    title: "VisionLine QA",
-    category: "AI",
-    type: "Computer vision inspection",
-    description: "Realtime production-line anomaly detection dashboard with model confidence workflows.",
-    href: "/projects",
-    metrics: ["23ms edge inference", "42% fewer manual reviews"],
-  },
-  {
-    title: "FleetCore",
-    category: "Robotics",
-    type: "Robotics operations suite",
-    description: "Command center for autonomous warehouse units with telemetry, routes, and maintenance signals.",
-    href: "/projects",
-    metrics: ["800+ devices monitored", "99.9% event ingestion"],
-  },
-  {
-    title: "PulseDesk",
-    category: "Web",
-    type: "SaaS analytics platform",
-    description: "Executive analytics workspace for distributed teams with permissions and realtime reporting.",
-    href: "/projects",
-    metrics: ["4.8s to 1.1s dashboard load", "18 markets launched"],
+    metrics: ["Kotlin and Jetpack Compose, Play Store release in preparation", "Stores data on device — nothing collected or shared"],
   },
 ];
+
+/** Derived from the data so a filter can never point at an empty result set. */
+export const projectFilters = ["All", ...Array.from(new Set(projects.map((project) => project.category)))];
 
 export const plantPalFeatures = [
   "AI plant identification from a single photo",

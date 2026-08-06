@@ -24,7 +24,7 @@ export default function ProjectsPage() {
             Portfolio systems across mobile, AI, robotics, and complex web.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/62">
-            Selected work concepts showing the product quality, technical range, and interface polish MediaRise brings to every engagement.
+            Products we designed and engineered end to end, from the first prototype through store release.
           </p>
         </Reveal>
       </section>

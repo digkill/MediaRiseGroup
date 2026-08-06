@@ -34,7 +34,7 @@ const cardBase =
 
 export function FeaturedProjectCard({ project }: { project: Featured }) {
   return (
-    <Link href={project.href} className="group block h-full">
+    <SmartLink href={project.href} className="group block h-full">
       <Card className={cn(cardBase, "flex min-h-[320px] flex-col p-6")}>
         <div className={cn("pointer-events-none absolute inset-0", project.accent)} />
         <div className="pointer-events-none absolute inset-0 bg-grid-fade-light bg-size-[26px_26px] dark:bg-grid-fade" />
@@ -58,7 +58,7 @@ export function FeaturedProjectCard({ project }: { project: Featured }) {
           </div>
         </div>
       </Card>
-    </Link>
+    </SmartLink>
   );
 }
 
