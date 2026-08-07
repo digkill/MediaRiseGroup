@@ -217,6 +217,20 @@ export const projects: PortfolioProject[] = [
     ],
   },
   {
+    title: "Platinum OS One",
+    category: "Systems",
+    type: "Linux platform & Rust build system",
+    description:
+      "A universal Linux platform for bootable images: one Ubuntu Base userspace and one package set across phones, tablets, PCs and robots, driven by a Rust build pipeline and a Qt/QML device shell.",
+    href: "https://github.com/digkill/Platinum-OS",
+    metrics: [
+      "Ten-crate Rust workspace; board support ships as TOML data, not engine branches",
+      "Board targets: Orange Pi Zero 3W, Raspberry Pi 5, Parallels ARM64",
+    ],
+    image: "/images/projects/platinum/shell-apps.webp",
+    imageAlt: "Platinum OS shell on a landscape display: the Applications grid with Calendar, Clock, Contacts, AI, Files, Terminal and Messages",
+  },
+  {
     title: "PlantPal",
     category: "Mobile",
     type: "AI plant care app",
