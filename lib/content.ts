@@ -205,6 +205,18 @@ export const projects: PortfolioProject[] = [
     imageAlt: "Vibe Video editor on macOS: multitrack timeline with a chroma-key overlay and the layer inspector",
   },
   {
+    title: "Rush Messanger",
+    category: "Mobile",
+    type: "End-to-end encrypted messenger",
+    description:
+      "Direct messages, groups, channels and WebRTC audio/video calls across native iOS and Android clients, a Tauri desktop app and a Rust realtime backend.",
+    href: "https://www.rushmessanger.com",
+    metrics: [
+      "Rust server with native iOS, Android and Tauri desktop clients",
+      "E2EE by X25519/ECDH exchange and AES-256-GCM — private keys stay on device",
+    ],
+  },
+  {
     title: "PlantPal",
     category: "Mobile",
     type: "AI plant care app",
