@@ -231,6 +231,20 @@ export const projects: PortfolioProject[] = [
     imageAlt: "Platinum OS shell on a landscape display: the Applications grid with Calendar, Clock, Contacts, AI, Files, Terminal and Messages",
   },
   {
+    title: "Hunter Demons",
+    category: "Games",
+    type: "3D action game on Godot",
+    description:
+      "Wave-based demon hunting with a cyber-sakura katana: touch-first controls, eight enemy types with two bosses, and levels from a neon district to a flooded temple.",
+    href: "https://github.com/digkill/HunterDemons",
+    metrics: [
+      "Godot 4.6 with the mobile renderer and Jolt physics; 7.6k lines of GDScript",
+      "Export targets for iOS, Android, macOS, Windows and Raspberry Pi arm64",
+    ],
+    image: "/images/projects/hunterdemons/neon-district.webp",
+    imageAlt: "Hunter Demons gameplay: the heroine Yukka facing a demon in a neon-lit district, with health, mana and Dragon Spirit meters and on-screen touch controls",
+  },
+  {
     title: "PlantPal",
     category: "Mobile",
     type: "AI plant care app",
