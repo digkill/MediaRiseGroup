@@ -9,9 +9,14 @@ import { ServiceCard } from "@/components/sections/service-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { featuredProjects, services, stats, testimonials, whyUs } from "@/lib/content";
+import { services, stats, testimonials, whyUs } from "@/lib/content";
 
-export default function HomePage() {
+import { getProjects } from "@/lib/portfolio-data";
+
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const featuredProjects = (await getProjects()).filter(project => project.featured);
   return (
     <>
       <section className="noise relative flex min-h-screen items-center overflow-hidden pt-28">
@@ -66,13 +71,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/2.5 py-24">
+      {featuredProjects.length > 0 && <section className="border-y border-white/10 bg-white/2.5 py-24">
         <div className="container">
           <Reveal>
             <SectionHeading
-              eyebrow="Портфолио"
-              title="Приложения и платформы MediaRise."
-              description="Возможности продуктов, реальные интерфейсы и подробности разработки."
+              eyebrow="Portfolio"
+              title="Applications and platforms by MediaRise."
+              description="Product capabilities, real interfaces and the work behind them."
             />
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-2">
@@ -82,9 +87,9 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
-          <Button asChild variant="secondary" className="mt-8"><Link href="/projects">Все проекты <ArrowRight /></Link></Button>
+          <Button asChild variant="secondary" className="mt-8"><Link href="/projects">All projects <ArrowRight /></Link></Button>
         </div>
-      </section>
+      </section>}
 
       <section className="container py-24">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">

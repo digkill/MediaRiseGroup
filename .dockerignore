@@ -6,9 +6,16 @@ build
 dist
 *.tsbuildinfo
 
-# Not part of the frontend image
-backend
-deploy
+# Development-only backend files
+backend/vendor
+backend/node_modules
+backend/.env
+backend/.env.*
+backend/storage/logs/*
+backend/storage/framework/*
+backend/bootstrap/cache/*.php
+backend/tests
+backend/database/*.sqlite
 scripts/start.mjs
 
 # VCS and tooling
@@ -34,3 +41,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 README.md
+
+# Keep local account credentials and test artefacts out of images
+.private

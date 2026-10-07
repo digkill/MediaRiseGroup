@@ -16,7 +16,7 @@ import { siteUrl } from "./site";
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/projects", label: "Портфолио" },
+  { href: "/projects", label: "Portfolio" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -64,29 +64,6 @@ export const stats = [
   { value: "12", label: "Industries served" },
   { value: "99.95%", label: "Target platform uptime" },
   { value: "6wk", label: "Prototype sprint" },
-];
-
-export const featuredProjects = [
-  {
-    title: "Vibe Video",
-    href: "/projects/vibe-video",
-    image: "/images/projects/vibevideo/mac-editor.webp",
-    imageAlt: "Многодорожечный монтаж в Vibe Video на Mac",
-    category: "iOS · iPadOS · macOS",
-    description: "Видеоредактор с многодорожечным монтажом, хромакеем, работой со звуком и экспортом до 8K.",
-    tags: ["SwiftUI", "AVFoundation", "Vision"],
-    accent: "bg-[radial-gradient(110%_80%_at_12%_0%,rgba(255,0,51,.12),transparent_55%)]",
-  },
-  {
-    title: "LeadWise",
-    href: "/projects/leadwise",
-    image: "/images/projects/leadwise/groups.webp",
-    imageAlt: "Учебные группы LeadWise на демонстрационных данных",
-    category: "Образовательная платформа",
-    description: "Рабочая среда онлайн-школы: ученики, группы, курсы, расписание, материалы уроков и домашние задания.",
-    tags: ["Laravel", "Vue", "MySQL"],
-    accent: "bg-[radial-gradient(110%_80%_at_88%_0%,rgba(255,0,51,.12),transparent_55%)]",
-  },
 ];
 
 export const whyUs = [
@@ -180,7 +157,6 @@ export const process = [
   { title: "Scale", description: "Launch support, monitoring, optimization, roadmap planning, and growth experiments." },
 ];
 
-export { projects, projectFilters } from "./portfolio";
 export type { PortfolioProject } from "./portfolio";
 
 export const vibeVideo = {

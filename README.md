@@ -13,33 +13,58 @@ yarn dev
 
 Open `http://localhost:3000`.
 
-## Backend
+## Portfolio CMS
 
-Laravel backend is installed in `backend/` and configured for MySQL.
+Public portfolio pages use English only. Russian copy is retained in the protected
+editor. `/admin` requires an administrator account; there is no public registration.
+The **Published** checkbox controls the catalog and project detail page. **On homepage**
+controls the homepage independently, and only published projects can appear there.
+Changes take effect on the next page load without rebuilding the site.
 
 ```bash
 cd backend
+composer install
 cp .env.example .env
 php artisan key:generate
+# Configure DB_* in backend/.env before migrating.
 php artisan migrate
+php artisan db:seed --class=PortfolioSeeder
+php artisan portfolio:admin admin@example.com
 php artisan serve --port=8001
 ```
 
-Set remote MySQL credentials in `backend/.env` before running migrations:
+Set `PORTFOLIO_API_URL=http://127.0.0.1:8001` in the root `.env.local` and run
+`yarn dev`. Without this variable, the frontend uses the English seed in read-only
+mode. With it configured, API failures never fall back to publishing seed records.
 
-```env
-DB_HOST=remote-mysql-host
-DB_PORT=3306
-DB_DATABASE=mediarise
-DB_USERNAME=remote-mysql-user
-DB_PASSWORD=remote-mysql-password
-```
+The editor manages English and Russian copy, features, technology, platforms,
+status, links, order, image uploads, captions, publication, and homepage selection.
+Deletion archives a project; restoring it creates a hidden draft. Simultaneous edits
+are protected by a version check. Uploaded JPEG, PNG and WebP images are stored in
+the database, so deployments do not remove them.
 
-API health check:
+## Production
 
-```bash
-curl http://127.0.0.1:8001/api/health
-```
+The Docker image runs nginx on port 3000, Next.js on internal port 3001, and PHP-FPM.
+Nginx sends `/admin`, `/portfolio-media/*`, `/api/portfolio` and `/api/cms-health` to
+Laravel. Next fetches the public CMS API server-side without caching.
+
+Configure runtime environment variables in the hosting application:
+`APP_KEY` (Laravel base64 key), `APP_URL=https://mediarise.org`, `DB_CONNECTION=mysql`,
+`DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`, and
+`SESSION_COOKIE=mediarise_admin_session`. Keep secrets outside the repository and
+build arguments. Secure session cookies are enabled by the production image.
+
+Startup runs migrations and inserts missing seed projects. It never overwrites
+editor changes or restores archived records. Create the initial administrator in
+the running container using `php artisan portfolio:admin EMAIL`; automated setup
+can read a protected file using `--password-file=/dev/stdin`.
+
+Back up the complete CMS database (including projects, translations, media and
+users) and preserve `APP_KEY`. `/api/health` checks both the frontend and CMS;
+`/api/cms-health` checks database availability without disclosing connection data.
+
+Validation: `yarn lint`, `yarn build`, and `cd backend && php artisan test`.
 
 ## Build
 

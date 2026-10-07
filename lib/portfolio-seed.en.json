@@ -1,0 +1,754 @@
+[
+  {
+    "slug": "vibe-video",
+    "title": "Vibe Video",
+    "category": "Apps",
+    "type": "Video editor for iPhone, iPad and Mac",
+    "status": "Live",
+    "description": "A native video editor for cutting footage, working with audio and preparing videos for publication. Multitrack editing, effects and export are available in one application.",
+    "audience": "Video creators, bloggers and content teams.",
+    "features": [
+      "Multitrack timeline with trimming, splitting and layer ordering",
+      "Chroma key, background removal and person masks",
+      "Text, stickers, transitions and downloadable video packs",
+      "Voice-over and camera recording directly into a project",
+      "4K H.264 and 8K HEVC export with social format presets",
+      "Saved projects and automatic recovery"
+    ],
+    "stack": [
+      "SwiftUI",
+      "AVFoundation",
+      "Vision"
+    ],
+    "platforms": [
+      "iOS",
+      "iPadOS",
+      "macOS"
+    ],
+    "website": "https://vibevideo.fun",
+    "screenshots": [
+      {
+        "src": "/images/projects/vibevideo/mac-editor.webp",
+        "alt": "macOS editor with preview, layers and a multitrack timeline",
+        "caption": "macOS editor with preview, layers and a multitrack timeline"
+      },
+      {
+        "src": "/images/projects/vibevideo/iphone-editor.webp",
+        "alt": "Touch editing on iPhone",
+        "caption": "Touch editing on iPhone"
+      },
+      {
+        "src": "/images/projects/vibevideo/ipad-editor.webp",
+        "alt": "Workspace and inspector on iPad",
+        "caption": "Workspace and inspector on iPad"
+      },
+      {
+        "src": "/images/projects/vibevideo/mac-text.webp",
+        "alt": "Text styling over video",
+        "caption": "Text styling over video"
+      }
+    ],
+    "featured": true,
+    "position": 10
+  },
+  {
+    "slug": "again-cleaner",
+    "title": "Again Cleaner",
+    "category": "Apps",
+    "type": "Disk analysis and cleanup for macOS",
+    "status": "Live",
+    "description": "See what occupies your Mac’s storage, find caches and temporary files, and choose what to remove. Dedicated tools cover development build artifacts and large files.",
+    "audience": "Mac users and developers who want control over their storage.",
+    "features": [
+      "Storage overview and Smart Scan results",
+      "Application caches, browser caches and temporary data",
+      "Detection of project dependencies and build artifacts",
+      "Large-file search and favourite locations",
+      "File selection before cleanup, with Trash used by default",
+      "Progress feedback and protection against repeated cleanup actions"
+    ],
+    "stack": [
+      "Swift",
+      "SwiftUI"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "website": "https://againcleaner.com",
+    "screenshots": [
+      {
+        "src": "/images/projects/again-cleaner/overview.webp",
+        "alt": "Disk usage overview in Again Cleaner",
+        "caption": "Disk usage overview in Again Cleaner"
+      },
+      {
+        "src": "/images/projects/again-cleaner/smart.webp",
+        "alt": "Smart Scan results with cleanup categories",
+        "caption": "Smart Scan results with cleanup categories"
+      },
+      {
+        "src": "/images/projects/again-cleaner/junk.webp",
+        "alt": "Temporary files and cache categories",
+        "caption": "Temporary files and cache categories"
+      }
+    ],
+    "featured": false,
+    "position": 20
+  },
+  {
+    "slug": "leadwise",
+    "title": "LeadWise",
+    "category": "Web platforms",
+    "type": "Management platform for online schools",
+    "status": "In development",
+    "description": "A shared workspace for education providers, covering courses, study groups, timetables, lesson materials and homework. Administrators, teachers and students have dedicated workflows.",
+    "audience": "Online schools and supplementary education centres.",
+    "features": [
+      "Students, study groups and lesson management",
+      "Courses, lesson materials and content previews",
+      "Timetables with access to group management",
+      "Homework with text, attachments and teacher feedback",
+      "Role-based access and organisation management",
+      "Custom branding for the learning platform"
+    ],
+    "stack": [
+      "Laravel",
+      "Vue",
+      "MySQL"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://lk.leadwise.study",
+    "screenshots": [
+      {
+        "src": "/images/projects/leadwise/groups.webp",
+        "alt": "LeadWise study groups and filters — demonstration data",
+        "caption": "LeadWise study groups and filters — demonstration data"
+      },
+      {
+        "src": "/images/projects/leadwise/courses.webp",
+        "alt": "LeadWise course catalogue — demonstration data",
+        "caption": "LeadWise course catalogue — demonstration data"
+      },
+      {
+        "src": "/images/projects/leadwise/lessons.webp",
+        "alt": "LeadWise lesson editor — demonstration data",
+        "caption": "LeadWise lesson editor — demonstration data"
+      }
+    ],
+    "featured": true,
+    "position": 30
+  },
+  {
+    "slug": "codeclass",
+    "title": "CodeClass / Kvantastika",
+    "category": "Web platforms",
+    "type": "ERP for a network of education centres",
+    "status": "Live",
+    "description": "Development of an ERP that connects schools and franchise operations: students, groups, scheduling, payments and teaching. Financial transactions are linked to lesson access and learning history.",
+    "audience": "School networks, franchise operators, administrators and teachers.",
+    "features": [
+      "Students, groups and paid lesson balances",
+      "Lesson transfers, withdrawals and remaining lesson control",
+      "Invoices, payments, refunds and fiscal service integrations",
+      "Teacher availability, scheduling and substitute selection",
+      "Onboarding and access after payment",
+      "School separation, access roles and event logs"
+    ],
+    "stack": [
+      "Laravel",
+      "Doctrine",
+      "Vue",
+      "MySQL",
+      "Redis"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "screenshots": [],
+    "note": "Client system. Screens containing personal or payment information are not published.",
+    "featured": false,
+    "position": 40
+  },
+  {
+    "slug": "testoge",
+    "title": "Technology Generation",
+    "category": "Web platforms",
+    "type": "Exam preparation and practice platform",
+    "status": "Live",
+    "description": "An education platform for Russia’s OGE school exams. It connects practice questions, webinars and student results, with tools for teachers to import and review learning materials.",
+    "audience": "School students, teachers and exam preparation providers.",
+    "features": [
+      "Questions organised by subject and topic, with answers and hints",
+      "Learning material imports with error reports",
+      "Review queue and publication controls",
+      "Webinars, timetables and learning sections",
+      "Activity events filtered by subject",
+      "Administration area and user management"
+    ],
+    "stack": [
+      "Go",
+      "PostgreSQL",
+      "React",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://поколениетехнологий.рф",
+    "screenshots": [],
+    "featured": false,
+    "position": 50
+  },
+  {
+    "slug": "skillup",
+    "title": "SkillUp",
+    "category": "Web platforms",
+    "type": "Hands-on online learning platform",
+    "status": "Live",
+    "description": "Online courses combining learning materials and practical assignments. Programming exercises run submitted code in an isolated environment.",
+    "audience": "Students, course authors and education providers.",
+    "features": [
+      "Course catalogue and structured lessons",
+      "Beginner and intermediate Java courses",
+      "Programming assignments with code execution",
+      "Isolated Java execution in containers",
+      "Learning content and course access management"
+    ],
+    "stack": [
+      "Laravel",
+      "Java",
+      "Docker"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://skillup.su",
+    "screenshots": [],
+    "featured": false,
+    "position": 60
+  },
+  {
+    "slug": "scheduler",
+    "title": "Scheduler",
+    "category": "Web platforms",
+    "type": "Scheduling service for education centres",
+    "status": "In development",
+    "description": "A dedicated scheduling service with its own API and web interface. Designed to integrate with an education ERP, with a separate adaptation for LeadWise.",
+    "audience": "Schools and education centres that need a dedicated planning service.",
+    "features": [
+      "Scheduling through a web interface and API",
+      "API gateway and background task processing",
+      "PostgreSQL storage for timetable data",
+      "Integration with an education ERP",
+      "A dedicated adaptation for LeadWise"
+    ],
+    "stack": [
+      "Go",
+      "PostgreSQL",
+      "React",
+      "Goose"
+    ],
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "screenshots": [],
+    "featured": false,
+    "position": 70
+  },
+  {
+    "slug": "accounting-tools",
+    "title": "Accounting Tools",
+    "category": "Web platforms",
+    "type": "Operation registers and fiscal receipts",
+    "status": "Live",
+    "description": "A service for managing organisations, operation registers and fiscal receipt processing. Teams can prepare data, check duplicate rows and track receipt submission results.",
+    "audience": "Accounting teams and companies processing batches of financial operations.",
+    "features": [
+      "Organisation accounts and cash register management",
+      "Excel register imports and validation",
+      "Duplicate detection and repeat-submission prevention",
+      "Dry runs to review entries and amounts",
+      "ATOL Online integration and fiscalisation status tracking",
+      "Processing reports for individual operations"
+    ],
+    "stack": [
+      "Go",
+      "React",
+      "MySQL",
+      "ATOL API"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "screenshots": [],
+    "note": "Registers containing company financial data are not published.",
+    "featured": false,
+    "position": 80
+  },
+  {
+    "slug": "yoozuu",
+    "title": "Yoozuu",
+    "category": "Web platforms",
+    "type": "Publishing and community platform",
+    "status": "Live",
+    "description": "A platform for articles, discussions and sharing expertise. Includes publishing tools, topic sections and moderation, with layouts for desktop and mobile.",
+    "audience": "Authors, professional communities and readers.",
+    "features": [
+      "Publication feeds, topic sections and author profiles",
+      "Block and Markdown article editors",
+      "Comments and article discussions",
+      "Moderation before publication",
+      "Controls against registration abuse and spam",
+      "Light and dark themes with responsive layouts"
+    ],
+    "stack": [
+      "Go",
+      "React",
+      "TypeScript",
+      "S3"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://yoozuu.com",
+    "screenshots": [
+      {
+        "src": "/images/projects/yoozuu/feed.webp",
+        "alt": "Yoozuu publication feed in dark mode",
+        "caption": "Yoozuu publication feed in dark mode"
+      },
+      {
+        "src": "/images/projects/yoozuu/editor.webp",
+        "alt": "Block-based article editor",
+        "caption": "Block-based article editor"
+      },
+      {
+        "src": "/images/projects/yoozuu/article.webp",
+        "alt": "Article layout with formatting and code blocks",
+        "caption": "Article layout with formatting and code blocks"
+      }
+    ],
+    "featured": false,
+    "position": 90
+  },
+  {
+    "slug": "probot",
+    "title": "PRobot",
+    "category": "AI & automation",
+    "type": "Content and publishing management",
+    "status": "Live",
+    "description": "A workspace for marketing and PR: prepare content, connect channels and process publishing tasks in the background. AI assists with drafts while integrations connect distribution channels.",
+    "audience": "Content teams, marketers and PR professionals.",
+    "features": [
+      "Publishing platform catalogue and connected channels",
+      "AI-assisted draft preparation",
+      "Background publishing and processing queues",
+      "Telegram Client Service integration",
+      "Collection of materials and publication relationships",
+      "Relationship graph and analytics views"
+    ],
+    "stack": [
+      "Go",
+      "React",
+      "PostgreSQL",
+      "Redis",
+      "Asynq"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://prbo.ru",
+    "screenshots": [],
+    "note": "Publishing availability depends on the connected account and the target platform’s API.",
+    "featured": false,
+    "position": 100
+  },
+  {
+    "slug": "misa",
+    "title": "Misa",
+    "category": "AI & automation",
+    "type": "Voice AI assistant with business integrations",
+    "status": "In development",
+    "description": "An assistant with voice conversations, memory and tools for working with business information. A web client with a VRM character connects to speech services and Bitrix24.",
+    "audience": "Teams that need an assistant for communication and information workflows.",
+    "features": [
+      "Voice conversations with speech recognition and synthesis",
+      "Web client with an animated VRM character",
+      "Memory and search across accumulated context",
+      "Bitrix24 chat and task integration",
+      "Attachment processing and contextual information extraction",
+      "Direct links to created tasks in replies"
+    ],
+    "stack": [
+      "Go",
+      "VRM",
+      "PostgreSQL",
+      "Qdrant",
+      "Bitrix24"
+    ],
+    "platforms": [
+      "Web",
+      "Server"
+    ],
+    "screenshots": [],
+    "featured": false,
+    "position": 110
+  },
+  {
+    "slug": "platinum-os",
+    "title": "Platinum OS One",
+    "category": "System software",
+    "type": "Linux platform and image build system",
+    "status": "In development",
+    "description": "A Linux platform with its own graphical shell and a shared build system for different devices. Hardware support is separated from build logic, and the interface adapts to the device.",
+    "audience": "Device makers and developers of mobile and embedded systems.",
+    "features": [
+      "Qt/QML shell with applications and a home screen",
+      "Bootable image builds through a Rust pipeline",
+      "Separate board profiles and hardware support packages",
+      "Ethernet, Wi-Fi and network connection management",
+      "Ongoing Samsung Galaxy M52 bring-up",
+      "Remote screen access over VNC"
+    ],
+    "stack": [
+      "Rust",
+      "Linux",
+      "Qt / QML",
+      "Ubuntu Base"
+    ],
+    "platforms": [
+      "ARM64",
+      "Mobile devices",
+      "Desktop"
+    ],
+    "website": "https://github.com/digkill/Platinum-OS",
+    "websiteLabel": "Repository",
+    "screenshots": [
+      {
+        "src": "/images/projects/platinum/home.webp",
+        "alt": "Platinum OS home screen and applications",
+        "caption": "Platinum OS home screen and applications"
+      },
+      {
+        "src": "/images/projects/platinum/shell-apps.webp",
+        "alt": "Application grid in the graphical shell",
+        "caption": "Application grid in the graphical shell"
+      }
+    ],
+    "featured": false,
+    "position": 120
+  },
+  {
+    "slug": "platinum-browser",
+    "title": "Platinum Browser",
+    "category": "System software",
+    "type": "Browser with independent tab groups",
+    "status": "In development",
+    "description": "A browser built on Chromium Embedded Framework with a custom interface. Tab groups act as separate workspaces with independent data and sessions.",
+    "audience": "People working with multiple accounts and separate browsing contexts.",
+    "features": [
+      "Tab groups with independent browser contexts",
+      "Protected groups with a password and recovery key — in development",
+      "Group locking and hidden locked tabs — in development",
+      "Separate cookies, storage and sessions",
+      "Scrollable tab strip",
+      "Data cleanup settings with time range selection",
+      "Custom browser interface built with CEF and C++"
+    ],
+    "stack": [
+      "C++",
+      "CEF",
+      "Chromium"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "screenshots": [],
+    "note": "Protected groups and their locking workflows are under development.",
+    "featured": false,
+    "position": 130
+  },
+  {
+    "slug": "payphone",
+    "title": "PAYPHONE",
+    "category": "System software",
+    "type": "Experimental VPN protocol in Rust",
+    "status": "Prototype",
+    "description": "A research project for carrying IP traffic over encrypted transport. Includes a server, client components and a dedicated session authentication model.",
+    "audience": "Networking software developers and research teams.",
+    "features": [
+      "Bidirectional IPv4 transport through TUN",
+      "QUIC Datagrams transport with TLS 1.3",
+      "Authentication with Ed25519-signed tokens",
+      "Session recovery after reconnecting",
+      "Separate Rust modules for protocol, transport and authentication"
+    ],
+    "stack": [
+      "Rust",
+      "QUIC",
+      "TLS 1.3",
+      "TUN"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Mobile clients"
+    ],
+    "screenshots": [
+      {
+        "src": "/images/projects/payphone/overview.webp",
+        "alt": "Illustration of the PAYPHONE transport concept; not an application screenshot",
+        "caption": "Illustration of the PAYPHONE transport concept; not an application screenshot",
+        "kind": "illustration"
+      }
+    ],
+    "note": "A development and research prototype, not a production VPN service.",
+    "featured": false,
+    "position": 140
+  },
+  {
+    "slug": "hunter-demons",
+    "title": "Hunter Demons",
+    "category": "Games",
+    "type": "Mobile 3D action game built with Godot",
+    "status": "In development",
+    "description": "An action game featuring Misa, waves of demons and battles in stylised environments. Touch controls combine melee combat, a rifle and character abilities.",
+    "audience": "Players on mobile devices and desktop computers.",
+    "features": [
+      "Katana melee combat and rifle shooting",
+      "Aiming, reloading and weapon switching",
+      "Character abilities, including a summoned dragon",
+      "Enemy waves and boss encounters",
+      "Animations, audio and effects driven by gameplay events",
+      "Touch controls and iPhone builds"
+    ],
+    "stack": [
+      "Godot",
+      "GDScript",
+      "3D"
+    ],
+    "platforms": [
+      "iOS",
+      "Android",
+      "Desktop"
+    ],
+    "website": "https://github.com/digkill/HunterDemons",
+    "websiteLabel": "Repository",
+    "screenshots": [
+      {
+        "src": "/images/projects/hunterdemons/rifle.webp",
+        "alt": "Hunter Demons gameplay with rifle and touch ability controls",
+        "caption": "Hunter Demons gameplay with rifle and touch ability controls"
+      },
+      {
+        "src": "/images/projects/hunterdemons/scope.webp",
+        "alt": "Rifle aiming mode",
+        "caption": "Rifle aiming mode"
+      },
+      {
+        "src": "/images/projects/hunterdemons/neon-district.webp",
+        "alt": "Combat in the neon district",
+        "caption": "Combat in the neon district"
+      }
+    ],
+    "featured": false,
+    "position": 150
+  },
+  {
+    "slug": "office-raid",
+    "title": "Office Raid",
+    "category": "Games",
+    "type": "3D strategy game about offices and raids",
+    "status": "In development",
+    "description": "The office becomes a base and its employees become combat units. Staff work, rest and train between battles, while combat uses a reproducible simulation.",
+    "audience": "Strategy players who enjoy base building and short play sessions.",
+    "features": [
+      "Office base with employee workstations",
+      "Kitchen, gym, karaoke, games room and other facilities",
+      "Employee routines for work, rest and training",
+      "Squad combat and grid-based pathfinding",
+      "Deterministic simulation and battle replays",
+      "Browser version with no application installation"
+    ],
+    "stack": [
+      "Defold",
+      "Lua",
+      "HTML5"
+    ],
+    "platforms": [
+      "Web",
+      "Mobile builds"
+    ],
+    "website": "https://officeraid.com",
+    "websiteLabel": "Play in browser",
+    "screenshots": [
+      {
+        "src": "/images/projects/office-raid/base.webp",
+        "alt": "Office Raid office base, rooms and employees in the browser version",
+        "caption": "Office Raid office base, rooms and employees in the browser version"
+      }
+    ],
+    "featured": false,
+    "position": 160
+  },
+  {
+    "slug": "tarot",
+    "title": "Tarot",
+    "category": "Apps",
+    "type": "Tarot decks and reading interpretations",
+    "status": "In development",
+    "description": "A mobile app with card decks, reading layouts and AI interpretations. Reading history keeps past sessions accessible, while the server handles generation and premium access.",
+    "audience": "People exploring Tarot for entertainment and self-reflection.",
+    "features": [
+      "Card of the day and quick reading layouts",
+      "Deck selection and card browsing",
+      "Server-side AI interpretations",
+      "Saved reading history",
+      "Russian and English interfaces",
+      "Premium feature access management"
+    ],
+    "stack": [
+      "React Native",
+      "Expo",
+      "Go"
+    ],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "screenshots": [
+      {
+        "src": "/images/projects/tarot/home.webp",
+        "alt": "Tarot home screen with daily card and quick readings",
+        "caption": "Tarot home screen with daily card and quick readings"
+      },
+      {
+        "src": "/images/projects/tarot/decks.webp",
+        "alt": "Card deck selection",
+        "caption": "Card deck selection"
+      }
+    ],
+    "featured": false,
+    "position": 170
+  },
+  {
+    "slug": "rush-messenger",
+    "title": "Rush Messenger",
+    "category": "Apps",
+    "type": "Messenger with mobile and desktop clients",
+    "status": "In development",
+    "description": "A communication platform with direct messages, groups, channels and calls. Native mobile apps and a desktop client share a Rust server.",
+    "audience": "People using private conversations and group communities.",
+    "features": [
+      "Direct messages, group chats and channels",
+      "End-to-end encryption for direct messages",
+      "Audio and video calls",
+      "Native iOS and Android clients",
+      "Tauri desktop client",
+      "Shared REST and WebSocket API"
+    ],
+    "stack": [
+      "Rust",
+      "SwiftUI",
+      "Kotlin",
+      "Tauri",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "iOS",
+      "Android",
+      "Desktop"
+    ],
+    "website": "https://rushmessanger.com",
+    "screenshots": [],
+    "featured": false,
+    "position": 180
+  },
+  {
+    "slug": "meteor",
+    "title": "Meteor",
+    "category": "Devices",
+    "type": "Experimental drone control system",
+    "status": "Prototype",
+    "description": "Firmware and diagnostic tools for an experimental ESP32-S3 platform. The project combines motion sensors, distance measurements and telemetry for hardware development.",
+    "audience": "Embedded systems developers and experimental flight platform teams.",
+    "features": [
+      "Console diagnostics for the board and connected sensors",
+      "Inertial sensor and rangefinder readings",
+      "Optical flow sensor integration",
+      "Telemetry and MQTT data exchange",
+      "Communication and altitude estimation development"
+    ],
+    "stack": [
+      "ESP32-S3",
+      "ESP-IDF",
+      "MQTT"
+    ],
+    "platforms": [
+      "Embedded"
+    ],
+    "screenshots": [],
+    "note": "An experimental development project; autonomous flight readiness is not claimed.",
+    "featured": false,
+    "position": 190
+  },
+  {
+    "slug": "ai-sandbox",
+    "title": "AI Sandbox",
+    "category": "AI & automation",
+    "type": "Create 2D and 3D games on Android",
+    "status": "Prototype",
+    "description": "A mobile environment for creating game projects from text descriptions and presets. Combines a project library, editor, generation server and Godot-based execution.",
+    "audience": "Game prototype creators and people learning to make games.",
+    "features": [
+      "Game project creation from a text prompt",
+      "Library and editor for 2D and 3D projects",
+      "Server-side AI generation pipeline",
+      "Project and revision storage",
+      "Scene execution through a Godot host",
+      "Email sign-in with verification codes"
+    ],
+    "stack": [
+      "Android",
+      "Godot",
+      "Go",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "Android"
+    ],
+    "screenshots": [],
+    "featured": false,
+    "position": 200
+  },
+  {
+    "slug": "plantpal",
+    "title": "PlantPal",
+    "category": "Apps",
+    "type": "Mobile plant care assistant",
+    "status": "In development",
+    "description": "An app for identifying plants and organising care for a home collection. Combines plant profiles, care guidance and reminders.",
+    "audience": "Indoor plant owners.",
+    "features": [
+      "Plant identification from a photo",
+      "Home collection profiles",
+      "Plant care guidance",
+      "Watering reminders"
+    ],
+    "stack": [
+      "Kotlin",
+      "Jetpack Compose"
+    ],
+    "platforms": [
+      "Android"
+    ],
+    "website": "/plantpal",
+    "websiteLabel": "App details",
+    "screenshots": [],
+    "featured": false,
+    "position": 210
+  }
+]
