@@ -58,7 +58,7 @@ build arguments. Secure session cookies are enabled by the production image.
 Startup runs migrations and inserts missing seed projects. It never overwrites
 editor changes or restores archived records. Create the initial administrator in
 the running container using `php artisan portfolio:admin EMAIL`; automated setup
-can read a protected file using `--password-file=/dev/stdin`.
+can read a protected file using `--password-file=php://stdin`.
 
 Back up the complete CMS database (including projects, translations, media and
 users) and preserve `APP_KEY`. `/api/health` checks both the frontend and CMS;
