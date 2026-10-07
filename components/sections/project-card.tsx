@@ -14,7 +14,7 @@ export function FeaturedProjectCard({ project }: { project: PortfolioProject }) 
     <Link href={`/projects/${project.slug}`} className="group block h-full">
       <Card className="premium-border relative flex h-full flex-col overflow-hidden bg-white/4.5 p-6 transition hover:-translate-y-1 hover:shadow-glow">
         <div className="relative flex items-center justify-between"><Badge variant="secondary">{project.category}</Badge><ArrowUpRight className="size-5 text-foreground/50" /></div>
-        {cover && <div className="relative mt-5 aspect-16/10 overflow-hidden rounded-lg border border-foreground/10 bg-background/50"><Image src={cover.src} alt={cover.alt} fill sizes="(min-width: 768px) 45vw, 90vw" className="object-contain p-2" /></div>}
+        {cover && <div className="relative mt-5 aspect-16/10 overflow-hidden rounded-lg border border-foreground/10 bg-background/50"><Image unoptimized={cover.src.startsWith("/portfolio-media/")} src={cover.src} alt={cover.alt} fill sizes="(min-width: 768px) 45vw, 90vw" className="object-contain p-2" /></div>}
         <div className="relative mt-auto pt-6"><h3 className="font-display text-2xl font-semibold">{project.title}</h3><p className="mt-3 text-sm leading-6 text-foreground/65">{project.description}</p><div className="mt-5 flex flex-wrap gap-2">{project.stack.map(tag => <Badge key={tag} variant="outline">{tag}</Badge>)}</div></div>
       </Card>
     </Link>
@@ -31,7 +31,7 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
     <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-foreground/10 bg-card transition duration-300 hover:border-red-500/35 hover:shadow-lg">
       <Link href={`/projects/${project.slug}`} className="relative block overflow-hidden border-b border-foreground/10 bg-foreground/[0.035]" aria-label={`${project.title} — details and screenshots`}>
         {cover ? <div className="relative aspect-16/10 p-3 sm:p-5">
-          <Image src={cover.src} alt={cover.alt} fill sizes="(min-width: 1280px) 590px, (min-width: 768px) 48vw, 100vw" className="object-contain p-3 transition duration-500 group-hover:scale-[1.025] sm:p-5" />
+          <Image unoptimized={cover.src.startsWith("/portfolio-media/")} src={cover.src} alt={cover.alt} fill sizes="(min-width: 1280px) 590px, (min-width: 768px) 48vw, 100vw" className="object-contain p-3 transition duration-500 group-hover:scale-[1.025] sm:p-5" />
         </div> : <div className="relative flex aspect-16/10 flex-col justify-between overflow-hidden bg-[radial-gradient(ellipse_at_top_right,rgba(255,0,51,0.12),transparent_70%)] p-7 sm:p-9">
           <div className="flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-foreground/45"><Cpu className="size-4" /> MediaRise / {project.platforms[0]}</div>
           <div><Layers3 className="mb-5 size-8 text-red-500/65" /><p className="font-display text-3xl font-semibold sm:text-4xl">{project.title}</p><p className="mt-3 max-w-sm text-sm text-foreground/55">{project.type}</p></div>
