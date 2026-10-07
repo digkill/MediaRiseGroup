@@ -1,0 +1,114 @@
+[
+  {
+    "asset": "again-cleaner/overview.webp",
+    "source": "Swift/AgainCleaner/Again Cleaner/landing/public/screenshots/overview.png",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "again-cleaner/smart.webp",
+    "source": "Swift/AgainCleaner/Again Cleaner/landing/public/screenshots/smart.png",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "again-cleaner/junk.webp",
+    "source": "Swift/AgainCleaner/Again Cleaner/landing/public/screenshots/junk.png",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "leadwise/groups.webp",
+    "source": "MediaRise.ru/backend-mediarise/front/src/assets/products/leadwise/groups.webp",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "leadwise/courses.webp",
+    "source": "MediaRise.ru/backend-mediarise/front/src/assets/products/leadwise/courses.webp",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "leadwise/lessons.webp",
+    "source": "MediaRise.ru/backend-mediarise/front/src/assets/products/leadwise/lessons.webp",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "yoozuu/feed.webp",
+    "source": "go/DevPortal/docs/screenshots/brand-en-dark.png",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "yoozuu/editor.webp",
+    "source": "go/DevPortal/docs/screenshots/block-editor-desktop.png",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "yoozuu/article.webp",
+    "source": "go/DevPortal/docs/screenshots/brand-article-dark.png",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "platinum/home.webp",
+    "source": "OS/PlatinumOS-One/AgentDevelop/portfolio/screenshots/home-screen.png",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "payphone/overview.webp",
+    "source": "Rust/PAYPHONE/AgentDevelop/portfolio/screenshots/tunnel-overview.png",
+    "kind": "illustration"
+  },
+  {
+    "asset": "hunterdemons/rifle.webp",
+    "source": "GameDev/HunterDemons/HunterDemons/AgentDevelop/portfolio/screenshots/gameplay-controls/village_rifle_controls.png",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "hunterdemons/scope.webp",
+    "source": "GameDev/HunterDemons/HunterDemons/AgentDevelop/portfolio/screenshots/rifle-scope/scope.png",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "tarot/home.webp",
+    "source": "js/tarot-app/AgentDevelop/portfolio/screenshots/ru/04-home.png",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "tarot/decks.webp",
+    "source": "js/tarot-app/AgentDevelop/portfolio/screenshots/ru/05-decks.png",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "office-raid/base.webp",
+    "source": "https://officeraid.com",
+    "kind": "new screenshot",
+    "captured": "2026-10-07",
+    "method": "Native Microsoft Edge capture through Computer Use; browser toolbar removed; WebP quality 90"
+  },
+  {
+    "asset": "vibevideo/mac-editor.webp",
+    "source": "Pre-existing portfolio assets, retained",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "vibevideo/iphone-editor.webp",
+    "source": "Pre-existing portfolio assets, retained",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "vibevideo/ipad-editor.webp",
+    "source": "Pre-existing portfolio assets, retained",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "vibevideo/mac-text.webp",
+    "source": "Pre-existing portfolio assets, retained",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "platinum/shell-apps.webp",
+    "source": "Pre-existing portfolio asset, retained",
+    "kind": "existing screenshot"
+  },
+  {
+    "asset": "hunterdemons/neon-district.webp",
+    "source": "Pre-existing portfolio asset, retained",
+    "kind": "existing screenshot"
+  }
+]

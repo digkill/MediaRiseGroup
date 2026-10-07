@@ -70,9 +70,9 @@ export default function HomePage() {
         <div className="container">
           <Reveal>
             <SectionHeading
-              eyebrow="Featured work"
-              title="Selected systems with serious product depth."
-              description="Products we designed, engineered and shipped end to end."
+              eyebrow="Портфолио"
+              title="Приложения и платформы MediaRise."
+              description="Возможности продуктов, реальные интерфейсы и подробности разработки."
             />
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-2">
@@ -82,6 +82,7 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+          <Button asChild variant="secondary" className="mt-8"><Link href="/projects">Все проекты <ArrowRight /></Link></Button>
         </div>
       </section>
 

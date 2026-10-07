@@ -16,7 +16,7 @@ import { siteUrl } from "./site";
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/projects", label: "Projects" },
+  { href: "/projects", label: "Портфолио" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -69,23 +69,23 @@ export const stats = [
 export const featuredProjects = [
   {
     title: "Vibe Video",
-    href: "/vibe-video",
+    href: "/projects/vibe-video",
+    image: "/images/projects/vibevideo/mac-editor.webp",
+    imageAlt: "Многодорожечный монтаж в Vibe Video на Mac",
     category: "iOS · iPadOS · macOS",
-    description:
-      "Short-form video editor for iPhone, iPad and Mac: multitrack timeline, green-screen overlays, stickers and one-tap export to social formats.",
-    tags: ["Swift", "AVFoundation", "App Store"],
-    // Brand red only; cards differ by the anchor point of the glow, not by hue.
-    accent:
-      "bg-[radial-gradient(110%_80%_at_12%_0%,rgba(255,0,51,.11),transparent_55%)] dark:bg-[radial-gradient(110%_80%_at_12%_0%,rgba(255,0,51,.30),transparent_58%)]",
+    description: "Видеоредактор с многодорожечным монтажом, хромакеем, работой со звуком и экспортом до 8K.",
+    tags: ["SwiftUI", "AVFoundation", "Vision"],
+    accent: "bg-[radial-gradient(110%_80%_at_12%_0%,rgba(255,0,51,.12),transparent_55%)]",
   },
   {
-    title: "PlantPal",
-    href: "/plantpal",
-    category: "Mobile + AI",
-    description: "AI plant recognition, personalized care plans, reminders, and a calm mobile community experience.",
-    tags: ["Kotlin", "Compose", "Computer Vision"],
-    accent:
-      "bg-[radial-gradient(110%_80%_at_88%_0%,rgba(255,0,51,.10),transparent_55%)] dark:bg-[radial-gradient(110%_80%_at_88%_0%,rgba(255,0,51,.26),transparent_58%)]",
+    title: "LeadWise",
+    href: "/projects/leadwise",
+    image: "/images/projects/leadwise/groups.webp",
+    imageAlt: "Учебные группы LeadWise на демонстрационных данных",
+    category: "Образовательная платформа",
+    description: "Рабочая среда онлайн-школы: ученики, группы, курсы, расписание, материалы уроков и домашние задания.",
+    tags: ["Laravel", "Vue", "MySQL"],
+    accent: "bg-[radial-gradient(110%_80%_at_88%_0%,rgba(255,0,51,.12),transparent_55%)]",
   },
 ];
 
@@ -180,82 +180,8 @@ export const process = [
   { title: "Scale", description: "Launch support, monitoring, optimization, roadmap planning, and growth experiments." },
 ];
 
-export type PortfolioProject = {
-  title: string;
-  category: string;
-  type: string;
-  description: string;
-  href: string;
-  metrics: string[];
-  /** Real product screenshot. Cards without one fall back to the icon header. */
-  image?: string;
-  imageAlt?: string;
-};
-
-export const projects: PortfolioProject[] = [
-  {
-    title: "Vibe Video",
-    category: "Mobile",
-    type: "iOS, iPadOS & macOS video editor",
-    description:
-      "One SwiftUI codebase shipping as a touch editor on iPhone and iPad and a windowed editor on Mac: multitrack timeline, green screen, stickers and one-tap social export.",
-    href: "/vibe-video",
-    metrics: ["Native iPhone, iPad and Mac builds from one codebase", "On the App Store, localized into 6 languages"],
-    image: "/images/projects/vibevideo/mac-editor.webp",
-    imageAlt: "Vibe Video editor on macOS: multitrack timeline with a chroma-key overlay and the layer inspector",
-  },
-  {
-    title: "Rush Messanger",
-    category: "Mobile",
-    type: "End-to-end encrypted messenger",
-    description:
-      "Direct messages, groups, channels and WebRTC audio/video calls across native iOS and Android clients, a Tauri desktop app and a Rust realtime backend.",
-    href: "https://www.rushmessanger.com",
-    metrics: [
-      "Rust server with native iOS, Android and Tauri desktop clients",
-      "E2EE by X25519/ECDH exchange and AES-256-GCM — private keys stay on device",
-    ],
-  },
-  {
-    title: "Platinum OS One",
-    category: "Systems",
-    type: "Linux platform & Rust build system",
-    description:
-      "A universal Linux platform for bootable images: one Ubuntu Base userspace and one package set across phones, tablets, PCs and robots, driven by a Rust build pipeline and a Qt/QML device shell.",
-    href: "https://github.com/digkill/Platinum-OS",
-    metrics: [
-      "Ten-crate Rust workspace; board support ships as TOML data, not engine branches",
-      "Board targets: Orange Pi Zero 3W, Raspberry Pi 5, Parallels ARM64",
-    ],
-    image: "/images/projects/platinum/shell-apps.webp",
-    imageAlt: "Platinum OS shell on a landscape display: the Applications grid with Calendar, Clock, Contacts, AI, Files, Terminal and Messages",
-  },
-  {
-    title: "Hunter Demons",
-    category: "Games",
-    type: "3D action game on Godot",
-    description:
-      "Wave-based demon hunting with a cyber-sakura katana: touch-first controls, eight enemy types with two bosses, and levels from a neon district to a flooded temple.",
-    href: "https://github.com/digkill/HunterDemons",
-    metrics: [
-      "Godot 4.6 with the mobile renderer and Jolt physics; 7.6k lines of GDScript",
-      "Export targets for iOS, Android, macOS, Windows and Raspberry Pi arm64",
-    ],
-    image: "/images/projects/hunterdemons/neon-district.webp",
-    imageAlt: "Hunter Demons gameplay: the heroine Yukka facing a demon in a neon-lit district, with health, mana and Dragon Spirit meters and on-screen touch controls",
-  },
-  {
-    title: "PlantPal",
-    category: "Mobile",
-    type: "AI plant care app",
-    description: "Consumer app with AI plant identification, personalized care plans, reminders, and community collections.",
-    href: "/plantpal",
-    metrics: ["Kotlin and Jetpack Compose, Play Store release in preparation", "Stores data on device — nothing collected or shared"],
-  },
-];
-
-/** Derived from the data so a filter can never point at an empty result set. */
-export const projectFilters = ["All", ...Array.from(new Set(projects.map((project) => project.category)))];
+export { projects, projectFilters } from "./portfolio";
+export type { PortfolioProject } from "./portfolio";
 
 export const vibeVideo = {
   appStoreUrl: "https://apps.apple.com/us/app/vibe-video-video-editor/id6794705650",
