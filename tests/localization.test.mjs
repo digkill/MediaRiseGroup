@@ -46,3 +46,24 @@ test('every published seed project has all six translations with equivalent feat
   }
   assert.equal(projects.find(p => p.slug === 'payphone').status, 'Prototype');
 });
+
+test('locale rewrites preserve the internal origin behind TLS termination and redirects use the public origin', async () => {
+  const nextUrl = new URL('../node_modules/next/server.js', import.meta.url).href;
+  const { NextRequest } = await import(nextUrl);
+  const configUrl = `data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`;
+  const siteSource = fs.readFileSync(new URL('../lib/site.ts', import.meta.url), 'utf8');
+  const siteCode = ts.transpileModule(siteSource, { compilerOptions: { module: ts.ModuleKind.ESNext } }).outputText;
+  const siteModule = `data:text/javascript;base64,${Buffer.from(siteCode).toString('base64')}`;
+  const proxySource = fs.readFileSync(new URL('../proxy.ts', import.meta.url), 'utf8');
+  const proxyCode = ts.transpileModule(proxySource, { compilerOptions: { module: ts.ModuleKind.ESNext } }).outputText
+    .replace('"next/server"', JSON.stringify(nextUrl)).replace('"@/lib/i18n/config"', JSON.stringify(configUrl)).replace('"@/lib/site"', JSON.stringify(siteModule));
+  const { proxy } = await import(`data:text/javascript;base64,${Buffer.from(proxyCode).toString('base64')}`);
+  assert.ok(fs.readFileSync(new URL('../deploy/supervisord.conf', import.meta.url), 'utf8').includes('HOSTNAME="0.0.0.0"'));
+  const response = proxy(new NextRequest('https://0.0.0.0:3001/ja/projects?view=all', { headers: { host: 'mediarise.org', 'x-forwarded-proto': 'https', 'x-site-locale': 'ru' } }));
+  assert.equal(response.headers.get('x-middleware-rewrite'), 'https://0.0.0.0:3001/projects?view=all');
+  assert.equal(response.headers.get('x-middleware-request-x-site-locale'), 'ja');
+  const redirect = proxy(new NextRequest('https://localhost:3001/en/projects?view=all'));
+  assert.equal(redirect.status, 308);
+  assert.equal(redirect.headers.get('location'), 'https://mediarise.org/projects?view=all');
+  assert.equal(proxy(new NextRequest('https://localhost:3001/ja/admin/projects')).status, 404);
+});
