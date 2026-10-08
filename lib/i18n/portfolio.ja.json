@@ -1,0 +1,816 @@
+[
+  {
+    "title": "Vibe Video",
+    "type": "iPhone・iPad・Mac 用動画エディター",
+    "description": "映像のカット、音声の編集、公開用動画の準備ができるネイティブアプリ。マルチトラック、効果、書き出しを一つにまとめています。",
+    "audience": "動画制作者、ブロガー、コンテンツ制作チーム。",
+    "features": [
+      "トリミング・分割・レイヤー順に対応するマルチトラック",
+      "クロマキー、背景除去、人物マスク",
+      "文字、ステッカー、トランジション、追加動画素材",
+      "プロジェクト内で音声・カメラを録音録画",
+      "4K H.264・8K HEVC と SNS 向け書き出し",
+      "プロジェクトの保存と自動復旧"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "vibe-video",
+    "category": "Apps",
+    "status": "Live",
+    "stack": [
+      "SwiftUI",
+      "AVFoundation",
+      "Vision"
+    ],
+    "platforms": [
+      "iOS",
+      "iPadOS",
+      "macOS"
+    ],
+    "website": "https://vibevideo.fun",
+    "featured": true,
+    "position": 10,
+    "screenshots": [
+      {
+        "src": "/images/projects/vibevideo/mac-editor.webp",
+        "kind": "screenshot",
+        "alt": "macOS エディター：プレビュー、レイヤー、マルチトラック",
+        "caption": "macOS エディター：プレビュー、レイヤー、マルチトラック"
+      },
+      {
+        "src": "/images/projects/vibevideo/iphone-editor.webp",
+        "kind": "screenshot",
+        "alt": "iPhone でのタッチ編集",
+        "caption": "iPhone でのタッチ編集"
+      },
+      {
+        "src": "/images/projects/vibevideo/ipad-editor.webp",
+        "kind": "screenshot",
+        "alt": "iPad の作業領域とインスペクター",
+        "caption": "iPad の作業領域とインスペクター"
+      },
+      {
+        "src": "/images/projects/vibevideo/mac-text.webp",
+        "kind": "screenshot",
+        "alt": "動画上の文字装飾",
+        "caption": "動画上の文字装飾"
+      }
+    ]
+  },
+  {
+    "title": "Again Cleaner",
+    "type": "macOS のディスク分析・整理",
+    "description": "Mac の容量を何が使っているか確認し、キャッシュや一時ファイルを見つけて削除対象を選択。開発のビルド成果物や大容量ファイルにも対応。",
+    "audience": "ストレージを管理したい Mac ユーザーと開発者。",
+    "features": [
+      "ストレージ概要とスマートスキャン結果",
+      "アプリ・ブラウザーのキャッシュと一時データ",
+      "プロジェクト依存関係とビルド成果物の検出",
+      "大容量ファイル検索とお気に入りの場所",
+      "削除前に選択し、標準ではゴミ箱へ移動",
+      "進捗表示と重複した整理操作の防止"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "again-cleaner",
+    "category": "Apps",
+    "status": "Live",
+    "stack": [
+      "Swift",
+      "SwiftUI"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "website": "https://againcleaner.com",
+    "featured": false,
+    "position": 20,
+    "screenshots": [
+      {
+        "src": "/images/projects/again-cleaner/overview.webp",
+        "kind": "screenshot",
+        "alt": "Again Cleaner のディスク使用状況",
+        "caption": "Again Cleaner のディスク使用状況"
+      },
+      {
+        "src": "/images/projects/again-cleaner/smart.webp",
+        "kind": "screenshot",
+        "alt": "整理カテゴリー別のスマートスキャン結果",
+        "caption": "整理カテゴリー別のスマートスキャン結果"
+      },
+      {
+        "src": "/images/projects/again-cleaner/junk.webp",
+        "kind": "screenshot",
+        "alt": "一時ファイルとキャッシュの分類",
+        "caption": "一時ファイルとキャッシュの分類"
+      }
+    ]
+  },
+  {
+    "title": "LeadWise",
+    "type": "オンラインスクールの管理基盤",
+    "description": "コース、学習グループ、時間割、教材、宿題を一つの場所で管理。管理者、講師、学習者それぞれの業務に対応します。",
+    "audience": "オンラインスクールや補習教育機関。",
+    "features": [
+      "生徒・学習グループ・授業の管理",
+      "コース、教材、内容プレビュー",
+      "時間割とグループ管理の連携",
+      "文章・添付ファイル・講師のコメント付き課題",
+      "役割別のアクセスと組織管理",
+      "学習基盤のブランド設定"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "leadwise",
+    "category": "Web platforms",
+    "status": "In development",
+    "stack": [
+      "Laravel",
+      "Vue",
+      "MySQL"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://lk.leadwise.study",
+    "featured": true,
+    "position": 30,
+    "screenshots": [
+      {
+        "src": "/images/projects/leadwise/groups.webp",
+        "kind": "screenshot",
+        "alt": "LeadWise の学習グループと絞り込み — デモデータ",
+        "caption": "LeadWise の学習グループと絞り込み — デモデータ"
+      },
+      {
+        "src": "/images/projects/leadwise/courses.webp",
+        "kind": "screenshot",
+        "alt": "LeadWise のコース一覧 — デモデータ",
+        "caption": "LeadWise のコース一覧 — デモデータ"
+      },
+      {
+        "src": "/images/projects/leadwise/lessons.webp",
+        "kind": "screenshot",
+        "alt": "LeadWise のレッスン編集 — デモデータ",
+        "caption": "LeadWise のレッスン編集 — デモデータ"
+      }
+    ]
+  },
+  {
+    "title": "プログラミングスクール",
+    "type": "教育施設ネットワーク向け ERP",
+    "description": "学校・フランチャイズの生徒、グループ、時間割、決済、授業を連携。取引を受講権限と学習履歴に結びつけます。",
+    "audience": "学校ネットワーク、フランチャイズ運営者、管理者、講師。",
+    "features": [
+      "生徒、グループ、支払済みの受講残数",
+      "授業の振替・取り消し・残数管理",
+      "請求、決済、返金、財務サービス連携",
+      "講師の空き時間、時間割、代講者選択",
+      "決済後の登録とアクセス付与",
+      "学校別の分離、役割権限、イベントログ"
+    ],
+    "note": "顧客システムです。個人情報や決済情報を含む画面は公開していません。",
+    "websiteLabel": null,
+    "slug": "codeclass",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Laravel",
+      "Doctrine",
+      "Vue",
+      "MySQL",
+      "Redis"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 40,
+    "screenshots": []
+  },
+  {
+    "title": "Technology Generation",
+    "type": "試験対策・演習プラットフォーム",
+    "description": "ロシアの学校試験 OGE 向けの教育基盤。問題演習、ウェビナー、生徒の成績を連携し、講師向けに教材の取り込み・確認機能を提供。",
+    "audience": "生徒、講師、試験対策の教育機関。",
+    "features": [
+      "科目・テーマ別の問題、解答、ヒント",
+      "教材の取り込みとエラー報告",
+      "確認待ちキューと公開管理",
+      "ウェビナー、時間割、学習セクション",
+      "科目で絞り込める活動イベント",
+      "管理画面とユーザー管理"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "testoge",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "PostgreSQL",
+      "React",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://поколениетехнологий.рф",
+    "featured": false,
+    "position": 50,
+    "screenshots": []
+  },
+  {
+    "title": "SkillUp",
+    "type": "実践型オンライン学習基盤",
+    "description": "教材と実習を組み合わせたオンラインコース。提出されたコードを隔離環境で実行するプログラミング演習に対応。",
+    "audience": "学生、コース制作者、教育機関。",
+    "features": [
+      "コース一覧と体系的なレッスン",
+      "初級・中級 Java コース",
+      "コードを実行できるプログラミング課題",
+      "コンテナー内での Java の隔離実行",
+      "教材と受講アクセスの管理"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "skillup",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Laravel",
+      "Java",
+      "Docker"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://skillup.su",
+    "featured": false,
+    "position": 60,
+    "screenshots": []
+  },
+  {
+    "title": "Scheduler",
+    "type": "教育機関向けスケジュールサービス",
+    "description": "独自の API と Web UI を備えた時間割サービス。教育 ERP との統合を想定し、LeadWise 向けの構成にも対応。",
+    "audience": "専用の予定管理が必要な学校や教育機関。",
+    "features": [
+      "Web UI と API による時間割管理",
+      "API ゲートウェイとバックグラウンド処理",
+      "PostgreSQL による時間割データ保存",
+      "教育 ERP との連携",
+      "LeadWise 向けの専用構成"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "scheduler",
+    "category": "Web platforms",
+    "status": "In development",
+    "stack": [
+      "Go",
+      "PostgreSQL",
+      "React",
+      "Goose"
+    ],
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 70,
+    "screenshots": []
+  },
+  {
+    "title": "Accounting Tools",
+    "type": "取引台帳と税務レシート処理",
+    "description": "組織、取引台帳、税務レシートを管理。データを準備し、重複行を確認し、レシート送信結果を追跡できます。",
+    "audience": "会計チームや財務取引を一括処理する企業。",
+    "features": [
+      "組織アカウントとレジの管理",
+      "Excel 台帳の取り込みと検証",
+      "重複検出と二重送信の防止",
+      "項目・金額を確認する試行処理",
+      "ATOL Online 連携と税務処理状態の追跡",
+      "取引ごとの処理結果レポート"
+    ],
+    "note": "企業の財務データを含む台帳は公開していません。",
+    "websiteLabel": null,
+    "slug": "accounting-tools",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "React",
+      "MySQL",
+      "ATOL API"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 80,
+    "screenshots": []
+  },
+  {
+    "title": "Yoozuu",
+    "type": "記事公開・コミュニティ基盤",
+    "description": "記事、議論、知識共有のプラットフォーム。公開ツール、テーマ別の領域、モデレーションを備え、PC とモバイルに対応。",
+    "audience": "執筆者、専門コミュニティ、読者。",
+    "features": [
+      "投稿フィード、テーマ別領域、著者プロフィール",
+      "ブロック・Markdown エディター",
+      "コメントと記事の議論",
+      "公開前のモデレーション",
+      "不正登録・スパム対策",
+      "レスポンシブ表示とライト・ダークテーマ"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "yoozuu",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "React",
+      "TypeScript",
+      "S3"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://yoozuu.com",
+    "featured": false,
+    "position": 90,
+    "screenshots": [
+      {
+        "src": "/images/projects/yoozuu/feed.webp",
+        "kind": "screenshot",
+        "alt": "Yoozuu のダーク表示フィード",
+        "caption": "Yoozuu のダーク表示フィード"
+      },
+      {
+        "src": "/images/projects/yoozuu/editor.webp",
+        "kind": "screenshot",
+        "alt": "ブロック型記事エディター",
+        "caption": "ブロック型記事エディター"
+      },
+      {
+        "src": "/images/projects/yoozuu/article.webp",
+        "kind": "screenshot",
+        "alt": "書式とコードブロックを含む記事",
+        "caption": "書式とコードブロックを含む記事"
+      }
+    ]
+  },
+  {
+    "title": "PRobot",
+    "type": "コンテンツ・公開管理",
+    "description": "マーケティング・広報向けの作業基盤。原稿作成、チャネル連携、バックグラウンド公開を支援。AI が下書きを補助します。",
+    "audience": "コンテンツチーム、マーケター、広報担当。",
+    "features": [
+      "公開先一覧と接続済みチャネル",
+      "AI による下書き支援",
+      "バックグラウンド公開と処理キュー",
+      "Telegram Client Service 連携",
+      "素材収集と投稿の関係管理",
+      "関係グラフと分析画面"
+    ],
+    "note": "公開の可否は接続アカウントと対象プラットフォームの API によります。",
+    "websiteLabel": null,
+    "slug": "probot",
+    "category": "AI & automation",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "React",
+      "PostgreSQL",
+      "Redis",
+      "Asynq"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://prbo.ru",
+    "featured": false,
+    "position": 100,
+    "screenshots": []
+  },
+  {
+    "title": "Misa",
+    "type": "業務連携を備えた音声 AI アシスタント",
+    "description": "音声対話、記憶、業務情報の処理ツールを備えるアシスタント。VRM キャラクター付き Web クライアントが音声サービスや Bitrix24 と接続。",
+    "audience": "コミュニケーションや情報業務の支援が必要なチーム。",
+    "features": [
+      "音声認識・合成による対話",
+      "動く VRM キャラクターの Web クライアント",
+      "蓄積された文脈の記憶と検索",
+      "Bitrix24 のチャット・タスク連携",
+      "添付処理と文脈情報の抽出",
+      "作成したタスクへの直接リンクを返信"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "misa",
+    "category": "AI & automation",
+    "status": "In development",
+    "stack": [
+      "Go",
+      "VRM",
+      "PostgreSQL",
+      "Qdrant",
+      "Bitrix24"
+    ],
+    "platforms": [
+      "Web",
+      "Server"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 110,
+    "screenshots": []
+  },
+  {
+    "title": "Platinum OS One",
+    "type": "Linux プラットフォームとイメージ構築",
+    "description": "独自のグラフィカルシェルと複数端末共通のビルド基盤を備えた Linux。ハードウェア対応を構築ロジックから分離し、UI を端末に合わせます。",
+    "audience": "機器メーカー、モバイル・組み込みシステム開発者。",
+    "features": [
+      "アプリとホーム画面を備える Qt/QML シェル",
+      "Rust パイプラインで起動イメージを構築",
+      "ボード別プロファイルとハードウェア対応パッケージ",
+      "Ethernet・Wi-Fi・ネットワーク接続管理",
+      "Samsung Galaxy M52 への対応を開発中",
+      "VNC による遠隔画面アクセス"
+    ],
+    "note": null,
+    "websiteLabel": "リポジトリ",
+    "slug": "platinum-os",
+    "category": "System software",
+    "status": "In development",
+    "stack": [
+      "Rust",
+      "Linux",
+      "Qt / QML",
+      "Ubuntu Base"
+    ],
+    "platforms": [
+      "ARM64",
+      "Mobile devices",
+      "Desktop"
+    ],
+    "website": "https://github.com/digkill/Platinum-OS",
+    "featured": false,
+    "position": 120,
+    "screenshots": [
+      {
+        "src": "/images/projects/platinum/home.webp",
+        "kind": "screenshot",
+        "alt": "Platinum OS のホーム画面とアプリ",
+        "caption": "Platinum OS のホーム画面とアプリ"
+      },
+      {
+        "src": "/images/projects/platinum/shell-apps.webp",
+        "kind": "screenshot",
+        "alt": "グラフィカルシェルのアプリ一覧",
+        "caption": "グラフィカルシェルのアプリ一覧"
+      }
+    ]
+  },
+  {
+    "title": "Platinum Browser",
+    "type": "独立したタブグループを持つブラウザー",
+    "description": "Chromium Embedded Framework と独自 UI を使ったブラウザー。タブグループごとにデータとセッションを分離した作業領域を提供。",
+    "audience": "複数アカウントや別々の閲覧環境を使う方。",
+    "features": [
+      "独立したブラウザーコンテキストのタブグループ",
+      "パスワードと復旧キーで保護するグループ — 開発中",
+      "グループのロックとロック済みタブの非表示 — 開発中",
+      "Cookie・ストレージ・セッションの分離",
+      "スクロール可能なタブバー",
+      "期間を選べるデータ削除",
+      "CEF・C++ による独自 UI"
+    ],
+    "note": "保護されたグループとロック機能は開発中です。",
+    "websiteLabel": null,
+    "slug": "platinum-browser",
+    "category": "System software",
+    "status": "In development",
+    "stack": [
+      "C++",
+      "CEF",
+      "Chromium"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 130,
+    "screenshots": []
+  },
+  {
+    "title": "PAYPHONE",
+    "type": "Rust による実験的 VPN プロトコル",
+    "description": "暗号化された転送路で IP トラフィックを運ぶ研究プロジェクト。サーバー、クライアント部品、独自のセッション認証モデルを含みます。",
+    "audience": "ネットワークソフトウェアの開発者と研究チーム。",
+    "features": [
+      "TUN を使う双方向 IPv4 転送",
+      "TLS 1.3 付き QUIC Datagrams",
+      "Ed25519 署名トークンによる認証",
+      "再接続後のセッション復旧",
+      "プロトコル・転送・認証を分離した Rust モジュール"
+    ],
+    "note": "開発・研究用プロトタイプであり、実運用の VPN サービスではありません。",
+    "websiteLabel": null,
+    "slug": "payphone",
+    "category": "System software",
+    "status": "Prototype",
+    "stack": [
+      "Rust",
+      "QUIC",
+      "TLS 1.3",
+      "TUN"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Mobile clients"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 140,
+    "screenshots": [
+      {
+        "src": "/images/projects/payphone/overview.webp",
+        "kind": "illustration",
+        "alt": "PAYPHONE の転送概念図。アプリの画面ではありません",
+        "caption": "PAYPHONE の転送概念図。アプリの画面ではありません"
+      }
+    ]
+  },
+  {
+    "title": "Hunter Demons",
+    "type": "Godot 製モバイル 3D アクション",
+    "description": "Misa が個性的な舞台で悪魔の群れと戦うアクションゲーム。タッチ操作で近接攻撃、ライフル、能力を使い分けます。",
+    "audience": "モバイル・デスクトップのプレイヤー。",
+    "features": [
+      "刀による近接戦とライフル射撃",
+      "照準、リロード、武器切り替え",
+      "ドラゴン召喚などのキャラクター能力",
+      "敵のウェーブとボス戦",
+      "ゲームイベントに連動するアニメーション・音・効果",
+      "タッチ操作と iPhone ビルド"
+    ],
+    "note": null,
+    "websiteLabel": "リポジトリ",
+    "slug": "hunter-demons",
+    "category": "Games",
+    "status": "In development",
+    "stack": [
+      "Godot",
+      "GDScript",
+      "3D"
+    ],
+    "platforms": [
+      "iOS",
+      "Android",
+      "Desktop"
+    ],
+    "website": "https://github.com/digkill/HunterDemons",
+    "featured": false,
+    "position": 150,
+    "screenshots": [
+      {
+        "src": "/images/projects/hunterdemons/rifle.webp",
+        "kind": "screenshot",
+        "alt": "Hunter Demons のライフルとタッチ能力操作",
+        "caption": "Hunter Demons のライフルとタッチ能力操作"
+      },
+      {
+        "src": "/images/projects/hunterdemons/scope.webp",
+        "kind": "screenshot",
+        "alt": "ライフルの照準モード",
+        "caption": "ライフルの照準モード"
+      },
+      {
+        "src": "/images/projects/hunterdemons/neon-district.webp",
+        "kind": "screenshot",
+        "alt": "ネオン街での戦闘",
+        "caption": "ネオン街での戦闘"
+      }
+    ]
+  },
+  {
+    "title": "Office Raid",
+    "type": "オフィスと襲撃を題材にした 3D 戦略ゲーム",
+    "description": "オフィスが基地に、社員が戦闘ユニットに。戦闘の合間に仕事・休憩・訓練を行い、再現可能なシミュレーションで戦います。",
+    "audience": "基地づくりと短時間プレイを楽しむ戦略ゲームのプレイヤー。",
+    "features": [
+      "社員の作業席を備えるオフィス基地",
+      "キッチン、ジム、カラオケ、ゲーム室など",
+      "社員の仕事・休憩・訓練の習慣",
+      "分隊戦闘とグリッド経路探索",
+      "決定論的シミュレーションと戦闘リプレイ",
+      "インストール不要のブラウザー版"
+    ],
+    "note": null,
+    "websiteLabel": "ブラウザーで遊ぶ",
+    "slug": "office-raid",
+    "category": "Games",
+    "status": "In development",
+    "stack": [
+      "Defold",
+      "Lua",
+      "HTML5"
+    ],
+    "platforms": [
+      "Web",
+      "Mobile builds"
+    ],
+    "website": "https://officeraid.com",
+    "featured": false,
+    "position": 160,
+    "screenshots": [
+      {
+        "src": "/images/projects/office-raid/base.webp",
+        "kind": "screenshot",
+        "alt": "Office Raid ブラウザー版の基地、部屋、社員",
+        "caption": "Office Raid ブラウザー版の基地、部屋、社員"
+      }
+    ]
+  },
+  {
+    "title": "Tarot",
+    "type": "タロットデッキとリーディング解釈",
+    "description": "デッキ、展開法、AI による解釈を備えるモバイルアプリ。過去のリーディングを保存し、生成と有料機能の権限はサーバーで管理。",
+    "audience": "娯楽や自己理解のためにタロットを楽しむ方。",
+    "features": [
+      "今日の一枚とクイック展開",
+      "デッキ選択とカード閲覧",
+      "サーバー側の AI 解釈",
+      "リーディング履歴の保存",
+      "ロシア語・英語 UI",
+      "プレミアム機能のアクセス管理"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "tarot",
+    "category": "Apps",
+    "status": "In development",
+    "stack": [
+      "React Native",
+      "Expo",
+      "Go"
+    ],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 170,
+    "screenshots": [
+      {
+        "src": "/images/projects/tarot/home.webp",
+        "kind": "screenshot",
+        "alt": "Tarot のホーム画面：今日のカードとクイックリーディング",
+        "caption": "Tarot のホーム画面：今日のカードとクイックリーディング"
+      },
+      {
+        "src": "/images/projects/tarot/decks.webp",
+        "kind": "screenshot",
+        "alt": "カードデッキの選択",
+        "caption": "カードデッキの選択"
+      }
+    ]
+  },
+  {
+    "title": "Rush Messenger",
+    "type": "モバイル・デスクトップ向けメッセンジャー",
+    "description": "個別メッセージ、グループ、チャンネル、通話の通信基盤。ネイティブモバイルアプリとデスクトップが Rust サーバーを共有。",
+    "audience": "個人の会話やグループコミュニティを利用する方。",
+    "features": [
+      "個別メッセージ、グループチャット、チャンネル",
+      "個別メッセージのエンドツーエンド暗号化",
+      "音声・ビデオ通話",
+      "ネイティブ iOS・Android クライアント",
+      "Tauri デスクトップクライアント",
+      "共通 REST・WebSocket API"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "rush-messenger",
+    "category": "Apps",
+    "status": "In development",
+    "stack": [
+      "Rust",
+      "SwiftUI",
+      "Kotlin",
+      "Tauri",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "iOS",
+      "Android",
+      "Desktop"
+    ],
+    "website": "https://rushmessanger.com",
+    "featured": false,
+    "position": 180,
+    "screenshots": []
+  },
+  {
+    "title": "Meteor",
+    "type": "実験的ドローン制御システム",
+    "description": "ESP32-S3 実験基盤向けのファームウェアと診断ツール。動作センサー、距離計測、テレメトリーを組み合わせ、ハードウェア開発を支援。",
+    "audience": "組み込み開発者と実験飛行プラットフォームのチーム。",
+    "features": [
+      "ボード・接続センサーのコンソール診断",
+      "慣性センサーと距離計の読み取り",
+      "オプティカルフローセンサー連携",
+      "テレメトリーと MQTT データ交換",
+      "通信・高度推定の開発"
+    ],
+    "note": "実験開発プロジェクトであり、自律飛行への準備完了を示すものではありません。",
+    "websiteLabel": null,
+    "slug": "meteor",
+    "category": "Devices",
+    "status": "Prototype",
+    "stack": [
+      "ESP32-S3",
+      "ESP-IDF",
+      "MQTT"
+    ],
+    "platforms": [
+      "Embedded"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 190,
+    "screenshots": []
+  },
+  {
+    "title": "AI Sandbox",
+    "type": "Android で 2D・3D ゲーム制作",
+    "description": "文章やプリセットからゲームをつくるモバイル環境。プロジェクト一覧、エディター、生成サーバー、Godot 実行環境を統合。",
+    "audience": "ゲームのプロトタイプ制作者と制作を学ぶ方。",
+    "features": [
+      "文章プロンプトからゲームを生成",
+      "2D・3D プロジェクトのライブラリと編集",
+      "サーバー側 AI 生成パイプライン",
+      "プロジェクトと改訂履歴の保存",
+      "Godot ホストによるシーン実行",
+      "メール確認コードでのログイン"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "ai-sandbox",
+    "category": "AI & automation",
+    "status": "Prototype",
+    "stack": [
+      "Android",
+      "Godot",
+      "Go",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "Android"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 200,
+    "screenshots": []
+  },
+  {
+    "title": "PlantPal",
+    "type": "モバイル植物ケアアシスタント",
+    "description": "植物を識別し、自宅の植物のお世話を管理するアプリ。植物プロフィール、育て方の案内、通知をまとめています。",
+    "audience": "観葉植物を育てている方。",
+    "features": [
+      "写真から植物を識別",
+      "自宅の植物コレクションのプロフィール",
+      "植物の育て方ガイド",
+      "水やりの通知"
+    ],
+    "note": null,
+    "websiteLabel": "アプリの詳細",
+    "slug": "plantpal",
+    "category": "Apps",
+    "status": "In development",
+    "stack": [
+      "Kotlin",
+      "Jetpack Compose"
+    ],
+    "platforms": [
+      "Android"
+    ],
+    "website": "/plantpal",
+    "featured": false,
+    "position": 210,
+    "screenshots": []
+  }
+]

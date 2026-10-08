@@ -1,8 +1,10 @@
+import { getI18n } from "@/lib/i18n/server";
+import { localePath, locales, languageTags } from "@/lib/i18n/config";
 import type { Metadata } from "next";
 
 import { siteUrl } from "@/lib/site";
 
-export function createMetadata({
+export async function createMetadata({
   title,
   description,
   path = "",
@@ -10,14 +12,17 @@ export function createMetadata({
   title: string;
   description: string;
   path?: string;
-}): Metadata {
-  const url = `${siteUrl}${path}`;
+}): Promise<Metadata> {
+  const { locale, t } = await getI18n();
+  title = t(title); description = t(description);
+  const url = `${siteUrl}${localePath(path || "/", locale)}`;
 
   return {
-    title,
+    title: path === "/" ? { absolute: title } : title,
     description,
     alternates: {
       canonical: url,
+      languages: { ...Object.fromEntries(locales.map(code => [languageTags[code], `${siteUrl}${localePath(path || "/", code)}`])), "x-default": `${siteUrl}${path || "/"}` },
     },
     openGraph: {
       title,

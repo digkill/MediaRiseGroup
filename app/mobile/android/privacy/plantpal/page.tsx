@@ -1,15 +1,16 @@
+import { getI18n } from "@/lib/i18n/server";
 import { Camera, Database, Download, ShieldCheck, Smartphone, WalletCards } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { createMetadata } from "@/lib/metadata";
 
-export const metadata = createMetadata({
+export async function generateMetadata() { return createMetadata({
   title: "PlantPal Privacy Policy",
   description:
     "Privacy policy for PlantPal, a free houseplant care reminder app by MediaRise. PlantPal stores data locally and does not collect, sell, share, or transmit personal data.",
   path: "/mobile/android/privacy/plantpal",
-});
+}); }
 
 const policySections = [
   {
@@ -44,18 +45,15 @@ const policySections = [
   },
 ];
 
-export default function PlantPalPrivacyPage() {
+export default async function PlantPalPrivacyPage() {
+  const { t } = await getI18n();
   return (
     <section className="container pt-36 pb-24">
       <div className="mx-auto max-w-4xl">
-        <Badge>PlantPal Privacy Policy</Badge>
-        <h1 className="mt-6 font-display text-5xl font-semibold tracking-normal text-white text-balance md:text-6xl">
-          PlantPal Privacy Policy
-        </h1>
-        <p className="mt-5 text-sm text-white/48">Effective date: 2026-04-25</p>
-        <p className="mt-8 text-lg leading-8 text-white/64">
-          PlantPal is a free houseplant care reminder app.
-        </p>
+        <Badge>{t("PlantPal Privacy Policy")}</Badge>
+        <h1 className="mt-6 font-display text-5xl font-semibold tracking-normal text-white text-balance md:text-6xl">{t("PlantPal Privacy Policy")}</h1>
+        <p className="mt-5 text-sm text-white/48">{t("Effective date: 2026-04-25")}</p>
+        <p className="mt-8 text-lg leading-8 text-white/64">{t("PlantPal is a free houseplant care reminder app.")}</p>
 
         <div className="mt-12 grid gap-5">
           {policySections.map((section) => {
@@ -68,8 +66,8 @@ export default function PlantPalPrivacyPage() {
                     <Icon className="size-5" />
                   </div>
                   <div>
-                    <h2 className="font-display text-2xl font-semibold text-white">{section.title}</h2>
-                    <p className="mt-3 text-base leading-8 text-white/62">{section.body}</p>
+                    <h2 className="font-display text-2xl font-semibold text-white">{t(section.title)}</h2>
+                    <p className="mt-3 text-base leading-8 text-white/62">{t(section.body)}</p>
                   </div>
                 </div>
               </Card>
@@ -77,8 +75,8 @@ export default function PlantPalPrivacyPage() {
           })}
 
           <Card className="bg-white/4.5 p-6">
-            <h2 className="font-display text-2xl font-semibold text-white">Contact</h2>
-            <p className="mt-3 text-base leading-8 text-white/62">MediaRise.org</p>
+            <h2 className="font-display text-2xl font-semibold text-white">{t("Contact")}</h2>
+            <p className="mt-3 text-base leading-8 text-white/62">{t("MediaRise.org")}</p>
           </Card>
         </div>
       </div>

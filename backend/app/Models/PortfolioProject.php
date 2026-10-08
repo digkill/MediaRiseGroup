@@ -9,6 +9,8 @@ class PortfolioProject extends Model
 {
     use SoftDeletes;
 
+    public const LOCALES = ['en', 'ru', 'zh', 'ko', 'th', 'ja'];
+
     public const CATEGORIES = ['Apps', 'Web platforms', 'AI & automation', 'System software', 'Games', 'Devices'];
 
     public const STATUSES = ['Live', 'In development', 'Prototype'];
@@ -17,13 +19,15 @@ class PortfolioProject extends Model
 
     protected function casts(): array
     {
-        return ['en' => 'array', 'ru' => 'array', 'stack' => 'array', 'platforms' => 'array', 'screenshots' => 'array', 'published' => 'boolean', 'featured' => 'boolean', 'version' => 'integer', 'position' => 'integer'];
+        return ['en' => 'array', 'ru' => 'array', 'zh' => 'array', 'ko' => 'array', 'th' => 'array', 'ja' => 'array', 'stack' => 'array', 'platforms' => 'array', 'screenshots' => 'array', 'published' => 'boolean', 'featured' => 'boolean', 'version' => 'integer', 'position' => 'integer'];
     }
 
-    public function toPublicArray(): array
+    public function toPublicArray(string $locale = 'en'): array
     {
-        // Explicit allowlist: never serialize the model or Russian editorial data.
-        $content = array_intersect_key($this->en, array_flip(['title', 'type', 'description', 'audience', 'features', 'note', 'websiteLabel']));
+        // Return exactly one locale, never the complete multilingual model.
+        $locale = in_array($locale, self::LOCALES, true) ? $locale : 'en';
+        $localized = array_filter($this->{$locale} ?? [], fn ($value) => is_string($value) ? trim($value) !== '' : ($value !== null && $value !== []));
+        $content = array_intersect_key(array_merge($this->en, $localized), array_flip(['title', 'type', 'description', 'audience', 'features', 'note', 'websiteLabel']));
 
         return array_merge($content, [
             'slug' => $this->slug, 'category' => $this->category, 'status' => $this->status,
@@ -31,7 +35,7 @@ class PortfolioProject extends Model
             'featured' => $this->featured, 'position' => $this->position,
             'screenshots' => array_map(fn ($shot) => [
                 'src' => $shot['src'], 'kind' => $shot['kind'] ?? 'screenshot',
-                'alt' => $shot['caption_en'], 'caption' => $shot['caption_en'],
+                'alt' => trim($shot['caption_'.$locale] ?? '') !== '' ? $shot['caption_'.$locale] : $shot['caption_en'], 'caption' => trim($shot['caption_'.$locale] ?? '') !== '' ? $shot['caption_'.$locale] : $shot['caption_en'],
             ], $this->screenshots),
         ]);
     }

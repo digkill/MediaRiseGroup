@@ -1,8 +1,11 @@
+"use client";
+import { useI18n } from "@/components/locale-provider";
 import { Check, Leaf, ScanLine, Users } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
 export function PhoneMockup({ className, variant = "care" }: { className?: string; variant?: "care" | "scan" | "community" }) {
+  const { t } = useI18n();
   const isScan = variant === "scan";
   const isCommunity = variant === "community";
 
@@ -14,9 +17,9 @@ export function PhoneMockup({ className, variant = "care" }: { className?: strin
           <div className="min-h-[520px] bg-[radial-gradient(circle_at_50%_10%,rgba(34,197,94,.38),transparent_28%),linear-gradient(180deg,#071007,#0b0b0b)] p-5 pt-12">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs text-white/48">PlantPal</p>
+                <p className="text-xs text-white/48">{t("PlantPal")}</p>
                 <h3 className="font-display text-xl font-semibold text-white">
-                  {isScan ? "AI Scan" : isCommunity ? "Greenhouse" : "Monstera"}
+                  {t(isScan ? "AI Scan" : isCommunity ? "Greenhouse" : "Monstera")}
                 </h3>
               </div>
               <div className="flex size-10 items-center justify-center rounded-md bg-emerald-400/15 text-emerald-200">
@@ -26,8 +29,8 @@ export function PhoneMockup({ className, variant = "care" }: { className?: strin
             <div className="mt-8 rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-4">
               <div className="aspect-square rounded-md bg-[radial-gradient(circle_at_45%_25%,#8ef5aa,transparent_14%),radial-gradient(circle_at_52%_56%,#22c55e,transparent_36%),linear-gradient(135deg,#14331b,#071007)]" />
               <div className="mt-4 flex items-center justify-between text-xs text-white/62">
-                <span>{isScan ? "Recognition confidence" : "Care score"}</span>
-                <span className="font-semibold text-emerald-200">{isScan ? "98.4%" : "92%"}</span>
+                <span>{t(isScan ? "Recognition confidence" : "Care score")}</span>
+                <span className="font-semibold text-emerald-200">{t(isScan ? "98.4%" : "92%")}</span>
               </div>
             </div>
             <div className="mt-5 grid gap-3">
@@ -36,7 +39,7 @@ export function PhoneMockup({ className, variant = "care" }: { className?: strin
                   <span className="flex size-6 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-200">
                     <Check className="size-3.5" />
                   </span>
-                  <span className="text-xs text-white/72">{item}</span>
+                  <span className="text-xs text-white/72">{t(item)}</span>
                 </div>
               ))}
             </div>

@@ -1,3 +1,4 @@
+import { getI18n } from "@/lib/i18n/server";
 import { Mail, MapPin, Send } from "lucide-react";
 
 import { Reveal } from "@/components/motion/reveal";
@@ -11,24 +12,21 @@ import { Textarea } from "@/components/ui/textarea";
 import { contactCards } from "@/lib/content";
 import { createMetadata } from "@/lib/metadata";
 
-export const metadata = createMetadata({
+export async function generateMetadata() { return createMetadata({
   title: "Contact",
   description: "Contact MediaRise for mobile app development, AI systems, web platforms, robotics automation, IoT solutions, and digital transformation.",
   path: "/contact",
-});
+}); }
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const { t } = await getI18n();
   return (
     <>
       <section className="container pt-36 pb-16">
         <Reveal>
-          <Badge>Contact</Badge>
-          <h1 className="mt-6 max-w-5xl font-display text-5xl font-semibold tracking-normal text-white text-balance md:text-7xl">
-            Tell us what needs to exist next.
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/62">
-            Share the product, platform, AI, robotics, or IoT challenge you want to solve. We will respond with a clear next step.
-          </p>
+          <Badge>{t("Contact")}</Badge>
+          <h1 className="mt-6 max-w-5xl font-display text-5xl font-semibold tracking-normal text-white text-balance md:text-7xl">{t("Tell us what needs to exist next.")}</h1>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/62">{t("Share the product, platform, AI, robotics, or IoT challenge you want to solve. We will respond with a clear next step.")}</p>
         </Reveal>
       </section>
 
@@ -37,23 +35,22 @@ export default function ContactPage() {
           <Card className="bg-white/4.5 p-6 md:p-8">
             <form className="grid gap-5">
               <div className="grid gap-2">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" name="name" placeholder="Your name" autoComplete="name" />
+                <Label htmlFor="name">{t("Name")}</Label>
+                <Input id="name" name="name" placeholder={t("Your name")} autoComplete="name" />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" name="email" type="email" placeholder="you@company.com" autoComplete="email" />
+                <Label htmlFor="email">{t("Email")}</Label>
+                <Input id="email" name="email" type="email" placeholder={t("you@company.com")} autoComplete="email" />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="company">Company</Label>
-                <Input id="company" name="company" placeholder="Company or product name" autoComplete="organization" />
+                <Label htmlFor="company">{t("Company")}</Label>
+                <Input id="company" name="company" placeholder={t("Company or product name")} autoComplete="organization" />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="message">Project brief</Label>
-                <Textarea id="message" name="message" placeholder="What are you building? What timeline matters?" />
+                <Label htmlFor="message">{t("Project brief")}</Label>
+                <Textarea id="message" name="message" placeholder={t("What are you building? What timeline matters?")} />
               </div>
-              <Button type="submit" className="w-full sm:w-fit">
-                Send inquiry <Send />
+              <Button type="submit" className="w-full sm:w-fit">{t("Send inquiry")}<Send />
               </Button>
             </form>
           </Card>
@@ -67,9 +64,7 @@ export default function ContactPage() {
                   <div className="flex size-14 items-center justify-center rounded-full bg-red-500 text-white shadow-glow">
                     <MapPin className="size-6" />
                   </div>
-                  <p className="mt-4 rounded-md border border-white/10 bg-black/50 px-3 py-2 text-sm text-white/72 backdrop-blur-sm">
-                    Remote-first global studio
-                  </p>
+                  <p className="mt-4 rounded-md border border-white/10 bg-black/50 px-3 py-2 text-sm text-white/72 backdrop-blur-sm">{t("Remote-first global studio")}</p>
                 </div>
               </div>
             </Card>
@@ -79,8 +74,8 @@ export default function ContactPage() {
               <Reveal key={card.title}>
                 <Card className="bg-white/4.5 p-5">
                   <Mail className="size-5 text-red-300" />
-                  <h2 className="mt-4 text-sm font-semibold text-white">{card.title}</h2>
-                  <p className="mt-2 text-sm leading-6 text-white/58">{card.value}</p>
+                  <h2 className="mt-4 text-sm font-semibold text-white">{t(card.title)}</h2>
+                  <p className="mt-2 text-sm leading-6 text-white/58">{t(card.value)}</p>
                 </Card>
               </Reveal>
             ))}
@@ -90,7 +85,7 @@ export default function ContactPage() {
 
       <section className="container pb-24">
         <Reveal>
-          <SectionHeading eyebrow="Response window" title="We usually reply within one business day." />
+          <SectionHeading eyebrow={t("Response window")} title={t("We usually reply within one business day.")} />
         </Reveal>
       </section>
     </>

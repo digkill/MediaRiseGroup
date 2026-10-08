@@ -1,10 +1,11 @@
+import { getI18n } from "@/lib/i18n/server";
 import { createMetadata } from "@/lib/metadata";
 
-export const metadata = createMetadata({
+export async function generateMetadata() { return createMetadata({
   title: "Privacy Policy",
   description: "MediaRise privacy policy covering personal data, contact inquiries, analytics, cookies, service providers, and user rights.",
   path: "/privacy",
-});
+}); }
 
 const sections = [
   {
@@ -49,21 +50,20 @@ const sections = [
   },
 ];
 
-export default function PrivacyPage() {
+export default async function PrivacyPage() {
+  const { t } = await getI18n();
   return (
     <section className="container pt-36 pb-24">
       <div className="mx-auto max-w-4xl">
-        <p className="text-sm font-semibold uppercase text-red-200/80">Privacy Policy</p>
-        <h1 className="mt-4 font-display text-5xl font-semibold tracking-normal text-white md:text-6xl">MediaRise Privacy Policy</h1>
-        <p className="mt-5 text-sm text-white/48">Effective date: April 25, 2026</p>
-        <p className="mt-8 text-lg leading-8 text-white/64">
-          This Privacy Policy explains how MediaRise collects, uses, shares, and protects information when you use mediarise.org or communicate with us. This page is provided for general business transparency and should not be treated as legal advice.
-        </p>
+        <p className="text-sm font-semibold uppercase text-red-200/80">{t("Privacy Policy")}</p>
+        <h1 className="mt-4 font-display text-5xl font-semibold tracking-normal text-white md:text-6xl">{t("MediaRise Privacy Policy")}</h1>
+        <p className="mt-5 text-sm text-white/48">{t("Effective date: April 25, 2026")}</p>
+        <p className="mt-8 text-lg leading-8 text-white/64">{t("This Privacy Policy explains how MediaRise collects, uses, shares, and protects information when you use mediarise.org or communicate with us. This page is provided for general business transparency and should not be treated as legal advice.")}</p>
         <div className="mt-12 grid gap-5">
           {sections.map((section) => (
             <article key={section.title} className="rounded-lg border border-white/10 bg-white/4.5 p-6">
-              <h2 className="font-display text-2xl font-semibold text-white">{section.title}</h2>
-              <p className="mt-4 text-base leading-8 text-white/62">{section.body}</p>
+              <h2 className="font-display text-2xl font-semibold text-white">{t(section.title)}</h2>
+              <p className="mt-4 text-base leading-8 text-white/62">{t(section.body)}</p>
             </article>
           ))}
         </div>

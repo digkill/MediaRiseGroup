@@ -1,0 +1,816 @@
+[
+  {
+    "title": "Vibe Video",
+    "type": "iPhone、iPad 和 Mac 视频编辑器",
+    "description": "原生视频编辑器，集剪辑、音频处理、效果和发布导出于一体。",
+    "audience": "视频创作者、博主和内容团队。",
+    "features": [
+      "支持裁剪、分割和图层排序的多轨时间线",
+      "绿幕抠像、背景移除和人物蒙版",
+      "文字、贴纸、转场和可下载视频素材包",
+      "直接在项目中录制配音和相机画面",
+      "4K H.264、8K HEVC 导出及社交平台预设",
+      "保存项目和自动恢复"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "vibe-video",
+    "category": "Apps",
+    "status": "Live",
+    "stack": [
+      "SwiftUI",
+      "AVFoundation",
+      "Vision"
+    ],
+    "platforms": [
+      "iOS",
+      "iPadOS",
+      "macOS"
+    ],
+    "website": "https://vibevideo.fun",
+    "featured": true,
+    "position": 10,
+    "screenshots": [
+      {
+        "src": "/images/projects/vibevideo/mac-editor.webp",
+        "kind": "screenshot",
+        "alt": "macOS 编辑器：预览、图层和多轨时间线",
+        "caption": "macOS 编辑器：预览、图层和多轨时间线"
+      },
+      {
+        "src": "/images/projects/vibevideo/iphone-editor.webp",
+        "kind": "screenshot",
+        "alt": "iPhone 触控编辑",
+        "caption": "iPhone 触控编辑"
+      },
+      {
+        "src": "/images/projects/vibevideo/ipad-editor.webp",
+        "kind": "screenshot",
+        "alt": "iPad 工作区与检查器",
+        "caption": "iPad 工作区与检查器"
+      },
+      {
+        "src": "/images/projects/vibevideo/mac-text.webp",
+        "kind": "screenshot",
+        "alt": "视频文字样式",
+        "caption": "视频文字样式"
+      }
+    ]
+  },
+  {
+    "title": "Again Cleaner",
+    "type": "macOS 磁盘分析与清理",
+    "description": "查看 Mac 存储占用，查找缓存和临时文件，并自行选择清理内容。提供开发构建产物和大文件专用工具。",
+    "audience": "希望掌控存储空间的 Mac 用户和开发者。",
+    "features": [
+      "存储概览和智能扫描结果",
+      "应用缓存、浏览器缓存和临时数据",
+      "检测项目依赖及构建产物",
+      "大文件搜索与常用位置",
+      "清理前选择文件，默认移至废纸篓",
+      "进度反馈和防止重复清理"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "again-cleaner",
+    "category": "Apps",
+    "status": "Live",
+    "stack": [
+      "Swift",
+      "SwiftUI"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "website": "https://againcleaner.com",
+    "featured": false,
+    "position": 20,
+    "screenshots": [
+      {
+        "src": "/images/projects/again-cleaner/overview.webp",
+        "kind": "screenshot",
+        "alt": "Again Cleaner 磁盘使用概览",
+        "caption": "Again Cleaner 磁盘使用概览"
+      },
+      {
+        "src": "/images/projects/again-cleaner/smart.webp",
+        "kind": "screenshot",
+        "alt": "智能扫描结果和清理分类",
+        "caption": "智能扫描结果和清理分类"
+      },
+      {
+        "src": "/images/projects/again-cleaner/junk.webp",
+        "kind": "screenshot",
+        "alt": "临时文件与缓存分类",
+        "caption": "临时文件与缓存分类"
+      }
+    ]
+  },
+  {
+    "title": "LeadWise",
+    "type": "在线学校管理平台",
+    "description": "为教育机构提供课程、学习小组、课表、材料和作业的统一工作空间，管理员、教师和学生各有专属流程。",
+    "audience": "在线学校和课外教育中心。",
+    "features": [
+      "学生、学习小组及课程管理",
+      "课程材料与内容预览",
+      "课表及小组管理入口",
+      "支持文字、附件和教师反馈的作业",
+      "基于角色的权限与机构管理",
+      "教学平台品牌定制"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "leadwise",
+    "category": "Web platforms",
+    "status": "In development",
+    "stack": [
+      "Laravel",
+      "Vue",
+      "MySQL"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://lk.leadwise.study",
+    "featured": true,
+    "position": 30,
+    "screenshots": [
+      {
+        "src": "/images/projects/leadwise/groups.webp",
+        "kind": "screenshot",
+        "alt": "LeadWise 学习组及筛选 — 演示数据",
+        "caption": "LeadWise 学习组及筛选 — 演示数据"
+      },
+      {
+        "src": "/images/projects/leadwise/courses.webp",
+        "kind": "screenshot",
+        "alt": "LeadWise 课程目录 — 演示数据",
+        "caption": "LeadWise 课程目录 — 演示数据"
+      },
+      {
+        "src": "/images/projects/leadwise/lessons.webp",
+        "kind": "screenshot",
+        "alt": "LeadWise 课程编辑器 — 演示数据",
+        "caption": "LeadWise 课程编辑器 — 演示数据"
+      }
+    ]
+  },
+  {
+    "title": "编程学校",
+    "type": "连锁教育机构 ERP",
+    "description": "连接学校与加盟运营的 ERP，涵盖学生、小组、排课、支付和教学。交易与课程访问及学习历史关联。",
+    "audience": "学校网络、加盟运营者、管理员和教师。",
+    "features": [
+      "学生、小组和已付费课时余额",
+      "调课、退出和剩余课时控制",
+      "账单、支付、退款及财税服务集成",
+      "教师可用时间、排课和代课安排",
+      "付款后的入学及权限开通",
+      "学校隔离、角色权限与事件日志"
+    ],
+    "note": "客户系统。不公开含个人或支付信息的画面。",
+    "websiteLabel": null,
+    "slug": "codeclass",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Laravel",
+      "Doctrine",
+      "Vue",
+      "MySQL",
+      "Redis"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 40,
+    "screenshots": []
+  },
+  {
+    "title": "Technology Generation",
+    "type": "考试准备与练习平台",
+    "description": "面向俄罗斯 OGE 学校考试的教育平台，连接练习题、网络研讨课和学生成绩，并提供教师导入和审核材料的工具。",
+    "audience": "中学生、教师及备考教育机构。",
+    "features": [
+      "按学科和主题分类的题目、答案和提示",
+      "教材导入与错误报告",
+      "审核队列与发布控制",
+      "在线课程、时间表和学习板块",
+      "按学科筛选学习事件",
+      "后台及用户管理"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "testoge",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "PostgreSQL",
+      "React",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://поколениетехнологий.рф",
+    "featured": false,
+    "position": 50,
+    "screenshots": []
+  },
+  {
+    "title": "SkillUp",
+    "type": "实践型在线学习平台",
+    "description": "在线课程结合学习材料与实践任务，编程练习可在隔离环境中运行提交的代码。",
+    "audience": "学生、课程作者和教育机构。",
+    "features": [
+      "课程目录与结构化章节",
+      "初级和中级 Java 课程",
+      "可执行代码的编程作业",
+      "容器中隔离执行 Java",
+      "学习内容和课程访问管理"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "skillup",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Laravel",
+      "Java",
+      "Docker"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://skillup.su",
+    "featured": false,
+    "position": 60,
+    "screenshots": []
+  },
+  {
+    "title": "Scheduler",
+    "type": "教育中心排课服务",
+    "description": "拥有独立 API 和 Web 界面的排课服务，可集成教育 ERP，并为 LeadWise 提供专门适配。",
+    "audience": "需要独立排课服务的学校和教育中心。",
+    "features": [
+      "通过网页界面和 API 排课",
+      "API 网关和后台任务处理",
+      "PostgreSQL 课表数据存储",
+      "教育 ERP 集成",
+      "LeadWise 专门适配"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "scheduler",
+    "category": "Web platforms",
+    "status": "In development",
+    "stack": [
+      "Go",
+      "PostgreSQL",
+      "React",
+      "Goose"
+    ],
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 70,
+    "screenshots": []
+  },
+  {
+    "title": "Accounting Tools",
+    "type": "业务登记与财税收据处理",
+    "description": "管理机构、业务登记和财税收据处理的服务。支持准备数据、检测重复行和跟踪收据提交结果。",
+    "audience": "会计团队及批量处理财务业务的企业。",
+    "features": [
+      "机构账户与收银机管理",
+      "Excel 登记导入与校验",
+      "重复检测和防止重复提交",
+      "试运行以检查条目和金额",
+      "ATOL Online 集成与财税处理状态跟踪",
+      "单项业务处理报告"
+    ],
+    "note": "不公开包含企业财务数据的登记表。",
+    "websiteLabel": null,
+    "slug": "accounting-tools",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "React",
+      "MySQL",
+      "ATOL API"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 80,
+    "screenshots": []
+  },
+  {
+    "title": "Yoozuu",
+    "type": "内容发布与社区平台",
+    "description": "面向文章、讨论和知识分享的平台，包含发布工具、主题板块和审核，适配桌面和手机。",
+    "audience": "作者、专业社区和读者。",
+    "features": [
+      "内容动态、主题板块和作者资料",
+      "区块与 Markdown 编辑器",
+      "评论和文章讨论",
+      "发布前审核",
+      "防止注册滥用和垃圾内容",
+      "响应式布局及浅色、深色主题"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "yoozuu",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "React",
+      "TypeScript",
+      "S3"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://yoozuu.com",
+    "featured": false,
+    "position": 90,
+    "screenshots": [
+      {
+        "src": "/images/projects/yoozuu/feed.webp",
+        "kind": "screenshot",
+        "alt": "Yoozuu 深色模式内容流",
+        "caption": "Yoozuu 深色模式内容流"
+      },
+      {
+        "src": "/images/projects/yoozuu/editor.webp",
+        "kind": "screenshot",
+        "alt": "区块式文章编辑器",
+        "caption": "区块式文章编辑器"
+      },
+      {
+        "src": "/images/projects/yoozuu/article.webp",
+        "kind": "screenshot",
+        "alt": "带格式和代码块的文章布局",
+        "caption": "带格式和代码块的文章布局"
+      }
+    ]
+  },
+  {
+    "title": "PRobot",
+    "type": "内容与发布管理",
+    "description": "面向营销和公关的工作空间：准备内容、连接渠道并在后台处理发布任务。AI 辅助起草，集成服务连接分发渠道。",
+    "audience": "内容团队、营销人员和公关专业人士。",
+    "features": [
+      "发布平台目录与已连接渠道",
+      "AI 辅助草稿",
+      "后台发布与处理队列",
+      "Telegram Client Service 集成",
+      "材料收集与发布关系",
+      "关系图与分析视图"
+    ],
+    "note": "发布可用性取决于已连接账户和目标平台 API。",
+    "websiteLabel": null,
+    "slug": "probot",
+    "category": "AI & automation",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "React",
+      "PostgreSQL",
+      "Redis",
+      "Asynq"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://prbo.ru",
+    "featured": false,
+    "position": 100,
+    "screenshots": []
+  },
+  {
+    "title": "Misa",
+    "type": "带业务集成的语音 AI 助手",
+    "description": "具备语音对话、记忆和业务信息处理工具的助手。带 VRM 角色的 Web 客户端连接语音服务与 Bitrix24。",
+    "audience": "需要沟通和信息流程助手的团队。",
+    "features": [
+      "语音识别与合成对话",
+      "带动画 VRM 角色的 Web 客户端",
+      "累积上下文的记忆和搜索",
+      "Bitrix24 聊天与任务集成",
+      "附件处理和上下文信息提取",
+      "回复中直达已创建任务的链接"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "misa",
+    "category": "AI & automation",
+    "status": "In development",
+    "stack": [
+      "Go",
+      "VRM",
+      "PostgreSQL",
+      "Qdrant",
+      "Bitrix24"
+    ],
+    "platforms": [
+      "Web",
+      "Server"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 110,
+    "screenshots": []
+  },
+  {
+    "title": "Platinum OS One",
+    "type": "Linux 平台与镜像构建系统",
+    "description": "具有自有图形界面的 Linux 平台及跨设备构建系统。硬件支持与构建逻辑分离，界面适配不同设备。",
+    "audience": "设备制造商以及移动、嵌入式系统开发者。",
+    "features": [
+      "Qt/QML 图形界面、应用及主屏幕",
+      "通过 Rust 流程构建可启动镜像",
+      "独立板卡配置与硬件支持包",
+      "以太网、Wi-Fi 和网络连接管理",
+      "持续适配 Samsung Galaxy M52",
+      "通过 VNC 远程访问屏幕"
+    ],
+    "note": null,
+    "websiteLabel": "代码仓库",
+    "slug": "platinum-os",
+    "category": "System software",
+    "status": "In development",
+    "stack": [
+      "Rust",
+      "Linux",
+      "Qt / QML",
+      "Ubuntu Base"
+    ],
+    "platforms": [
+      "ARM64",
+      "Mobile devices",
+      "Desktop"
+    ],
+    "website": "https://github.com/digkill/Platinum-OS",
+    "featured": false,
+    "position": 120,
+    "screenshots": [
+      {
+        "src": "/images/projects/platinum/home.webp",
+        "kind": "screenshot",
+        "alt": "Platinum OS 主屏幕与应用",
+        "caption": "Platinum OS 主屏幕与应用"
+      },
+      {
+        "src": "/images/projects/platinum/shell-apps.webp",
+        "kind": "screenshot",
+        "alt": "图形界面中的应用网格",
+        "caption": "图形界面中的应用网格"
+      }
+    ]
+  },
+  {
+    "title": "Platinum Browser",
+    "type": "具有独立标签组的浏览器",
+    "description": "基于 Chromium Embedded Framework 的自定义浏览器。标签组是独立工作区，拥有各自的数据和会话。",
+    "audience": "需要多个账户及独立浏览环境的用户。",
+    "features": [
+      "具有独立浏览器上下文的标签组",
+      "密码和恢复密钥保护组——开发中",
+      "组锁定及隐藏已锁定标签——开发中",
+      "独立 Cookie、存储和会话",
+      "可滚动的标签栏",
+      "可选择时间范围的数据清理",
+      "使用 CEF 和 C++ 的自定义界面"
+    ],
+    "note": "受保护的组及其锁定流程正在开发中。",
+    "websiteLabel": null,
+    "slug": "platinum-browser",
+    "category": "System software",
+    "status": "In development",
+    "stack": [
+      "C++",
+      "CEF",
+      "Chromium"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 130,
+    "screenshots": []
+  },
+  {
+    "title": "PAYPHONE",
+    "type": "Rust 实验性 VPN 协议",
+    "description": "通过加密传输承载 IP 流量的研究项目，包括服务器、客户端组件和专用会话认证模型。",
+    "audience": "网络软件开发者和研究团队。",
+    "features": [
+      "通过 TUN 双向传输 IPv4",
+      "使用 TLS 1.3 的 QUIC Datagrams",
+      "Ed25519 签名令牌认证",
+      "重新连接后恢复会话",
+      "协议、传输与认证的独立 Rust 模块"
+    ],
+    "note": "开发研究原型，并非生产级 VPN 服务。",
+    "websiteLabel": null,
+    "slug": "payphone",
+    "category": "System software",
+    "status": "Prototype",
+    "stack": [
+      "Rust",
+      "QUIC",
+      "TLS 1.3",
+      "TUN"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Mobile clients"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 140,
+    "screenshots": [
+      {
+        "src": "/images/projects/payphone/overview.webp",
+        "kind": "illustration",
+        "alt": "PAYPHONE 传输概念示意图，并非应用截图",
+        "caption": "PAYPHONE 传输概念示意图，并非应用截图"
+      }
+    ]
+  },
+  {
+    "title": "Hunter Demons",
+    "type": "Godot 移动端 3D 动作游戏",
+    "description": "以 Misa 为主角的动作游戏，在风格化场景中对抗恶魔浪潮。触控操作结合近战、步枪与角色技能。",
+    "audience": "移动设备和桌面电脑玩家。",
+    "features": [
+      "武士刀近战与步枪射击",
+      "瞄准、装弹、武器切换",
+      "角色技能，包括召唤巨龙",
+      "敌人波次和首领战",
+      "由游戏事件驱动的动画、音效和特效",
+      "触控操作与 iPhone 构建"
+    ],
+    "note": null,
+    "websiteLabel": "代码仓库",
+    "slug": "hunter-demons",
+    "category": "Games",
+    "status": "In development",
+    "stack": [
+      "Godot",
+      "GDScript",
+      "3D"
+    ],
+    "platforms": [
+      "iOS",
+      "Android",
+      "Desktop"
+    ],
+    "website": "https://github.com/digkill/HunterDemons",
+    "featured": false,
+    "position": 150,
+    "screenshots": [
+      {
+        "src": "/images/projects/hunterdemons/rifle.webp",
+        "kind": "screenshot",
+        "alt": "Hunter Demons 步枪玩法与触控技能",
+        "caption": "Hunter Demons 步枪玩法与触控技能"
+      },
+      {
+        "src": "/images/projects/hunterdemons/scope.webp",
+        "kind": "screenshot",
+        "alt": "步枪瞄准模式",
+        "caption": "步枪瞄准模式"
+      },
+      {
+        "src": "/images/projects/hunterdemons/neon-district.webp",
+        "kind": "screenshot",
+        "alt": "霓虹街区战斗",
+        "caption": "霓虹街区战斗"
+      }
+    ]
+  },
+  {
+    "title": "Office Raid",
+    "type": "办公室与突袭的 3D 策略游戏",
+    "description": "办公室是基地，员工是战斗单位。战斗间隙员工工作、休息和训练，战斗采用可复现模拟。",
+    "audience": "喜欢基地建设和短时游玩的策略玩家。",
+    "features": [
+      "员工工位与办公室基地",
+      "厨房、健身房、卡拉 OK、游戏室等设施",
+      "员工的工作、休息、训练日程",
+      "小队战斗和网格寻路",
+      "确定性模拟与战斗回放",
+      "无需安装的浏览器版本"
+    ],
+    "note": null,
+    "websiteLabel": "在浏览器中游玩",
+    "slug": "office-raid",
+    "category": "Games",
+    "status": "In development",
+    "stack": [
+      "Defold",
+      "Lua",
+      "HTML5"
+    ],
+    "platforms": [
+      "Web",
+      "Mobile builds"
+    ],
+    "website": "https://officeraid.com",
+    "featured": false,
+    "position": 160,
+    "screenshots": [
+      {
+        "src": "/images/projects/office-raid/base.webp",
+        "kind": "screenshot",
+        "alt": "Office Raid 浏览器版办公室基地、房间与员工",
+        "caption": "Office Raid 浏览器版办公室基地、房间与员工"
+      }
+    ]
+  },
+  {
+    "title": "Tarot",
+    "type": "塔罗牌组与解读",
+    "description": "提供牌组、牌阵和 AI 解读的移动应用。历史记录保留过往占卜，服务器负责生成和高级权限。",
+    "audience": "以娱乐和自我反思为目的探索塔罗的用户。",
+    "features": [
+      "每日一牌和快速牌阵",
+      "牌组选择及卡牌浏览",
+      "服务器端 AI 解读",
+      "保存解读历史",
+      "俄语和英语界面",
+      "高级功能权限管理"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "tarot",
+    "category": "Apps",
+    "status": "In development",
+    "stack": [
+      "React Native",
+      "Expo",
+      "Go"
+    ],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 170,
+    "screenshots": [
+      {
+        "src": "/images/projects/tarot/home.webp",
+        "kind": "screenshot",
+        "alt": "Tarot 主屏幕：每日一牌与快速解读",
+        "caption": "Tarot 主屏幕：每日一牌与快速解读"
+      },
+      {
+        "src": "/images/projects/tarot/decks.webp",
+        "kind": "screenshot",
+        "alt": "选择牌组",
+        "caption": "选择牌组"
+      }
+    ]
+  },
+  {
+    "title": "Rush Messenger",
+    "type": "移动和桌面即时通讯",
+    "description": "支持私信、群组、频道和通话的通讯平台。原生移动应用与桌面客户端共用 Rust 服务器。",
+    "audience": "使用私人对话和群组社区的用户。",
+    "features": [
+      "私信、群聊和频道",
+      "私信端到端加密",
+      "语音和视频通话",
+      "原生 iOS 与 Android 客户端",
+      "Tauri 桌面客户端",
+      "共享 REST 与 WebSocket API"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "rush-messenger",
+    "category": "Apps",
+    "status": "In development",
+    "stack": [
+      "Rust",
+      "SwiftUI",
+      "Kotlin",
+      "Tauri",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "iOS",
+      "Android",
+      "Desktop"
+    ],
+    "website": "https://rushmessanger.com",
+    "featured": false,
+    "position": 180,
+    "screenshots": []
+  },
+  {
+    "title": "Meteor",
+    "type": "实验性无人机控制系统",
+    "description": "面向 ESP32-S3 实验平台的固件与诊断工具。结合运动传感器、距离测量和遥测，用于硬件研发。",
+    "audience": "嵌入式开发者和实验飞行平台团队。",
+    "features": [
+      "板卡及传感器控制台诊断",
+      "惯性传感器和测距读数",
+      "光流传感器集成",
+      "遥测和 MQTT 数据交换",
+      "通信与高度估算开发"
+    ],
+    "note": "实验开发项目，不宣称已具备自主飞行能力。",
+    "websiteLabel": null,
+    "slug": "meteor",
+    "category": "Devices",
+    "status": "Prototype",
+    "stack": [
+      "ESP32-S3",
+      "ESP-IDF",
+      "MQTT"
+    ],
+    "platforms": [
+      "Embedded"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 190,
+    "screenshots": []
+  },
+  {
+    "title": "AI Sandbox",
+    "type": "在 Android 上制作 2D 和 3D 游戏",
+    "description": "从文字描述和预设创建游戏的移动环境。结合项目库、编辑器、生成服务器和 Godot 运行环境。",
+    "audience": "游戏原型创作者和游戏制作学习者。",
+    "features": [
+      "从文字提示创建游戏项目",
+      "2D、3D 项目库和编辑器",
+      "服务器端 AI 生成流程",
+      "项目和版本存储",
+      "通过 Godot 宿主执行场景",
+      "邮箱验证码登录"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "ai-sandbox",
+    "category": "AI & automation",
+    "status": "Prototype",
+    "stack": [
+      "Android",
+      "Godot",
+      "Go",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "Android"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 200,
+    "screenshots": []
+  },
+  {
+    "title": "PlantPal",
+    "type": "移动植物养护助手",
+    "description": "用于识别植物和管理家庭植物的应用，整合植物档案、养护指导和提醒。",
+    "audience": "室内植物爱好者。",
+    "features": [
+      "通过照片识别植物",
+      "家庭植物档案",
+      "植物养护指导",
+      "浇水提醒"
+    ],
+    "note": null,
+    "websiteLabel": "应用详情",
+    "slug": "plantpal",
+    "category": "Apps",
+    "status": "In development",
+    "stack": [
+      "Kotlin",
+      "Jetpack Compose"
+    ],
+    "platforms": [
+      "Android"
+    ],
+    "website": "/plantpal",
+    "featured": false,
+    "position": 210,
+    "screenshots": []
+  }
+]

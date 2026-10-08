@@ -15,8 +15,8 @@ Open `http://localhost:3000`.
 
 ## Portfolio CMS
 
-Public portfolio pages use English only. Russian copy is retained in the protected
-editor. `/admin` requires an administrator account; there is no public registration.
+Public portfolio pages support six languages, with English as the fallback.
+All language versions are editable in the protected editor. `/admin` requires an administrator account; there is no public registration.
 The **Published** checkbox controls the catalog and project detail page. **On homepage**
 controls the homepage independently, and only published projects can appear there.
 Changes take effect on the next page load without rebuilding the site.
@@ -37,7 +37,7 @@ Set `PORTFOLIO_API_URL=http://127.0.0.1:8001` in the root `.env.local` and run
 `yarn dev`. Without this variable, the frontend uses the English seed in read-only
 mode. With it configured, API failures never fall back to publishing seed records.
 
-The editor manages English and Russian copy, features, technology, platforms,
+The editor manages six language versions, features, technology, platforms,
 status, links, order, image uploads, captions, publication, and homepage selection.
 Deletion archives a project; restoring it creates a hidden draft. Simultaneous edits
 are protected by a version check. Uploaded JPEG, PNG and WebP images are stored in
@@ -93,3 +93,25 @@ yarn lint
 - `/about`
 - `/privacy`
 - `/contact`
+
+## Languages
+
+The public site supports English (existing unprefixed URLs), Russian (`/ru`),
+Simplified Chinese (`/zh`), Korean (`/ko`), Thai (`/th`) and Japanese (`/ja`).
+The language selector preserves the page, query and fragment. `/en/*` redirects
+to canonical English URLs. Translations are rendered on the server; no external
+translation service is called by the application. UI dictionaries live in
+`lib/i18n/messages/`, with request-local server loaders and a client context.
+
+Each project has six editable language sections in `/admin/projects`. Empty,
+missing or whitespace-only translated fields and captions fall back to English;
+translated fields on the same project remain localized. Empty feature lists use
+the English feature list. `/api/portfolio?locale=ja` returns only the selected
+language's public projection; an omitted or unsupported language selects English.
+Publication, homepage flags, order, media files and slugs are shared across languages.
+
+The additive migration adds four language columns. The seed fills only previously
+uninitialized columns; existing editorial copy, order, visibility, archives and
+translated edits are preserved. Keep database backups before deploying migrations.
+Metadata provides canonical and alternate-language URLs, and `/sitemap.xml` includes
+all six variants of published pages. `/admin` remains an unprefixed management area.

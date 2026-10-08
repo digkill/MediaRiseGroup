@@ -20,8 +20,8 @@ class SavePortfolioProject extends FormRequest
         foreach (['stack', 'platforms'] as $field) {
             $values[$field] = $this->lines($this->input($field, ''));
         }
-        foreach (['en', 'ru'] as $locale) {
-            $values[$locale] = $this->input($locale, []);
+        foreach (PortfolioProject::LOCALES as $locale) {
+            $values[$locale] = $this->input($locale, $this->route('project')?->{$locale} ?? []);
             $values[$locale]['features'] = $this->lines($values[$locale]['features'] ?? '');
         }
         $values['screenshots'] = array_values(array_filter($this->input('screenshots', []), fn ($shot) => empty($shot['remove'])));
@@ -63,7 +63,8 @@ class SavePortfolioProject extends FormRequest
             'screenshots.*.kind' => ['required', Rule::in(['screenshot', 'illustration'])],
             'screenshots.*.position' => ['nullable', 'integer', 'min:0', 'max:10000'],
         ];
-        foreach (['en', 'ru'] as $locale) {
+        foreach (PortfolioProject::LOCALES as $locale) {
+            $rules['screenshots.*.caption_'.$locale] = [$locale === 'en' ? 'required' : 'nullable', 'string', 'max:500'];
             $required = $locale === 'en' ? 'required' : 'nullable';
             $rules[$locale] = ['required', 'array:title,type,description,audience,features,note,websiteLabel'];
             foreach (['title' => 160, 'type' => 240, 'description' => 3000, 'audience' => 1000, 'note' => 2000, 'websiteLabel' => 80] as $field => $max) {

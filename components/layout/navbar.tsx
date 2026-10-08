@@ -1,10 +1,12 @@
 "use client";
-
+import { LanguageSwitcher } from "./language-switcher";
+import { stripLocale } from "@/lib/i18n/config";
+import { useI18n } from "@/components/locale-provider";
 import * as Dialog from "@radix-ui/react-dialog";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/locale-link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -14,8 +16,9 @@ import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
 
 function Logo() {
+  const { t } = useI18n();
   return (
-    <Link href="/" className="group flex items-center gap-3" aria-label="MediaRise home">
+    <Link href="/" className="group flex items-center gap-3" aria-label={t("MediaRise home")}>
       <span className="relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-md border border-red-400/25 bg-white shadow-glow">
         <Image
           src="/images/mediarise-mark.png"
@@ -26,15 +29,15 @@ function Logo() {
           priority
         />
       </span>
-      <span className="font-display text-base font-semibold tracking-normal text-foreground">
-        Media<span className="text-red-400">Rise</span>
+      <span className="hidden font-display text-base font-semibold tracking-normal text-foreground min-[360px]:inline">{t("Media")}<span className="text-red-400">{t("Rise")}</span>
       </span>
     </Link>
   );
 }
 
 export function Navbar() {
-  const pathname = usePathname();
+  const { t } = useI18n();
+  const pathname = stripLocale(usePathname());
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -59,7 +62,7 @@ export function Navbar() {
         )}
       >
         <Logo />
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {
             const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (
@@ -71,20 +74,22 @@ export function Navbar() {
                   active && "bg-black/5 text-foreground dark:bg-white/[0.07] dark:text-white",
                 )}
               >
-                {item.label}
+                {t(item.label)}
               </Link>
             );
           })}
         </div>
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
+          <LanguageSwitcher />
           <ThemeToggle />
           <Button asChild size="sm">
-            <Link href="/contact">Get Consultation</Link>
+            <Link href="/contact">{t("Get Consultation")}</Link>
           </Button>
         </div>
+        <div className="lg:hidden"><LanguageSwitcher /></div>
         <Dialog.Root open={open} onOpenChange={setOpen}>
           <Dialog.Trigger asChild>
-            <Button variant="secondary" size="icon" className="md:hidden" aria-label="Open menu">
+            <Button variant="secondary" size="icon" className="lg:hidden" aria-label={t("Open menu")}>
               <Menu />
             </Button>
           </Dialog.Trigger>
@@ -109,7 +114,7 @@ export function Navbar() {
                     <div className="flex items-center justify-between">
                       <Logo />
                       <Dialog.Close asChild>
-                        <Button variant="secondary" size="icon" aria-label="Close menu">
+                        <Button variant="secondary" size="icon" aria-label={t("Close menu")}>
                           <X />
                         </Button>
                       </Dialog.Close>
@@ -121,13 +126,13 @@ export function Navbar() {
                           href={item.href}
                           className="rounded-md px-3 py-3 text-base font-medium text-foreground/80 transition hover:bg-black/5 hover:text-foreground dark:text-white/80 dark:hover:bg-white/[0.07] dark:hover:text-white"
                         >
-                          {item.label}
+                          {t(item.label)}
                         </Link>
                       ))}
                       <div className="mt-3 flex gap-2">
                         <ThemeToggle />
                         <Button asChild className="flex-1">
-                          <Link href="/contact">Get Consultation</Link>
+                          <Link href="/contact">{t("Get Consultation")}</Link>
                         </Button>
                       </div>
                     </div>

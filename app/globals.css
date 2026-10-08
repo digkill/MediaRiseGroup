@@ -383,3 +383,10 @@ html:not(.dark) .shadow-black\/30 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Natural line breaking and room for Thai marks and CJK glyphs. */
+html:lang(zh), html:lang(ja) { line-break: strict; }
+html:lang(ko) { word-break: keep-all; overflow-wrap: anywhere; }
+html:lang(th) { overflow-wrap: anywhere; }
+html:lang(th) :is(h1, h2, h3) { line-height: 1.5; letter-spacing: normal; }
+html:lang(zh) :is(h1, h2, h3), html:lang(ja) :is(h1, h2, h3), html:lang(ko) :is(h1, h2, h3) { line-height: 1.35; letter-spacing: normal; }

@@ -1,0 +1,816 @@
+[
+  {
+    "title": "Vibe Video",
+    "type": "โปรแกรมตัดต่อวิดีโอสำหรับ iPhone, iPad และ Mac",
+    "description": "แอปเนทีฟสำหรับตัดต่อ จัดการเสียง และเตรียมวิดีโอเผยแพร่ รวมหลายแทร็ก เอฟเฟกต์ และส่งออกในแอปเดียว",
+    "audience": "ผู้สร้างวิดีโอ บล็อกเกอร์ และทีมคอนเทนต์",
+    "features": [
+      "ไทม์ไลน์หลายแทร็กพร้อมตัด แบ่ง และเรียงเลเยอร์",
+      "โครมาคีย์ ลบพื้นหลัง และมาสก์บุคคล",
+      "ข้อความ สติกเกอร์ ทรานซิชัน และแพ็กวิดีโอดาวน์โหลด",
+      "บันทึกเสียงและกล้องลงโครงการโดยตรง",
+      "ส่งออก 4K H.264 และ 8K HEVC พร้อมรูปแบบโซเชียล",
+      "บันทึกโครงการและกู้คืนอัตโนมัติ"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "vibe-video",
+    "category": "Apps",
+    "status": "Live",
+    "stack": [
+      "SwiftUI",
+      "AVFoundation",
+      "Vision"
+    ],
+    "platforms": [
+      "iOS",
+      "iPadOS",
+      "macOS"
+    ],
+    "website": "https://vibevideo.fun",
+    "featured": true,
+    "position": 10,
+    "screenshots": [
+      {
+        "src": "/images/projects/vibevideo/mac-editor.webp",
+        "kind": "screenshot",
+        "alt": "ตัวแก้ไข macOS พร้อมตัวอย่าง เลเยอร์ และหลายแทร็ก",
+        "caption": "ตัวแก้ไข macOS พร้อมตัวอย่าง เลเยอร์ และหลายแทร็ก"
+      },
+      {
+        "src": "/images/projects/vibevideo/iphone-editor.webp",
+        "kind": "screenshot",
+        "alt": "ตัดต่อสัมผัสบน iPhone",
+        "caption": "ตัดต่อสัมผัสบน iPhone"
+      },
+      {
+        "src": "/images/projects/vibevideo/ipad-editor.webp",
+        "kind": "screenshot",
+        "alt": "พื้นที่ทำงานและแผงตรวจสอบบน iPad",
+        "caption": "พื้นที่ทำงานและแผงตรวจสอบบน iPad"
+      },
+      {
+        "src": "/images/projects/vibevideo/mac-text.webp",
+        "kind": "screenshot",
+        "alt": "จัดรูปแบบข้อความบนวิดีโอ",
+        "caption": "จัดรูปแบบข้อความบนวิดีโอ"
+      }
+    ]
+  },
+  {
+    "title": "Again Cleaner",
+    "type": "วิเคราะห์และล้างพื้นที่ดิสก์ macOS",
+    "description": "ดูพื้นที่เก็บข้อมูล Mac ค้นหาแคชและไฟล์ชั่วคราว แล้วเลือกสิ่งที่จะลบ มีเครื่องมือสำหรับไฟล์บิลด์และไฟล์ขนาดใหญ่",
+    "audience": "ผู้ใช้ Mac และนักพัฒนาที่ต้องการจัดการพื้นที่เก็บข้อมูล",
+    "features": [
+      "ภาพรวมพื้นที่และผล Smart Scan",
+      "แคชแอป เบราว์เซอร์ และข้อมูลชั่วคราว",
+      "ตรวจหาดีเพนเดนซีและไฟล์บิลด์โครงการ",
+      "ค้นหาไฟล์ใหญ่และตำแหน่งโปรด",
+      "เลือกไฟล์ก่อนล้าง โดยย้ายลงถังขยะเป็นค่าเริ่มต้น",
+      "แสดงความคืบหน้าและป้องกันการล้างซ้ำ"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "again-cleaner",
+    "category": "Apps",
+    "status": "Live",
+    "stack": [
+      "Swift",
+      "SwiftUI"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "website": "https://againcleaner.com",
+    "featured": false,
+    "position": 20,
+    "screenshots": [
+      {
+        "src": "/images/projects/again-cleaner/overview.webp",
+        "kind": "screenshot",
+        "alt": "ภาพรวมดิสก์ใน Again Cleaner",
+        "caption": "ภาพรวมดิสก์ใน Again Cleaner"
+      },
+      {
+        "src": "/images/projects/again-cleaner/smart.webp",
+        "kind": "screenshot",
+        "alt": "ผล Smart Scan พร้อมหมวดล้างข้อมูล",
+        "caption": "ผล Smart Scan พร้อมหมวดล้างข้อมูล"
+      },
+      {
+        "src": "/images/projects/again-cleaner/junk.webp",
+        "kind": "screenshot",
+        "alt": "หมวดไฟล์ชั่วคราวและแคช",
+        "caption": "หมวดไฟล์ชั่วคราวและแคช"
+      }
+    ]
+  },
+  {
+    "title": "LeadWise",
+    "type": "แพลตฟอร์มบริหารโรงเรียนออนไลน์",
+    "description": "พื้นที่ร่วมสำหรับหลักสูตร กลุ่มเรียน ตารางเรียน สื่อ และการบ้าน พร้อมขั้นตอนใช้งานเฉพาะผู้ดูแล ครู และนักเรียน",
+    "audience": "โรงเรียนออนไลน์และศูนย์การศึกษาเสริม",
+    "features": [
+      "จัดการนักเรียน กลุ่ม และบทเรียน",
+      "หลักสูตร สื่อบทเรียน และตัวอย่างเนื้อหา",
+      "ตารางเรียนพร้อมเข้าจัดการกลุ่ม",
+      "การบ้านข้อความ ไฟล์แนบ และข้อเสนอแนะจากครู",
+      "สิทธิ์ตามบทบาทและจัดการองค์กร",
+      "ปรับแบรนด์ของแพลตฟอร์มการเรียน"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "leadwise",
+    "category": "Web platforms",
+    "status": "In development",
+    "stack": [
+      "Laravel",
+      "Vue",
+      "MySQL"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://lk.leadwise.study",
+    "featured": true,
+    "position": 30,
+    "screenshots": [
+      {
+        "src": "/images/projects/leadwise/groups.webp",
+        "kind": "screenshot",
+        "alt": "กลุ่มและตัวกรอง LeadWise — ข้อมูลสาธิต",
+        "caption": "กลุ่มและตัวกรอง LeadWise — ข้อมูลสาธิต"
+      },
+      {
+        "src": "/images/projects/leadwise/courses.webp",
+        "kind": "screenshot",
+        "alt": "รายการหลักสูตร LeadWise — ข้อมูลสาธิต",
+        "caption": "รายการหลักสูตร LeadWise — ข้อมูลสาธิต"
+      },
+      {
+        "src": "/images/projects/leadwise/lessons.webp",
+        "kind": "screenshot",
+        "alt": "ตัวแก้ไขบทเรียน LeadWise — ข้อมูลสาธิต",
+        "caption": "ตัวแก้ไขบทเรียน LeadWise — ข้อมูลสาธิต"
+      }
+    ]
+  },
+  {
+    "title": "โรงเรียนเขียนโปรแกรม",
+    "type": "ERP สำหรับเครือข่ายศูนย์การศึกษา",
+    "description": "ERP เชื่อมโรงเรียนและแฟรนไชส์ ครอบคลุมนักเรียน กลุ่ม ตาราง การชำระเงิน และการสอน เชื่อมธุรกรรมกับสิทธิ์เรียนและประวัติการเรียน",
+    "audience": "เครือข่ายโรงเรียน ผู้ดำเนินงานแฟรนไชส์ ผู้ดูแล และครู",
+    "features": [
+      "นักเรียน กลุ่ม และยอดคงเหลือบทเรียนที่ชำระแล้ว",
+      "ย้าย ยกเลิก และควบคุมบทเรียนคงเหลือ",
+      "ใบแจ้งหนี้ ชำระเงิน คืนเงิน และเชื่อมบริการภาษี",
+      "เวลาว่างครู ตาราง และเลือกครูแทน",
+      "เริ่มใช้งานและเปิดสิทธิ์หลังชำระ",
+      "แยกโรงเรียน บทบาทสิทธิ์ และบันทึกเหตุการณ์"
+    ],
+    "note": "ระบบลูกค้า ไม่เผยแพร่หน้าจอที่มีข้อมูลส่วนบุคคลหรือการชำระเงิน",
+    "websiteLabel": null,
+    "slug": "codeclass",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Laravel",
+      "Doctrine",
+      "Vue",
+      "MySQL",
+      "Redis"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 40,
+    "screenshots": []
+  },
+  {
+    "title": "Technology Generation",
+    "type": "แพลตฟอร์มเตรียมสอบและฝึกทำข้อสอบ",
+    "description": "แพลตฟอร์มสำหรับสอบ OGE ของรัสเซีย เชื่อมแบบฝึกหัด เว็บบินาร์ และผลนักเรียน พร้อมเครื่องมือให้ครูนำเข้าและตรวจสื่อการเรียน",
+    "audience": "นักเรียน ครู และผู้ให้บริการเตรียมสอบ",
+    "features": [
+      "ข้อสอบตามวิชาและหัวข้อพร้อมคำตอบและคำใบ้",
+      "นำเข้าสื่อพร้อมรายงานข้อผิดพลาด",
+      "คิวตรวจทานและควบคุมการเผยแพร่",
+      "เว็บบินาร์ ตาราง และส่วนการเรียน",
+      "กรองกิจกรรมตามวิชา",
+      "ส่วนผู้ดูแลและจัดการผู้ใช้"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "testoge",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "PostgreSQL",
+      "React",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://поколениетехнологий.рф",
+    "featured": false,
+    "position": 50,
+    "screenshots": []
+  },
+  {
+    "title": "SkillUp",
+    "type": "แพลตฟอร์มเรียนออนไลน์แบบลงมือทำ",
+    "description": "หลักสูตรออนไลน์รวมสื่อการเรียนและงานปฏิบัติ แบบฝึกเขียนโปรแกรมรันโค้ดที่ส่งในสภาพแวดล้อมแยก",
+    "audience": "นักเรียน ผู้สร้างหลักสูตร และผู้ให้บริการการศึกษา",
+    "features": [
+      "รายการหลักสูตรและบทเรียนเป็นระบบ",
+      "หลักสูตร Java ระดับเริ่มต้นและกลาง",
+      "งานเขียนโปรแกรมพร้อมรันโค้ด",
+      "รัน Java แยกในคอนเทนเนอร์",
+      "จัดการเนื้อหาและสิทธิ์เข้าหลักสูตร"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "skillup",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Laravel",
+      "Java",
+      "Docker"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://skillup.su",
+    "featured": false,
+    "position": 60,
+    "screenshots": []
+  },
+  {
+    "title": "Scheduler",
+    "type": "บริการจัดตารางสำหรับศูนย์การศึกษา",
+    "description": "บริการจัดตารางที่มี API และเว็บของตัวเอง ออกแบบให้เชื่อมกับ ERP การศึกษา และมีรุ่นปรับให้ใช้กับ LeadWise",
+    "audience": "โรงเรียนและศูนย์การศึกษาที่ต้องการบริการวางแผนเฉพาะ",
+    "features": [
+      "จัดตารางผ่านเว็บและ API",
+      "API เกตเวย์และงานเบื้องหลัง",
+      "เก็บข้อมูลตารางด้วย PostgreSQL",
+      "เชื่อม ERP การศึกษา",
+      "รุ่นปรับเฉพาะสำหรับ LeadWise"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "scheduler",
+    "category": "Web platforms",
+    "status": "In development",
+    "stack": [
+      "Go",
+      "PostgreSQL",
+      "React",
+      "Goose"
+    ],
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 70,
+    "screenshots": []
+  },
+  {
+    "title": "Accounting Tools",
+    "type": "ทะเบียนธุรกรรมและใบเสร็จภาษี",
+    "description": "บริการจัดการองค์กร ทะเบียนธุรกรรม และใบเสร็จภาษี ช่วยเตรียมข้อมูล ตรวจรายการซ้ำ และติดตามผลการส่งใบเสร็จ",
+    "audience": "ทีมบัญชีและบริษัทที่ประมวลผลธุรกรรมการเงินเป็นชุด",
+    "features": [
+      "บัญชีองค์กรและเครื่องบันทึกเงินสด",
+      "นำเข้าและตรวจทะเบียน Excel",
+      "ตรวจรายการซ้ำและป้องกันส่งซ้ำ",
+      "ทดลองประมวลผลเพื่อตรวจรายการและจำนวนเงิน",
+      "เชื่อม ATOL Online และติดตามสถานะภาษี",
+      "รายงานผลแยกแต่ละธุรกรรม"
+    ],
+    "note": "ไม่เผยแพร่ทะเบียนที่มีข้อมูลการเงินบริษัท",
+    "websiteLabel": null,
+    "slug": "accounting-tools",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "React",
+      "MySQL",
+      "ATOL API"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 80,
+    "screenshots": []
+  },
+  {
+    "title": "Yoozuu",
+    "type": "แพลตฟอร์มเผยแพร่และชุมชน",
+    "description": "แพลตฟอร์มบทความ การสนทนา และแบ่งปันความรู้ มีเครื่องมือเผยแพร่ หมวดหัวข้อ และตรวจทาน รองรับเดสก์ท็อปกับมือถือ",
+    "audience": "นักเขียน ชุมชนวิชาชีพ และผู้อ่าน",
+    "features": [
+      "ฟีด หมวดหัวข้อ และโปรไฟล์ผู้เขียน",
+      "ตัวแก้ไขแบบบล็อกและ Markdown",
+      "ความคิดเห็นและอภิปรายบทความ",
+      "ตรวจทานก่อนเผยแพร่",
+      "ป้องกันการสมัครมิชอบและสแปม",
+      "ธีมสว่างและมืดพร้อมหน้าจอปรับขนาด"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "yoozuu",
+    "category": "Web platforms",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "React",
+      "TypeScript",
+      "S3"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://yoozuu.com",
+    "featured": false,
+    "position": 90,
+    "screenshots": [
+      {
+        "src": "/images/projects/yoozuu/feed.webp",
+        "kind": "screenshot",
+        "alt": "ฟีด Yoozuu ในธีมมืด",
+        "caption": "ฟีด Yoozuu ในธีมมืด"
+      },
+      {
+        "src": "/images/projects/yoozuu/editor.webp",
+        "kind": "screenshot",
+        "alt": "ตัวแก้ไขบทความแบบบล็อก",
+        "caption": "ตัวแก้ไขบทความแบบบล็อก"
+      },
+      {
+        "src": "/images/projects/yoozuu/article.webp",
+        "kind": "screenshot",
+        "alt": "บทความพร้อมรูปแบบและบล็อกโค้ด",
+        "caption": "บทความพร้อมรูปแบบและบล็อกโค้ด"
+      }
+    ]
+  },
+  {
+    "title": "PRobot",
+    "type": "จัดการคอนเทนต์และการเผยแพร่",
+    "description": "พื้นที่ทำงานการตลาดและ PR สำหรับเตรียมเนื้อหา เชื่อมช่องทาง และเผยแพร่เบื้องหลัง AI ช่วยร่างและเชื่อมบริการกระจายเนื้อหา",
+    "audience": "ทีมคอนเทนต์ นักการตลาด และผู้เชี่ยวชาญ PR",
+    "features": [
+      "รายการแพลตฟอร์มและช่องทางที่เชื่อม",
+      "AI ช่วยเตรียมร่าง",
+      "คิวเผยแพร่และประมวลผลเบื้องหลัง",
+      "เชื่อม Telegram Client Service",
+      "รวบรวมสื่อและความสัมพันธ์การเผยแพร่",
+      "กราฟความสัมพันธ์และหน้าวิเคราะห์"
+    ],
+    "note": "การเผยแพร่ขึ้นกับบัญชีที่เชื่อมและ API ของแพลตฟอร์มปลายทาง",
+    "websiteLabel": null,
+    "slug": "probot",
+    "category": "AI & automation",
+    "status": "Live",
+    "stack": [
+      "Go",
+      "React",
+      "PostgreSQL",
+      "Redis",
+      "Asynq"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "website": "https://prbo.ru",
+    "featured": false,
+    "position": 100,
+    "screenshots": []
+  },
+  {
+    "title": "Misa",
+    "type": "ผู้ช่วย AI เสียงพร้อมเชื่อมระบบธุรกิจ",
+    "description": "ผู้ช่วยสนทนาด้วยเสียง มีความจำและเครื่องมือข้อมูลธุรกิจ เว็บไคลเอนต์พร้อมตัวละคร VRM เชื่อมบริการเสียงและ Bitrix24",
+    "audience": "ทีมที่ต้องการผู้ช่วยด้านการสื่อสารและงานข้อมูล",
+    "features": [
+      "สนทนาด้วยการรู้จำและสังเคราะห์เสียง",
+      "เว็บไคลเอนต์พร้อมตัวละคร VRM เคลื่อนไหว",
+      "ความจำและค้นหาบริบทสะสม",
+      "เชื่อมแชตและงาน Bitrix24",
+      "ประมวลผลไฟล์แนบและดึงข้อมูลตามบริบท",
+      "ลิงก์ตรงไปยังงานที่สร้างในคำตอบ"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "misa",
+    "category": "AI & automation",
+    "status": "In development",
+    "stack": [
+      "Go",
+      "VRM",
+      "PostgreSQL",
+      "Qdrant",
+      "Bitrix24"
+    ],
+    "platforms": [
+      "Web",
+      "Server"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 110,
+    "screenshots": []
+  },
+  {
+    "title": "Platinum OS One",
+    "type": "แพลตฟอร์ม Linux และระบบสร้างอิมเมจ",
+    "description": "Linux พร้อมเชลล์กราฟิกของตัวเองและระบบบิลด์ร่วมหลายอุปกรณ์ แยกการรองรับฮาร์ดแวร์จากตรรกะบิลด์ และปรับ UI ตามอุปกรณ์",
+    "audience": "ผู้ผลิตอุปกรณ์และนักพัฒนาระบบมือถือหรือฝังตัว",
+    "features": [
+      "เชลล์ Qt/QML พร้อมแอปและหน้าหลัก",
+      "สร้างอิมเมจบูตผ่านระบบ Rust",
+      "โปรไฟล์บอร์ดและแพ็กเกจฮาร์ดแวร์แยก",
+      "จัดการ Ethernet, Wi-Fi และเครือข่าย",
+      "กำลังพัฒนารองรับ Samsung Galaxy M52",
+      "เข้าถึงหน้าจอระยะไกลผ่าน VNC"
+    ],
+    "note": null,
+    "websiteLabel": "ที่เก็บโค้ด",
+    "slug": "platinum-os",
+    "category": "System software",
+    "status": "In development",
+    "stack": [
+      "Rust",
+      "Linux",
+      "Qt / QML",
+      "Ubuntu Base"
+    ],
+    "platforms": [
+      "ARM64",
+      "Mobile devices",
+      "Desktop"
+    ],
+    "website": "https://github.com/digkill/Platinum-OS",
+    "featured": false,
+    "position": 120,
+    "screenshots": [
+      {
+        "src": "/images/projects/platinum/home.webp",
+        "kind": "screenshot",
+        "alt": "หน้าหลักและแอป Platinum OS",
+        "caption": "หน้าหลักและแอป Platinum OS"
+      },
+      {
+        "src": "/images/projects/platinum/shell-apps.webp",
+        "kind": "screenshot",
+        "alt": "ตารางแอปในเชลล์กราฟิก",
+        "caption": "ตารางแอปในเชลล์กราฟิก"
+      }
+    ]
+  },
+  {
+    "title": "Platinum Browser",
+    "type": "เบราว์เซอร์พร้อมกลุ่มแท็บอิสระ",
+    "description": "เบราว์เซอร์บน Chromium Embedded Framework พร้อม UI ของตัวเอง กลุ่มแท็บเป็นพื้นที่ทำงานแยกข้อมูลและเซสชัน",
+    "audience": "ผู้ที่ใช้หลายบัญชีและต้องแยกบริบทการท่องเว็บ",
+    "features": [
+      "กลุ่มแท็บที่มีบริบทเบราว์เซอร์แยก",
+      "กลุ่มป้องกันด้วยรหัสผ่านและคีย์กู้คืน — กำลังพัฒนา",
+      "ล็อกกลุ่มและซ่อนแท็บที่ล็อก — กำลังพัฒนา",
+      "แยกคุกกี้ พื้นที่เก็บ และเซสชัน",
+      "แถบแท็บเลื่อนได้",
+      "ล้างข้อมูลโดยเลือกช่วงเวลา",
+      "UI เบราว์เซอร์เฉพาะด้วย CEF และ C++"
+    ],
+    "note": "กลุ่มที่ป้องกันและขั้นตอนล็อกกำลังอยู่ระหว่างพัฒนา",
+    "websiteLabel": null,
+    "slug": "platinum-browser",
+    "category": "System software",
+    "status": "In development",
+    "stack": [
+      "C++",
+      "CEF",
+      "Chromium"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 130,
+    "screenshots": []
+  },
+  {
+    "title": "PAYPHONE",
+    "type": "โปรโตคอล VPN ทดลองด้วย Rust",
+    "description": "โครงการวิจัยส่งทราฟฟิก IP ผ่านช่องทางเข้ารหัส มีเซิร์ฟเวอร์ ส่วนไคลเอนต์ และโมเดลยืนยันเซสชันเฉพาะ",
+    "audience": "นักพัฒนาซอฟต์แวร์เครือข่ายและทีมวิจัย",
+    "features": [
+      "ส่ง IPv4 สองทางผ่าน TUN",
+      "QUIC Datagrams พร้อม TLS 1.3",
+      "ยืนยันด้วยโทเคนลงนาม Ed25519",
+      "กู้คืนเซสชันหลังเชื่อมต่อใหม่",
+      "โมดูล Rust แยกโปรโตคอล การขนส่ง และยืนยันตัวตน"
+    ],
+    "note": "ต้นแบบเพื่อพัฒนาและวิจัย ไม่ใช่บริการ VPN สำหรับใช้งานจริง",
+    "websiteLabel": null,
+    "slug": "payphone",
+    "category": "System software",
+    "status": "Prototype",
+    "stack": [
+      "Rust",
+      "QUIC",
+      "TLS 1.3",
+      "TUN"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Mobile clients"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 140,
+    "screenshots": [
+      {
+        "src": "/images/projects/payphone/overview.webp",
+        "kind": "illustration",
+        "alt": "ภาพแนวคิดการส่งข้อมูล PAYPHONE ไม่ใช่ภาพหน้าจอแอป",
+        "caption": "ภาพแนวคิดการส่งข้อมูล PAYPHONE ไม่ใช่ภาพหน้าจอแอป"
+      }
+    ]
+  },
+  {
+    "title": "Hunter Demons",
+    "type": "เกมแอ็กชัน 3D มือถือด้วย Godot",
+    "description": "เกมแอ็กชันตัวละคร Misa ต่อสู้ฝูงปีศาจในฉากมีสไตล์ ควบคุมสัมผัสรวมประชิด ปืนไรเฟิล และสกิล",
+    "audience": "ผู้เล่นมือถือและคอมพิวเตอร์",
+    "features": [
+      "ต่อสู้คาตานะและยิงไรเฟิล",
+      "เล็ง เติมกระสุน และเปลี่ยนอาวุธ",
+      "สกิลตัวละครรวมเรียกมังกร",
+      "ศัตรูเป็นระลอกและบอส",
+      "แอนิเมชัน เสียง และเอฟเฟกต์ตามเหตุการณ์เกม",
+      "ควบคุมสัมผัสและบิลด์ iPhone"
+    ],
+    "note": null,
+    "websiteLabel": "ที่เก็บโค้ด",
+    "slug": "hunter-demons",
+    "category": "Games",
+    "status": "In development",
+    "stack": [
+      "Godot",
+      "GDScript",
+      "3D"
+    ],
+    "platforms": [
+      "iOS",
+      "Android",
+      "Desktop"
+    ],
+    "website": "https://github.com/digkill/HunterDemons",
+    "featured": false,
+    "position": 150,
+    "screenshots": [
+      {
+        "src": "/images/projects/hunterdemons/rifle.webp",
+        "kind": "screenshot",
+        "alt": "Hunter Demons พร้อมไรเฟิลและปุ่มสกิลสัมผัส",
+        "caption": "Hunter Demons พร้อมไรเฟิลและปุ่มสกิลสัมผัส"
+      },
+      {
+        "src": "/images/projects/hunterdemons/scope.webp",
+        "kind": "screenshot",
+        "alt": "โหมดเล็งไรเฟิล",
+        "caption": "โหมดเล็งไรเฟิล"
+      },
+      {
+        "src": "/images/projects/hunterdemons/neon-district.webp",
+        "kind": "screenshot",
+        "alt": "ต่อสู้ในย่านนีออน",
+        "caption": "ต่อสู้ในย่านนีออน"
+      }
+    ]
+  },
+  {
+    "title": "Office Raid",
+    "type": "เกมกลยุทธ์ 3D เกี่ยวกับออฟฟิศและการบุก",
+    "description": "ออฟฟิศกลายเป็นฐานและพนักงานเป็นหน่วยต่อสู้ ระหว่างศึกพวกเขาทำงาน พัก และฝึก ใช้การจำลองที่ทำซ้ำได้",
+    "audience": "ผู้เล่นกลยุทธ์ที่ชอบสร้างฐานและเล่นช่วงสั้น",
+    "features": [
+      "ฐานออฟฟิศพร้อมโต๊ะพนักงาน",
+      "ครัว ยิม คาราโอเกะ ห้องเกม และห้องอื่น",
+      "กิจวัตรทำงาน พัก และฝึก",
+      "ต่อสู้เป็นทีมและหาเส้นทางบนกริด",
+      "จำลองแบบกำหนดผลแน่นอนและดูศึกย้อนหลัง",
+      "เล่นในเบราว์เซอร์โดยไม่ต้องติดตั้ง"
+    ],
+    "note": null,
+    "websiteLabel": "เล่นในเบราว์เซอร์",
+    "slug": "office-raid",
+    "category": "Games",
+    "status": "In development",
+    "stack": [
+      "Defold",
+      "Lua",
+      "HTML5"
+    ],
+    "platforms": [
+      "Web",
+      "Mobile builds"
+    ],
+    "website": "https://officeraid.com",
+    "featured": false,
+    "position": 160,
+    "screenshots": [
+      {
+        "src": "/images/projects/office-raid/base.webp",
+        "kind": "screenshot",
+        "alt": "Office Raid ฐาน ห้อง และพนักงานในเบราว์เซอร์",
+        "caption": "Office Raid ฐาน ห้อง และพนักงานในเบราว์เซอร์"
+      }
+    ]
+  },
+  {
+    "title": "Tarot",
+    "type": "สำรับไพ่ทาโรต์และการตีความ",
+    "description": "แอปมือถือพร้อมสำรับ รูปแบบวางไพ่ และคำตีความ AI เก็บประวัติครั้งก่อน โดยเซิร์ฟเวอร์จัดการสร้างคำตอบและสิทธิ์พรีเมียม",
+    "audience": "ผู้สนใจทาโรต์เพื่อความบันเทิงและสำรวจตนเอง",
+    "features": [
+      "ไพ่ประจำวันและรูปแบบด่วน",
+      "เลือกสำรับและดูไพ่",
+      "AI ตีความบนเซิร์ฟเวอร์",
+      "บันทึกประวัติการอ่านไพ่",
+      "อินเทอร์เฟซรัสเซียและอังกฤษ",
+      "จัดการสิทธิ์ฟีเจอร์พรีเมียม"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "tarot",
+    "category": "Apps",
+    "status": "In development",
+    "stack": [
+      "React Native",
+      "Expo",
+      "Go"
+    ],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 170,
+    "screenshots": [
+      {
+        "src": "/images/projects/tarot/home.webp",
+        "kind": "screenshot",
+        "alt": "หน้าหลัก Tarot พร้อมไพ่ประจำวันและอ่านไพ่ด่วน",
+        "caption": "หน้าหลัก Tarot พร้อมไพ่ประจำวันและอ่านไพ่ด่วน"
+      },
+      {
+        "src": "/images/projects/tarot/decks.webp",
+        "kind": "screenshot",
+        "alt": "เลือกสำรับไพ่",
+        "caption": "เลือกสำรับไพ่"
+      }
+    ]
+  },
+  {
+    "title": "Rush Messenger",
+    "type": "เมสเซนเจอร์สำหรับมือถือและเดสก์ท็อป",
+    "description": "แพลตฟอร์มสื่อสารพร้อมข้อความส่วนตัว กลุ่ม ช่อง และการโทร แอปมือถือเนทีฟกับเดสก์ท็อปใช้เซิร์ฟเวอร์ Rust ร่วมกัน",
+    "audience": "ผู้ใช้บทสนทนาส่วนตัวและชุมชนกลุ่ม",
+    "features": [
+      "ข้อความส่วนตัว แชตกลุ่ม และช่อง",
+      "เข้ารหัสต้นทางถึงปลายทางสำหรับข้อความส่วนตัว",
+      "โทรเสียงและวิดีโอ",
+      "ไคลเอนต์ iOS และ Android เนทีฟ",
+      "ไคลเอนต์เดสก์ท็อป Tauri",
+      "API REST และ WebSocket ร่วมกัน"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "rush-messenger",
+    "category": "Apps",
+    "status": "In development",
+    "stack": [
+      "Rust",
+      "SwiftUI",
+      "Kotlin",
+      "Tauri",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "iOS",
+      "Android",
+      "Desktop"
+    ],
+    "website": "https://rushmessanger.com",
+    "featured": false,
+    "position": 180,
+    "screenshots": []
+  },
+  {
+    "title": "Meteor",
+    "type": "ระบบควบคุมโดรนทดลอง",
+    "description": "เฟิร์มแวร์และเครื่องมือวินิจฉัยสำหรับแพลตฟอร์มทดลอง ESP32-S3 รวมเซนเซอร์การเคลื่อนไหว วัดระยะ และเทเลเมทรีเพื่อพัฒนาฮาร์ดแวร์",
+    "audience": "นักพัฒนาระบบฝังตัวและทีมแพลตฟอร์มบินทดลอง",
+    "features": [
+      "วินิจฉัยบอร์ดและเซนเซอร์ผ่านคอนโซล",
+      "อ่านเซนเซอร์เฉื่อยและเครื่องวัดระยะ",
+      "เชื่อมเซนเซอร์ออปติคัลโฟลว์",
+      "เทเลเมทรีและแลกข้อมูล MQTT",
+      "พัฒนาการสื่อสารและประมาณความสูง"
+    ],
+    "note": "โครงการพัฒนาทดลอง ไม่ได้อ้างว่าพร้อมบินอัตโนมัติ",
+    "websiteLabel": null,
+    "slug": "meteor",
+    "category": "Devices",
+    "status": "Prototype",
+    "stack": [
+      "ESP32-S3",
+      "ESP-IDF",
+      "MQTT"
+    ],
+    "platforms": [
+      "Embedded"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 190,
+    "screenshots": []
+  },
+  {
+    "title": "AI Sandbox",
+    "type": "สร้างเกม 2D และ 3D บน Android",
+    "description": "สภาพแวดล้อมมือถือสร้างเกมจากคำอธิบายและรูปแบบสำเร็จ รวมคลังโครงการ ตัวแก้ไข เซิร์ฟเวอร์สร้าง และรันผ่าน Godot",
+    "audience": "ผู้สร้างต้นแบบเกมและผู้เรียนทำเกม",
+    "features": [
+      "สร้างโครงการเกมจากข้อความ",
+      "คลังและตัวแก้ไขโครงการ 2D กับ 3D",
+      "ระบบ AI สร้างบนเซิร์ฟเวอร์",
+      "เก็บโครงการและเวอร์ชันแก้ไข",
+      "รันฉากผ่าน Godot host",
+      "เข้าสู่ระบบอีเมลด้วยรหัสยืนยัน"
+    ],
+    "note": null,
+    "websiteLabel": null,
+    "slug": "ai-sandbox",
+    "category": "AI & automation",
+    "status": "Prototype",
+    "stack": [
+      "Android",
+      "Godot",
+      "Go",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "Android"
+    ],
+    "website": null,
+    "featured": false,
+    "position": 200,
+    "screenshots": []
+  },
+  {
+    "title": "PlantPal",
+    "type": "ผู้ช่วยดูแลต้นไม้บนมือถือ",
+    "description": "แอประบุชนิดพืชและจัดการต้นไม้ในบ้าน รวมโปรไฟล์พืช คำแนะนำ และการแจ้งเตือน",
+    "audience": "ผู้เลี้ยงต้นไม้ในบ้าน",
+    "features": [
+      "ระบุพืชจากภาพถ่าย",
+      "โปรไฟล์คอลเลกชันในบ้าน",
+      "คำแนะนำดูแลพืช",
+      "แจ้งเตือนรดน้ำ"
+    ],
+    "note": null,
+    "websiteLabel": "รายละเอียดแอป",
+    "slug": "plantpal",
+    "category": "Apps",
+    "status": "In development",
+    "stack": [
+      "Kotlin",
+      "Jetpack Compose"
+    ],
+    "platforms": [
+      "Android"
+    ],
+    "website": "/plantpal",
+    "featured": false,
+    "position": 210,
+    "screenshots": []
+  }
+]

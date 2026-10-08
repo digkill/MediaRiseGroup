@@ -35,7 +35,7 @@ class ProjectController extends Controller
         $data = $request->validated();
         unset($data['version']);
         usort($data['screenshots'], fn ($a, $b) => ($a['position'] ?? 0) <=> ($b['position'] ?? 0));
-        $data['screenshots'] = array_map(fn ($shot) => array_intersect_key($shot, array_flip(['src', 'kind', 'caption_en', 'caption_ru'])), $data['screenshots']);
+        $data['screenshots'] = array_map(fn ($shot) => array_intersect_key($shot, array_flip(['src', 'kind', 'caption_en', 'caption_ru', 'caption_zh', 'caption_ko', 'caption_th', 'caption_ja'])), $data['screenshots']);
 
         return $data;
     }

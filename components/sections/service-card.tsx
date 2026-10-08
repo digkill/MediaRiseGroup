@@ -1,5 +1,6 @@
+import { getI18n } from "@/lib/i18n/server";
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/locale-link";
 
 import { Reveal } from "@/components/motion/reveal";
 import { Badge } from "@/components/ui/badge";
@@ -8,7 +9,8 @@ import type { services } from "@/lib/content";
 
 type Service = (typeof services)[number];
 
-export function ServiceCard({ service, index }: { service: Service; index: number }) {
+export async function ServiceCard({ service, index }: { service: Service; index: number }) {
+  const { t } = await getI18n();
   const Icon = service.icon;
 
   return (
@@ -23,14 +25,14 @@ export function ServiceCard({ service, index }: { service: Service; index: numbe
               </div>
               <ArrowUpRight className="size-4 text-white/34 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />
             </div>
-            <CardTitle>{service.title}</CardTitle>
+            <CardTitle>{t(service.title)}</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm leading-6 text-white/58">{service.description}</p>
+            <p className="text-sm leading-6 text-white/58">{t(service.description)}</p>
             <div className="mt-6 flex flex-wrap gap-2">
               {service.tags.map((tag) => (
                 <Badge key={tag} variant="secondary">
-                  {tag}
+                  {t(tag)}
                 </Badge>
               ))}
             </div>

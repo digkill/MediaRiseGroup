@@ -1,5 +1,6 @@
+import { getI18n } from "@/lib/i18n/server";
 import { ArrowRight, Gauge, Play, Shield, Smartphone } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/locale-link";
 
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
@@ -9,11 +10,11 @@ import { Card } from "@/components/ui/card";
 import { androidBenefits } from "@/lib/content";
 import { createMetadata } from "@/lib/metadata";
 
-export const metadata = createMetadata({
+export async function generateMetadata() { return createMetadata({
   title: "Android App Development",
   description: "Native Android development with Kotlin, Jetpack Compose, performance optimization, Play Store launch, and Android ecosystem expertise.",
   path: "/android",
-});
+}); }
 
 const pillars = [
   { title: "Kotlin architecture", icon: Smartphone, description: "Modern Android architecture with clean modules, Compose UI, offline data, and robust background work." },
@@ -22,26 +23,22 @@ const pillars = [
   { title: "Play Store growth", icon: Play, description: "Signing, tracks, staged rollout, policy readiness, crash monitoring, and optimization for discovery." },
 ];
 
-export default function AndroidPage() {
+export default async function AndroidPage() {
+  const { t } = await getI18n();
   return (
     <>
       <section className="container pt-36 pb-20 text-zinc-950 dark:text-zinc-50">
         <Reveal>
-          <Badge>Android Development</Badge>
-          <h1 className="mt-6 max-w-5xl font-display text-5xl font-semibold tracking-normal text-white text-balance md:text-7xl">
-            Native Android apps built for performance, polish, and Play Store growth.
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/62">
-            MediaRise builds Kotlin and Jetpack Compose products with the production details Android users notice immediately.
-          </p>
+          <Badge>{t("Android Development")}</Badge>
+          <h1 className="mt-6 max-w-5xl font-display text-5xl font-semibold tracking-normal text-white text-balance md:text-7xl">{t("Native Android apps built for performance, polish, and Play Store growth.")}</h1>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/62">{t("MediaRise builds Kotlin and Jetpack Compose products with the production details Android users notice immediately.")}</p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg">
-              <Link href="/contact">
-                Plan Android build <ArrowRight />
+              <Link href="/contact">{t("Plan Android build")}<ArrowRight />
               </Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
-              <Link href="/mobile">All mobile services</Link>
+              <Link href="/mobile">{t("All mobile services")}</Link>
             </Button>
           </div>
         </Reveal>
@@ -55,8 +52,8 @@ export default function AndroidPage() {
               <Reveal key={pillar.title} delay={index * 0.05}>
                 <Card className="h-full bg-white/4.5 p-6 text-white">
                   <Icon className="size-6 text-red-300" />
-                  <h2 className="mt-5 font-display text-xl font-semibold text-white">{pillar.title}</h2>
-                  <p className="mt-3 text-sm leading-6 text-white/58">{pillar.description}</p>
+                  <h2 className="mt-5 font-display text-xl font-semibold text-white">{t(pillar.title)}</h2>
+                  <p className="mt-3 text-sm leading-6 text-white/58">{t(pillar.description)}</p>
                 </Card>
               </Reveal>
             );
@@ -68,15 +65,15 @@ export default function AndroidPage() {
         <div className="container grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
             <SectionHeading
-              eyebrow="Delivery"
-              title="Android engineering with every launch detail covered."
-              description="We build for real-world Android fragmentation, marketplace rules, analytics, crash reporting, and ongoing iteration."
+              eyebrow={t("Delivery")}
+              title={t("Android engineering with every launch detail covered.")}
+              description={t("We build for real-world Android fragmentation, marketplace rules, analytics, crash reporting, and ongoing iteration.")}
             />
           </Reveal>
           <div className="grid gap-3">
             {androidBenefits.map((benefit) => (
               <Card key={benefit} className="bg-white/4.5 p-5 text-sm leading-6 text-white/70">
-                {benefit}
+                {t(benefit)}
               </Card>
             ))}
           </div>

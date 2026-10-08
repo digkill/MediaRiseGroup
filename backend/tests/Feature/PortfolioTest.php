@@ -32,7 +32,7 @@ class PortfolioTest extends TestCase
 
     private function payload(PortfolioProject $project): array
     {
-        return $project->only(['slug', 'category', 'status', 'published', 'featured', 'position', 'version', 'website', 'stack', 'platforms', 'en', 'ru', 'screenshots']);
+        return $project->only(['slug', 'category', 'status', 'published', 'featured', 'position', 'version', 'website', 'stack', 'platforms', 'en', 'ru', 'zh', 'ko', 'th', 'ja', 'screenshots']);
     }
 
     public function test_seed_is_idempotent_and_preserves_editor_changes_and_archives(): void
@@ -48,11 +48,11 @@ class PortfolioTest extends TestCase
         $this->assertTrue(PortfolioProject::withTrashed()->find($archived->id)->trashed());
     }
 
-    public function test_public_api_is_english_only_and_excludes_hidden_projects(): void
+    public function test_public_api_defaults_to_english_and_excludes_hidden_projects(): void
     {
         $p = $this->project();
         $p->update(['published' => false, 'featured' => true]);
-        $result = $this->getJson('/api/portfolio?locale=ru')->assertOk()->assertJsonCount(20, 'data');
+        $result = $this->getJson('/api/portfolio')->assertOk()->assertJsonCount(20, 'data');
         $this->assertStringNotContainsString('caption_ru', $result->getContent());
         $this->assertStringNotContainsString('"ru"', $result->getContent());
         $this->assertStringNotContainsString('Vibe Video', $result->getContent());
@@ -60,6 +60,67 @@ class PortfolioTest extends TestCase
             unset($project['website']);
             $this->assertDoesNotMatchRegularExpression('/[А-Яа-яЁё]/u', json_encode($project, JSON_UNESCAPED_UNICODE));
         }
+    }
+
+    public function test_public_api_returns_selected_language_and_defaults_unknown_languages_to_english(): void
+    {
+        $p = $this->project();
+        foreach (PortfolioProject::LOCALES as $locale) {
+            $response = $this->getJson('/api/portfolio?locale='.$locale)->assertOk()->assertHeader('Content-Language', $locale);
+            $first = $response->json('data.0');
+            $this->assertSame($p->{$locale}['description'], $first['description']);
+            $this->assertSame($p->screenshots[0]['caption_'.$locale], $first['screenshots'][0]['caption']);
+            foreach (PortfolioProject::LOCALES as $code) {
+                $this->assertArrayNotHasKey($code, $first);
+            }
+        }
+        $this->getJson('/api/portfolio?locale=xx')->assertOk()->assertHeader('Content-Language', 'en')->assertJsonPath('data.0.description', $p->en['description']);
+        $p->update(['published' => false]);
+        foreach (PortfolioProject::LOCALES as $locale) {
+            $this->getJson('/api/portfolio?locale='.$locale)->assertJsonMissing(['slug' => 'vibe-video']);
+        }
+    }
+
+    public function test_admin_can_save_all_locales_and_empty_fields_fall_back_to_english(): void
+    {
+        $p = $this->project();
+        $data = $this->payload($p);
+        foreach (['zh', 'ko', 'th', 'ja'] as $locale) {
+            $data[$locale]['description'] = 'Edited '.$locale;
+            $data['screenshots'][0]['caption_'.$locale] = 'Caption '.$locale;
+        }
+        $this->actingAs($this->admin())->put('/admin/projects/'.$p->id, $data)->assertSessionHasNoErrors();
+        foreach (['zh', 'ko', 'th', 'ja'] as $locale) {
+            $this->getJson('/api/portfolio?locale='.$locale)->assertJsonPath('data.0.description', 'Edited '.$locale)->assertJsonPath('data.0.screenshots.0.caption', 'Caption '.$locale);
+        }
+        $p->refresh();
+        $shots = $p->screenshots;
+        $shots[0]['caption_ja'] = '   ';
+        $p->update(['ja' => ['title' => null, 'description' => ' ', 'features' => [], 'audience' => '翻訳済み'], 'screenshots' => $shots]);
+        $this->getJson('/api/portfolio?locale=ja')
+            ->assertJsonPath('data.0.description', $p->en['description'])
+            ->assertJsonPath('data.0.title', $p->en['title'])
+            ->assertJsonPath('data.0.features', $p->en['features'])
+            ->assertJsonPath('data.0.audience', '翻訳済み')
+            ->assertJsonPath('data.0.screenshots.0.caption', $p->screenshots[0]['caption_en']);
+    }
+
+    public function test_language_backfill_preserves_editor_changes_and_archived_state(): void
+    {
+        $p = $this->project();
+        $p->update(['zh' => null, 'ja' => ['title' => 'Edited Japanese'], 'en' => [...$p->en, 'description' => 'Editor description'], 'position' => 999, 'featured' => false]);
+        $p->delete();
+        $this->seed(PortfolioSeeder::class);
+        $p->refresh();
+        $this->assertNotEmpty($p->zh['description']);
+        $this->assertSame('Edited Japanese', $p->ja['title']);
+        $this->assertSame('Editor description', $p->en['description']);
+        $this->assertSame(999, $p->position);
+        $this->assertFalse($p->featured);
+        $this->assertTrue($p->trashed());
+        $p->update(['zh' => ['description' => 'Edited Chinese']]);
+        $this->seed(PortfolioSeeder::class);
+        $this->assertSame('Edited Chinese', $p->fresh()->zh['description']);
     }
 
     public function test_guests_and_non_admins_cannot_manage_projects_or_upload(): void
@@ -77,7 +138,7 @@ class PortfolioTest extends TestCase
         $p = $this->project();
         $this->actingAs($this->admin());
         $this->get('/admin/projects')->assertOk()->assertSee('На главной');
-        $this->get('/admin/projects/'.$p->id.'/edit')->assertOk()->assertSee('Русская версия — скрыта');
+        $this->get('/admin/projects/'.$p->id.'/edit')->assertOk()->assertSee('Русский')->assertSee('한국어')->assertSee('日本語');
         $data = $this->payload($p);
         $data['en']['title'] = 'Updated video editor';
         $data['ru']['title'] = 'Сохранённая русская версия';
