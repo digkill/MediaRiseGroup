@@ -30,7 +30,7 @@ export default async function HomePage() {
           <div className="max-w-4xl">
             <Reveal>
               <Badge>{t("Mobile, AI, Robotics, IoT, Web Platforms")}</Badge>
-              <h1 className="mt-6 max-w-92 font-display text-4xl font-semibold leading-tight tracking-normal text-white text-balance sm:max-w-4xl sm:text-5xl md:text-7xl lg:text-8xl">{t("Premium technology for products that need to feel inevitable.")}</h1>
+              <h1 className="mt-6 max-w-92 font-display text-4xl font-semibold leading-tight tracking-normal text-white text-balance sm:max-w-4xl sm:text-5xl md:text-7xl lg:text-8xl">{t("Premium technology. Exceptional products.")}</h1>
               <p className="mt-6 max-w-92 text-base leading-7 text-white/64 sm:max-w-2xl md:text-xl md:leading-8">{t("MediaRise designs and engineers native apps, complex platforms, AI systems, robotics interfaces, and connected digital infrastructure.")}</p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">
