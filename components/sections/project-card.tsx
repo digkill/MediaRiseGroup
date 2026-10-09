@@ -14,12 +14,25 @@ export function FeaturedProjectCard({ project }: { project: PortfolioProject }) 
   const { t } = useI18n();
   const cover = project.screenshots[0];
   return (
-    <Link href={`/projects/${project.slug}`} className="group block h-full">
-      <Card className="premium-border relative flex h-full flex-col overflow-hidden bg-white/4.5 p-6 transition hover:-translate-y-1 hover:shadow-glow">
+    <Card className="group premium-border relative flex h-full flex-col overflow-hidden bg-white/4.5 p-6 transition hover:-translate-y-1 hover:shadow-glow">
+      <Link href={`/projects/${project.slug}`} className="relative flex flex-1 flex-col">
         <div className="relative flex items-center justify-between"><Badge variant="secondary">{t(project.category)}</Badge><ArrowUpRight className="size-5 text-foreground/50" /></div>
         {cover && <div className="relative mt-5 aspect-16/10 overflow-hidden rounded-lg border border-foreground/10 bg-background/50"><Image unoptimized={cover.src.startsWith("/portfolio-media/")} src={cover.src} alt={t(cover.alt)} fill sizes="(min-width: 768px) 45vw, 90vw" className="object-contain p-2" /></div>}
         <div className="relative mt-auto pt-6"><h3 className="font-display text-2xl font-semibold">{t(project.title)}</h3><p className="mt-3 text-sm leading-6 text-foreground/65">{t(project.description)}</p><div className="mt-5 flex flex-wrap gap-2">{project.stack.map(tag => <Badge key={tag} variant="outline">{t(tag)}</Badge>)}</div></div>
-      </Card>
+      </Link>
+      <ProjectWebsiteLink project={project} />
+    </Card>
+  );
+}
+
+function ProjectWebsiteLink({ project }: { project: PortfolioProject }) {
+  const { t } = useI18n();
+  if (!project.website) return null;
+  return (
+    <Link href={project.website}
+      {...(project.website.startsWith("https://") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      className="relative mt-4 inline-flex min-h-11 items-center justify-between gap-3 rounded-lg border border-foreground/15 px-4 py-2.5 text-sm font-medium transition hover:border-red-500/50 hover:text-red-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500">
+      {t(project.websiteLabel || "Project website")}<ArrowUpRight className="size-4 shrink-0" />
     </Link>
   );
 }
@@ -53,6 +66,7 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
         <div className="mt-auto pt-6">
           <div className="flex flex-wrap gap-2">{project.stack.slice(0, 4).map(tag => <Badge key={tag} variant="secondary">{t(tag)}</Badge>)}</div>
           <Link href={`/projects/${project.slug}`} className="mt-6 flex items-center justify-between border-t border-foreground/10 pt-4 text-sm font-medium">{t(project.screenshots.length ? "Details and screenshots" : "Explore the project")}<ArrowUpRight className="size-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /></Link>
+          <ProjectWebsiteLink project={project} />
         </div>
       </div>
     </article>
